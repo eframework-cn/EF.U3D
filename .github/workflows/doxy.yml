@@ -29,6 +29,37 @@ jobs:
               env:
                 GIT_CRYPT_BIN: "../../git-crypt.linux"
                 EP_U3D_EDITOR_ARCH_GIT: ${{ secrets.EP_U3D_EDITOR_ARCH_GIT }}
+                EP_U3D_EDITOR_ASSET_GIT: ${{ secrets.EP_U3D_EDITOR_ASSET_GIT }}
+                EP_U3D_EDITOR_ATLAS_GIT: ${{ secrets.EP_U3D_EDITOR_ATLAS_GIT }}
+                EP_U3D_EDITOR_AUDIO_GIT: ${{ secrets.EP_U3D_EDITOR_AUDIO_GIT }}
+                EP_U3D_EDITOR_BASE_GIT: ${{ secrets.EP_U3D_EDITOR_BASE_GIT }}
+                EP_U3D_EDITOR_EENG_GIT: ${{ secrets.EP_U3D_EDITOR_EENG_GIT }}
+                EP_U3D_EDITOR_EXCEL_GIT: ${{ secrets.EP_U3D_EDITOR_EXCEL_GIT }}
+                EP_U3D_EDITOR_ILR_GIT: ${{ secrets.EP_U3D_EDITOR_ILR_GIT }}
+                EP_U3D_EDITOR_LUA_GIT: ${{ secrets.EP_U3D_EDITOR_LUA_GIT }}
+                EP_U3D_EDITOR_PATCH_GIT: ${{ secrets.EP_U3D_EDITOR_PATCH_GIT }}
+                EP_U3D_EDITOR_PLAT_GIT: ${{ secrets.EP_U3D_EDITOR_PLAT_GIT }}
+                EP_U3D_EDITOR_PREF_GIT: ${{ secrets.EP_U3D_EDITOR_PREF_GIT }}
+                EP_U3D_EDITOR_PREFAB_GIT: ${{ secrets.EP_U3D_EDITOR_PREFAB_GIT }}
+                EP_U3D_EDITOR_PROTO_GIT: ${{ secrets.EP_U3D_EDITOR_PROTO_GIT }}
+                EP_U3D_EDITOR_SCENE_GIT: ${{ secrets.EP_U3D_EDITOR_SCENE_GIT }}
+                EP_U3D_EDITOR_SIM_GIT: ${{ secrets.EP_U3D_EDITOR_SIM_GIT }}
+                EP_U3D_LIBRARY_ASSET_GIT: ${{ secrets.EP_U3D_LIBRARY_ASSET_GIT }}
+                EP_U3D_LIBRARY_AUDIO_GIT: ${{ secrets.EP_U3D_LIBRARY_AUDIO_GIT }}
+                EP_U3D_LIBRARY_BASE_GIT: ${{ secrets.EP_U3D_LIBRARY_BASE_GIT }}
+                EP_U3D_LIBRARY_EVT_GIT: ${{ secrets.EP_U3D_LIBRARY_EVT_GIT }}
+                EP_U3D_LIBRARY_I18N_GIT: ${{ secrets.EP_U3D_LIBRARY_I18N_GIT }}
+                EP_U3D_LIBRARY_ILR_GIT: ${{ secrets.EP_U3D_LIBRARY_ILR_GIT }}
+                EP_U3D_LIBRARY_JSON_GIT: ${{ secrets.EP_U3D_LIBRARY_JSON_GIT }}
+                EP_U3D_LIBRARY_LUA_GIT: ${{ secrets.EP_U3D_LIBRARY_LUA_GIT }}
+                EP_U3D_LIBRARY_NET_GIT: ${{ secrets.EP_U3D_LIBRARY_NET_GIT }}
+                EP_U3D_LIBRARY_PATCH_GIT: ${{ secrets.EP_U3D_LIBRARY_PATCH_GIT }}
+                EP_U3D_LIBRARY_PROTO_GIT: ${{ secrets.EP_U3D_LIBRARY_PROTO_GIT }}
+                EP_U3D_LIBRARY_REPORT_GIT: ${{ secrets.EP_U3D_LIBRARY_REPORT_GIT }}
+                EP_U3D_LIBRARY_SCENE_GIT: ${{ secrets.EP_U3D_LIBRARY_SCENE_GIT }}
+                EP_U3D_LIBRARY_UI_GIT: ${{ secrets.EP_U3D_LIBRARY_UI_GIT }}
+                EP_U3D_RUNTIME_ILR_GIT: ${{ secrets.EP_U3D_RUNTIME_ILR_GIT }}
+                EP_U3D_RUNTIME_LUA_GIT: ${{ secrets.EP_U3D_RUNTIME_LUA_GIT }}
               shell: bash
               run: git submodule foreach -q 'bash ../../git-crypt.action || :'
           
