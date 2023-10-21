@@ -1,0 +1,6 @@
+Host git.code.tencent.com
+	HostName git.code.tencent.com
+	User git
+	IdentityFile ~/.ssh/用户名@git.code.tencent.key
+	HostkeyAlgorithms +ssh-rsa
+	PubkeyAcceptedAlgorithms +ssh-rsa
