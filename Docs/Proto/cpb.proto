@@ -1,0 +1,6 @@
+package protocol;
+
+message CGI_Hello {
+    required int32 ID = 1;
+    required string Desc = 2;
+}

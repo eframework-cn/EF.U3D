@@ -1,0 +1,16 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/*.meta": true,
+        ".vscode": true,
+        ".idea": true
+    },
+    "window.title": "${dirty}${activeEditorShort}${separator}${folderPath}",
+    "luaide-lite.apiFolders": [
+        "../../../Docs/Scripts/LuaAPI/"
+    ]
+}

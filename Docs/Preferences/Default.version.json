@@ -1,0 +1,29 @@
+{
+    "Developer": "Default",
+    "ListenLog": "127.0.0.1:10097",
+    "PushPatch": "127.0.0.1:10100",
+    "PushArchive": "127.0.0.1:10099",
+    "SWidth": 960,
+    "SHeight": 540,
+    "Pauseable": false,
+    "CheckMode": false,
+    "ScriptBundle": false,
+    "AssetBundle": false,
+    "CatVerbose": false,
+    "CatException": false,
+    "LiveMode": false,
+    "ReleaseMode": false,
+    "CheckUpdate": true,
+    "ForceUpdate": true,
+    "LogServer": "http://${ListenLog}:10098",
+    "PatchServer": "http://${PushPatch}/patch/${Project}/${Developer}/${Version}",
+    "Name": "Default",
+    "CgiIndex": 0,
+    "CgiServer": [
+        "NONE"
+    ],
+    "ConnIndex": 0,
+    "ConnServer": [
+        "NONE"
+    ]
+}

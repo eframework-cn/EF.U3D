@@ -1,0 +1,34 @@
+---@class UnityEngine.RuntimePlatform : System.Enum
+---@field value__ int
+---@field OSXEditor UnityEngine.RuntimePlatform
+---@field OSXPlayer UnityEngine.RuntimePlatform
+---@field WindowsPlayer UnityEngine.RuntimePlatform
+---@field WindowsEditor UnityEngine.RuntimePlatform
+---@field IPhonePlayer UnityEngine.RuntimePlatform
+---@field Android UnityEngine.RuntimePlatform
+---@field LinuxPlayer UnityEngine.RuntimePlatform
+---@field LinuxEditor UnityEngine.RuntimePlatform
+---@field WebGLPlayer UnityEngine.RuntimePlatform
+---@field WSAPlayerX86 UnityEngine.RuntimePlatform
+---@field WSAPlayerX64 UnityEngine.RuntimePlatform
+---@field WSAPlayerARM UnityEngine.RuntimePlatform
+---@field PS4 UnityEngine.RuntimePlatform
+---@field XboxOne UnityEngine.RuntimePlatform
+---@field tvOS UnityEngine.RuntimePlatform
+---@field Switch UnityEngine.RuntimePlatform
+---@field Lumin UnityEngine.RuntimePlatform
+---@field Stadia UnityEngine.RuntimePlatform
+---@field CloudRendering UnityEngine.RuntimePlatform
+---@field GameCoreXboxSeries UnityEngine.RuntimePlatform
+---@field GameCoreXboxOne UnityEngine.RuntimePlatform
+---@field PS5 UnityEngine.RuntimePlatform
+---@field EmbeddedLinuxArm64 UnityEngine.RuntimePlatform
+---@field EmbeddedLinuxArm32 UnityEngine.RuntimePlatform
+---@field EmbeddedLinuxX64 UnityEngine.RuntimePlatform
+---@field EmbeddedLinuxX86 UnityEngine.RuntimePlatform
+---@field LinuxServer UnityEngine.RuntimePlatform
+---@field WindowsServer UnityEngine.RuntimePlatform
+---@field OSXServer UnityEngine.RuntimePlatform
+local RuntimePlatform = {}
+
+UnityEngine.RuntimePlatform = RuntimePlatform

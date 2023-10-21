@@ -1,0 +1,21 @@
+{
+    "version": "0.1.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${file}",
+            "preLaunchTask": "tsc-watch",
+            "outFiles": [
+                "${workspaceFolder}/out/**/*.js"
+            ],
+            "env": {
+                "WORKSPACE": "${workspaceFolder}/../",
+                "BASH_ARCH_PREFS": "Bot.Dev.version.json",
+                "BASH_ARCH_VER": "0.1",
+                "Unity-2021.3.30f1": "C:/Program Files/Unity/Hub/Editor/2021.3.30f1/Editor/Unity.exe",
+            }
+        }
+    ]
+}

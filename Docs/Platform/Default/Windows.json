@@ -1,0 +1,20 @@
+{
+    "Clazz": "EFrame.PlatDefault",
+    "Channel": "Default",
+    "Runtime": "Windows",
+    "Product": [
+        "EFrame"
+    ],
+    "Icon": [
+        ""
+    ],
+    "Version": [
+        "1.0"
+    ],
+    "Identifier": [
+        "com.eframe.u3d"
+    ],
+    "Domain": [
+        "http://127.0.0.1"
+    ]
+}

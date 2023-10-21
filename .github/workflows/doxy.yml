@@ -1,0 +1,82 @@
+name: Generate Doxy
+on:
+    push:
+        paths:
+          - 'Packages/**'
+          - '*.md'
+          - '*.doxy'
+          - 'Manual/**'
+          - '.github/workflows/doxy.yml'
+
+jobs:
+    doc:
+        name: Generate Doxy
+        runs-on: ubuntu-latest
+        
+        steps:
+            ## 检出工程
+            - uses: actions/checkout@v3
+              with: 
+                submodules: 'true'
+
+            ## 解密工程
+            - run: wget https://github.com/eframework-cn/ET.SOFT/raw/master/git-crypt.linux -O git-crypt.linux 
+            - run: wget https://github.com/eframework-cn/ET.SOFT/raw/master/git-crypt.action -O git-crypt.action 
+            - run: chmod +x ./git-crypt.linux
+            - run: chmod +x ./git-crypt.action
+
+            - name: Run git-crypt
+              env:
+                GIT_CRYPT_BIN: "../../git-crypt.linux"
+                EP_U3D_EDITOR_ARCH_GIT: ${{ secrets.EP_U3D_EDITOR_ARCH_GIT }}
+              shell: bash
+              run: git submodule foreach -q 'bash ../../git-crypt.action || :'
+          
+            - run: rm -f ./git-crypt.linux
+            - run: rm -f ./git-crypt.action
+            
+            ## 配置环境
+            - run: git config --global user.name github-actions[bot]
+            - run: git config --global user.email github-actions[bot]@users.noreply.github.com
+            - run: git config --global --add safe.directory /github/workspace
+            - run: sudo apt-get install graphviz -y
+            - run: wget https://github.com/doxygen/doxygen/releases/download/Release_1_9_6/doxygen-1.9.6.linux.bin.tar.gz
+            - run: tar -zxvf ./doxygen-1.9.6.linux.bin.tar.gz
+            - run: rm -f ./doxygen-1.9.6.linux.bin.tar.gz
+            - run: chmod -R 777 ./doxygen-1.9.6/bin/
+
+            ## 生成文档
+            - run: ./doxygen-1.9.6/bin/doxygen .doxy
+            - run: rm -rf ./doxygen-1.9.6
+            - run: mkdir ./.html/Manual/
+            - run: cp ./Manual/* ./.html/Manual/
+            - run: cp -r `find ./ -mindepth 3 -maxdepth 3 -name 'Manual'` ./.html/
+            - run: git add ./.html
+            - run: git stash save ./.html
+
+            ## 切换分支
+            - run: git fetch origin
+            - run: git checkout gh-pages
+            
+            ## 清理目录
+            - run: rm -rf ./Packages
+            - run: rm -rf ./Manual
+            - run: git rm -rf *
+            - run: git commit -m '[Doxy] commit cleanup'
+
+            ## 移动文档
+            - run: git stash pop
+            - run: git commit -m '[Doxy] commit temporary'
+            - run: mv ./.html/* ./
+            - run: git rm -rf ./.html
+            
+            ## 创建文件（使得页面文件包含'_'的可以被访问）
+            - run: touch .nojekyll
+
+            ## 创建CNAME
+            - run: touch ./CNAME && echo -e "u3d.eframework.cn" >> ./CNAME
+            
+            ## 推送文档
+            - run: git add ./
+            - run: git commit -m '[Doxy] commit product'
+            - run: git push

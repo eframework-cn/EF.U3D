@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es2018",
+        "outDir": "out",
+        "lib": [
+            "es6"
+        ],
+        "sourceMap": true,
+        "allowJs": true,
+        "rootDir": ".",
+        "declaration": false,
+        "experimentalDecorators": true,
+    },
+    "exclude": [
+        "node_modules",
+        "out"
+    ]
+}
