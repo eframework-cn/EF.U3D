@@ -158,7 +158,7 @@ namespace CS.Core
                         var types = ILRManager.GetTypes().ToArray();
                         foreach (var type in types)
                         {
-                            if (type.FullName == "Launcher")
+                            if (type.FullName == "ILR.Core.Launcher")
                             {
                                 var o = ILRManager.CreateInstance(type);
                                 ILauncher = (o as ILTypeInstance).CLRInstance as ILauncher;
@@ -170,7 +170,7 @@ namespace CS.Core
                 else
                 {
                     var assembly = Assembly.GetExecutingAssembly();
-                    var type = assembly.GetType("Launcher");
+                    var type = assembly.GetType("ILR.Core.Launcher");
                     var o = ILRManager.CreateInstance(type);
                     ILauncher = o as ILauncher;
                 }

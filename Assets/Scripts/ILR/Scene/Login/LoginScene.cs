@@ -13,7 +13,7 @@ namespace ILR.Scene.Login
     {
         public NetConnection Connection;
 
-        public override string Name() { return "LOGIN"; }
+        public override string Name() { return "Login"; }
 
         public override void Awake()
         {

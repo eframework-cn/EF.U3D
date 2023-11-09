@@ -69,7 +69,7 @@ namespace CSExcel
         /// <summary>
         /// 持久化资源路径
         /// </summary>
-        public const string JSON_ASSET = "Resources/Internal/Excel/SHARED/I18NUpdater";
+        public const string JSON_ASSET = "Resources/Internal/Excel/Shared/I18NUpdater";
 
         /// <summary>
         /// 原始Json数据（使用前需判断是否就绪）
