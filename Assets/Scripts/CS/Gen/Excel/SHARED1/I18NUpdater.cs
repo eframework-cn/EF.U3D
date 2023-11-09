@@ -7,14 +7,14 @@ using EP.U3D.LIBRARY.ASSET;
 using EP.U3D.LIBRARY.BASE;
 using EP.U3D.LIBRARY.JSON;
 
-namespace CSExcel
+namespace CS.Gen.Excel.Shared
 {
     public class I18NUpdater : EP.U3D.LIBRARY.I18N.ILanguage
     {
 		/// <summary>
 		/// 键值
 		/// <summary>
-		public string key { get; private set; }
+		public string KEY { get; private set; }
 
 		/// <summary>
 		/// 中文
@@ -64,7 +64,7 @@ namespace CSExcel
         /// <summary>
         /// 键名列表
         /// </summary>
-        public static readonly string[] KEYS = { "key", "SCN", "EN", "ES", "AR", "DE", "FR", "JP", "KO", "TCN" };
+        public static readonly string[] KEYS = { "KEY", "SCN", "EN", "ES", "AR", "DE", "FR", "JP", "KO", "TCN" };
 
         /// <summary>
         /// 持久化资源路径

@@ -1,6 +1,6 @@
 #if UNITY_EDITOR || !EFRAME_ILR
 // AUTO GENERATED, DO NOT EDIT //
-namespace ILRProto
+namespace ILR.Gen.Proto
 {	// msg protocol
 	
 	public enum MID

@@ -119,7 +119,7 @@ namespace CS.Core
             Reporter.Instance.OnException += OnException;
             SceneManager.sceneLoaded += OnSceneWasLoaded;
             AssetManager.Initialize();
-            I18NApi.RegLanguage(CSExcel.I18NUpdater.Instance);
+            I18NApi.RegLanguage(Gen.Excel.Shared.I18NUpdater.Instance);
             Updater.Initialize(() =>
             {
                 Updater.Instance.OpenBG();

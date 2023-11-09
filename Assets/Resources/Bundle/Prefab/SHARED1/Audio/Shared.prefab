@@ -191,6 +191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb9b800dfbb36ea45aeddea5c4a6efc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Asset: Bundle/Prefab/Shared/Audio/Shared
-  Bundle: resources_bundle_prefab_shared_audio_shared.asset
+  Asset: Bundle/Prefab/SHARED1/Audio/Shared
+  Bundle: resources_bundle_prefab_shared1_audio_shared.asset
   Origin: 1

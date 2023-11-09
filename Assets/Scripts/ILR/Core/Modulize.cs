@@ -177,7 +177,7 @@ namespace ILR.Core
         /// <param name="id">消息ID</param>
         /// <param name="handler">消息回调</param>
         /// <param name="once">调用一次</param>
-        public virtual void RegMsg(ILRProto.MID id, EventHandlerDelegate handler, bool once = false)
+        public virtual void RegMsg(Gen.Proto.MID id, EventHandlerDelegate handler, bool once = false)
         {
             NetManager.RegMsg((int)id, handler, null, once);
         }
@@ -188,7 +188,7 @@ namespace ILR.Core
         /// <param name="id">消息ID</param>
         /// <param name="handler">消息回调</param>
         /// <param name="once">调用一次</param>
-        public virtual void RegMsg<T>(ILRProto.MID id, Action<T> handler, bool once = false) where T : class, IProto
+        public virtual void RegMsg<T>(Gen.Proto.MID id, Action<T> handler, bool once = false) where T : class, IProto
         {
             var _id = id.GetHashCode();
             if (!mMsgMap.ContainsKey(_id)) mMsgMap.Add(_id, new List<MsgHandler>());
@@ -205,14 +205,14 @@ namespace ILR.Core
         /// </summary>
         /// <param name="id">消息ID</param>
         /// <param name="handler">消息回调</param>
-        public virtual void UnregMsg(ILRProto.MID id, EventHandlerDelegate handler) { NetManager.UnregMsg((int)id, handler); }
+        public virtual void UnregMsg(Gen.Proto.MID id, EventHandlerDelegate handler) { NetManager.UnregMsg((int)id, handler); }
 
         /// <summary>
         /// 注销Msg消息（全局）
         /// </summary>
         /// <param name="id">消息ID</param>
         /// <param name="handler">消息回调</param>
-        public virtual void UnregMsg<T>(ILRProto.MID id, Action<T> handler) where T : class, IProto
+        public virtual void UnregMsg<T>(Gen.Proto.MID id, Action<T> handler) where T : class, IProto
         {
             var _id = id.GetHashCode();
             if (mMsgMap.TryGetValue(_id, out var rets))
@@ -241,7 +241,7 @@ namespace ILR.Core
         /// <param name="uid">用户ID</param>
         /// <param name="rid">路由ID</param>
         /// <param name="type">服务类型</param>
-        public virtual void SendMsg(ILRProto.MID id, IProto body = null, int uid = 0, int rid = 0, int server = 0) { NetManager.SendMsg((int)id, body, uid, rid, server); }
+        public virtual void SendMsg(Gen.Proto.MID id, IProto body = null, int uid = 0, int rid = 0, int server = 0) { NetManager.SendMsg((int)id, body, uid, rid, server); }
 
         /// <summary>
         /// 发送Cgi消息
@@ -252,7 +252,7 @@ namespace ILR.Core
         /// <param name="uid">用户ID</param>
         /// <param name="rid">路由ID</param>
         /// <param name="host">主机地址</param>
-        public virtual void SendCgi(ILRProto.CID id, IProto body = null, Action<string, byte[]> handler = null, int uid = 0, int rid = 0, string host = null)
+        public virtual void SendCgi(Gen.Proto.CID id, IProto body = null, Action<string, byte[]> handler = null, int uid = 0, int rid = 0, string host = null)
         {
             NetManager.SendCgi((int)id, body, handler, uid, rid, host);
         }
@@ -973,7 +973,7 @@ namespace ILR.Core
         /// <param name="id">消息ID</param>
         /// <param name="handler">消息回调</param>
         /// <param name="once">调用一次</param>
-        public virtual void RegMsg(ILRProto.MID id, EventHandlerDelegate handler, bool once = false)
+        public virtual void RegMsg(Gen.Proto.MID id, EventHandlerDelegate handler, bool once = false)
         {
             var _id = id.GetHashCode();
             if (!mMsgMap.ContainsKey(_id)) mMsgMap.Add(_id, new List<MsgHandler>());
@@ -990,7 +990,7 @@ namespace ILR.Core
         /// <param name="id">消息ID</param>
         /// <param name="handler">消息回调</param>
         /// <param name="once">调用一次</param>
-        public virtual void RegMsg<T>(ILRProto.MID id, Action<T> handler, bool once = false) where T : class, IProto
+        public virtual void RegMsg<T>(Gen.Proto.MID id, Action<T> handler, bool once = false) where T : class, IProto
         {
             var _id = id.GetHashCode();
             if (!mMsgMap.ContainsKey(_id)) mMsgMap.Add(_id, new List<MsgHandler>());
@@ -1007,7 +1007,7 @@ namespace ILR.Core
         /// </summary>
         /// <param name="id">消息ID</param>
         /// <param name="handler">消息回调</param>
-        public virtual void UnregMsg(ILRProto.MID id, EventHandlerDelegate handler)
+        public virtual void UnregMsg(Gen.Proto.MID id, EventHandlerDelegate handler)
         {
             var _id = id.GetHashCode();
             if (mMsgMap.TryGetValue(_id, out var rets))
@@ -1033,7 +1033,7 @@ namespace ILR.Core
         /// </summary>
         /// <param name="id">消息ID</param>
         /// <param name="handler">消息回调</param>
-        public virtual void UnregMsg<T>(ILRProto.MID id, Action<T> handler) where T : class, IProto
+        public virtual void UnregMsg<T>(Gen.Proto.MID id, Action<T> handler) where T : class, IProto
         {
             var _id = id.GetHashCode();
             if (mMsgMap.TryGetValue(_id, out var rets))
@@ -1062,7 +1062,7 @@ namespace ILR.Core
         /// <param name="uid">用户ID</param>
         /// <param name="rid">路由ID</param>
         /// <param name="type">服务类型</param>
-        public virtual void SendMsg(ILRProto.MID id, IProto body = null, int uid = 0, int rid = 0, int server = 0) { NetManager.SendMsg((int)id, body, uid, rid, server); }
+        public virtual void SendMsg(Gen.Proto.MID id, IProto body = null, int uid = 0, int rid = 0, int server = 0) { NetManager.SendMsg((int)id, body, uid, rid, server); }
 
         /// <summary>
         /// 发送Cgi消息
@@ -1073,7 +1073,7 @@ namespace ILR.Core
         /// <param name="uid">用户ID</param>
         /// <param name="rid">路由ID</param>
         /// <param name="host">主机地址</param>
-        public virtual void SendCgi(ILRProto.CID id, IProto body = null, Action<string, byte[]> handler = null, int uid = 0, int rid = 0, string host = null)
+        public virtual void SendCgi(Gen.Proto.CID id, IProto body = null, Action<string, byte[]> handler = null, int uid = 0, int rid = 0, string host = null)
         {
             NetManager.SendCgi((int)id, body, handler, uid, rid, host);
         }

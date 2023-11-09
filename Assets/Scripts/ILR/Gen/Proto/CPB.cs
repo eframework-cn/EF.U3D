@@ -4,7 +4,7 @@
 // Input: CPB.tmp
 
 #pragma warning disable CS1591, CS0168, CS0612, CS3021, IDE1006
-namespace ILRProto.CPB
+namespace ILR.Gen.Proto.CPB
 {
     public partial class CGI_Hello : EP.U3D.LIBRARY.PROTO.IProto
     {
