@@ -13,58 +13,58 @@ namespace CS.Gen.Excel
     {
 		/// <summary>
 		/// 键值
-		/// <summary>
-		public string KEY { get; private set; }
+		/// </summary>
+		public string key { get; private set; }
 
 		/// <summary>
 		/// 中文
-		/// <summary>
+		/// </summary>
 		public string SCN { get; private set; }
 
 		/// <summary>
 		/// English
-		/// <summary>
+		/// </summary>
 		public string EN { get; private set; }
 
 		/// <summary>
 		/// Español
-		/// <summary>
+		/// </summary>
 		public string ES { get; private set; }
 
 		/// <summary>
 		/// Arabic
-		/// <summary>
+		/// </summary>
 		public string AR { get; private set; }
 
 		/// <summary>
 		/// German
-		/// <summary>
+		/// </summary>
 		public string DE { get; private set; }
 
 		/// <summary>
 		/// French
-		/// <summary>
+		/// </summary>
 		public string FR { get; private set; }
 
 		/// <summary>
 		/// Japanese
-		/// <summary>
+		/// </summary>
 		public string JP { get; private set; }
 
 		/// <summary>
 		/// Korean
-		/// <summary>
+		/// </summary>
 		public string KO { get; private set; }
 
 		/// <summary>
 		/// 繁体中文
-		/// <summary>
+		/// </summary>
 		public string TCN { get; private set; }
 
         /// <summary>
         /// 键名列表
         /// </summary>
-        public static readonly string[] KEYS = { "KEY", "SCN", "EN", "ES", "AR", "DE", "FR", "JP", "KO", "TCN" };
+        public static readonly string[] KEYS = { "key", "SCN", "EN", "ES", "AR", "DE", "FR", "JP", "KO", "TCN" };
 
         /// <summary>
         /// 持久化资源路径
