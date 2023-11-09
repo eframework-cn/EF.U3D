@@ -1,7 +1,7 @@
 #if UNITY_EDITOR || !EFRAME_ILR
 using ILR.Core;
 
-namespace ILR.Scene.Shared
+namespace ILR.Scene.SHARED
 {
     public class UI_Confirm : View<UI_Confirm>
     {

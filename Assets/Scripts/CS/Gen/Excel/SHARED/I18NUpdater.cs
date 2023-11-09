@@ -7,7 +7,7 @@ using EP.U3D.LIBRARY.ASSET;
 using EP.U3D.LIBRARY.BASE;
 using EP.U3D.LIBRARY.JSON;
 
-namespace CS.Gen.Excel.Shared
+namespace CS.Gen.Excel
 {
     public class I18NUpdater : EP.U3D.LIBRARY.I18N.ILanguage
     {
@@ -69,7 +69,7 @@ namespace CS.Gen.Excel.Shared
         /// <summary>
         /// 持久化资源路径
         /// </summary>
-        public const string JSON_ASSET = "Resources/Internal/Excel/Shared/I18NUpdater";
+        public const string JSON_ASSET = "Resources/Internal/Excel/SHARED/I18NUpdater";
 
         /// <summary>
         /// 原始Json数据（使用前需判断是否就绪）

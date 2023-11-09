@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: 4990254681419823587}
   - component: {fileID: 6735968148008579834}
   - component: {fileID: 7930836472757575530}
+  - component: {fileID: 5325376373027745135}
   - component: {fileID: 3951584033287661349}
   - component: {fileID: 3953894895823532524}
   m_Layer: 5
@@ -232,6 +233,21 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &5325376373027745135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647232022034255027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41e9e677b9a71e94fb2f0517d629b90f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FullName: 
+  Fields: []
+  Shadow: {fileID: 3951584033287661349}
 --- !u!114 &3951584033287661349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,8 +275,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb9b800dfbb36ea45aeddea5c4a6efc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Asset: Bundle/Prefab/SHARED1/UI/UI_Confirm
-  Bundle: resources_bundle_prefab_shared1_ui_ui_confirm.asset
+  Asset: Bundle/Prefab/SHARED/UI/UI_Confirm
+  Bundle: resources_bundle_prefab_shared_ui_ui_confirm.asset
   Origin: 1
 --- !u!1 &1299188093803941477
 GameObject:

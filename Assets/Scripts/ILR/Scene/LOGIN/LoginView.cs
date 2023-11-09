@@ -1,7 +1,7 @@
 #if UNITY_EDITOR || !EFRAME_ILR
 using ILR.Core;
 
-namespace ILR.Scene.Login
+namespace ILR.Scene.LOGIN
 {
     public class LoginView
     {

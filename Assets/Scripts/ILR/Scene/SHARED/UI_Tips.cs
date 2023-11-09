@@ -4,7 +4,7 @@ using UnityEngine;
 using EP.U3D.LIBRARY.BASE;
 using ILR.Core;
 
-namespace ILR.Scene.Shared
+namespace ILR.Scene.SHARED
 {
     public class UI_Tips : View<UI_Tips>
     {

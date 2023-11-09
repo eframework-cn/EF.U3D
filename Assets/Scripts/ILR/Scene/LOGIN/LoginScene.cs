@@ -7,13 +7,13 @@ using EP.U3D.LIBRARY.SCENE;
 using ILR.Core;
 using ILR.Gen.Proto;
 
-namespace ILR.Scene.Login
+namespace ILR.Scene.LOGIN
 {
     public class LoginScene : Module<LoginScene>, IScene
     {
         public NetConnection Connection;
 
-        public override string Name() { return "Login"; }
+        public override string Name() { return "LOGIN"; }
 
         public override void Awake()
         {

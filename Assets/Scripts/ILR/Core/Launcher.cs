@@ -7,7 +7,7 @@ namespace ILR.Core
 {
     public class Launcher : CS.Core.ILauncher
     {
-        public override void Start(GameObject go) { SceneManager.Goto(Scene.Login.LoginScene.Instance); }
+        public override void Start(GameObject go) { SceneManager.Goto(Scene.LOGIN.LoginScene.Instance); }
 
         public override void OnGUI() { }
 
