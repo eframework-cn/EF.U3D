@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 11400000}
   - component: {fileID: 3353796786285321300}
   m_Layer: 0
-  m_Name: Pool
+  m_Name: POOL1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -172,6 +172,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb9b800dfbb36ea45aeddea5c4a6efc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Asset: Bundle/Prefab/SHARED/Audio/Pool
-  Bundle: resources_bundle_prefab_shared_audio_pool.asset
+  Asset: Bundle/Prefab/SHARED/Audio/POOL1
+  Bundle: resources_bundle_prefab_shared_audio_pool1.asset
   Origin: 1
