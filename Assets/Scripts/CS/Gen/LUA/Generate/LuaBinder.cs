@@ -243,8 +243,10 @@ public static class LuaBinder
 		L.EndModule();
 		L.EndModule();
 		L.EndModule();
-		L.BeginModule("EFrame");
-		EFrame_ConstantsWrap.Register(L);
+		L.BeginModule("CS");
+		L.BeginModule("Core");
+		CS_Core_ConstantsWrap.Register(L);
+		L.EndModule();
 		L.EndModule();
 		L.BeginModule("System");
 		System_GCWrap.Register(L);

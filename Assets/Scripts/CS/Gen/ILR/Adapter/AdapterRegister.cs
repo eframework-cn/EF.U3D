@@ -6,7 +6,7 @@ public class AdapterRegister
         domain.RegisterCrossBindingAdaptor(new System.ExceptionAdapter());
         domain.RegisterCrossBindingAdaptor(new System.Collections.IEnumerableAdapter());
         domain.RegisterCrossBindingAdaptor(new EP.U3D.LIBRARY.I18N.ILanguageAdapter());
-        domain.RegisterCrossBindingAdaptor(new EFrame.ILauncherAdapter());
+        domain.RegisterCrossBindingAdaptor(new CS.Core.ILauncherAdapter());
         domain.RegisterCrossBindingAdaptor(new EP.U3D.LIBRARY.PROTO.IProtoAdapter());
         domain.RegisterCrossBindingAdaptor(new EP.U3D.LIBRARY.SCENE.ISceneAdapter());
         domain.RegisterCrossBindingAdaptor(new EP.U3D.LIBRARY.SCENE.SceneAdapter());

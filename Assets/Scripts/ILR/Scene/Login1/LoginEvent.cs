@@ -1,5 +1,5 @@
 #if UNITY_EDITOR || !EFRAME_ILR
-namespace LOGIN
+namespace ILR.Scene.Login
 {
     public enum LoginEvent
     {

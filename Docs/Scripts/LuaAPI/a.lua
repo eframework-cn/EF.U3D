@@ -1,8 +1,10 @@
 --- using namespace
 ---@class CPB
 CPB = {}
----@class EFrame
-EFrame = {}
+---@class CS
+CS = {}
+---@class CS.Core
+CS.Core = {}
 ---@class EP
 EP = {}
 ---@class EP.U3D

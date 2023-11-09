@@ -4,11 +4,12 @@ using EP.U3D.LIBRARY.EVT;
 using EP.U3D.LIBRARY.NET;
 using EP.U3D.LIBRARY.REPORT;
 using EP.U3D.LIBRARY.SCENE;
+using ILR.Core;
 using MID = ILRProto.MID;
 
-namespace LOGIN
+namespace ILR.Scene.Login
 {
-    public class LoginScene : Modulize.Module<LoginScene>, IScene
+    public class LoginScene : Module<LoginScene>, IScene
     {
         public NetConnection Connection;
 

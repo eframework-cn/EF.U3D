@@ -1,18 +1,10 @@
-//-----------------------------------------------------------------------//
-//                       EFRAMEWORK LIMITED LICENSE                      //
-//                            Version 2023.10                            //
-//                                                                       //
-// Copyright (C) EFramework, https://eframework.cn, All rights reserved. //
-//   LICENSED-USER is permitted to refer this license document.          //
-//                   SEE LICENSE.md FOR MORE DETAILS.                    //
-//-----------------------------------------------------------------------//
 using System;
 using System.Linq;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
 
-namespace EFrame
+namespace CS.Core
 {
     public class Constants : EP.U3D.LIBRARY.BASE.Constants
     {

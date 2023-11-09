@@ -8,7 +8,7 @@ using AutoList = System.Collections.Generic.List<object>;
 using AutoList = ILRuntime.Other.UncheckedList<object>;
 #endif
 
-namespace EFrame
+namespace CS.Core
 {   
     public class ILauncherAdapter : CrossBindingAdaptor
     {
@@ -16,7 +16,7 @@ namespace EFrame
         {
             get
             {
-                return typeof(EFrame.ILauncher);
+                return typeof(CS.Core.ILauncher);
             }
         }
 
@@ -33,7 +33,7 @@ namespace EFrame
             return new Adapter(appdomain, instance);
         }
 
-        public class Adapter : EFrame.ILauncher, CrossBindingAdaptorType
+        public class Adapter : CS.Core.ILauncher, CrossBindingAdaptorType
         {
             CrossBindingMethodInfo<UnityEngine.GameObject> mStart_0 = new CrossBindingMethodInfo<UnityEngine.GameObject>("Start");
             CrossBindingMethodInfo mOnGUI_1 = new CrossBindingMethodInfo("OnGUI");

@@ -1,11 +1,3 @@
-//-----------------------------------------------------------------------//
-//                       EFRAMEWORK LIMITED LICENSE                      //
-//                            Version 2023.10                            //
-//                                                                       //
-// Copyright (C) EFramework, https://eframework.cn, All rights reserved. //
-//   LICENSED-USER is permitted to refer this license document.          //
-//                   SEE LICENSE.md FOR MORE DETAILS.                    //
-//-----------------------------------------------------------------------//
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Reflection;
@@ -35,7 +27,7 @@ using EP.U3D.RUNTIME.LUA;
 using UnityEditor;
 #endif
 
-namespace EFrame
+namespace CS.Core
 {
     public abstract class ILauncher
     {

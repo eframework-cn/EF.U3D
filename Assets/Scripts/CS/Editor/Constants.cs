@@ -1,11 +1,3 @@
-//-----------------------------------------------------------------------//
-//                       EFRAMEWORK LIMITED LICENSE                      //
-//                            Version 2023.10                            //
-//                                                                       //
-// Copyright (C) EFramework, https://eframework.cn, All rights reserved. //
-//   LICENSED-USER is permitted to refer this license document.          //
-//                   SEE LICENSE.md FOR MORE DETAILS.                    //
-//-----------------------------------------------------------------------//
 using EP.U3D.EDITOR.BASE;
 using EP.U3D.EDITOR.ILR;
 using EP.U3D.LIBRARY.SCENE;
@@ -39,7 +31,7 @@ using LuaInterface;
 using LuaInterface.Editor;
 #endif
 
-namespace EFrame.Editor
+namespace CS.Editor
 {
     [StaticOverride]
     [InitializeOnLoad]
@@ -49,7 +41,7 @@ namespace EFrame.Editor
         {
 #if EFRAME_ILR
             MenuILR.AdapterTypes = new List<Type>();
-            MenuILR.AdapterTypes.Add(typeof(ILauncher));
+            MenuILR.AdapterTypes.Add(typeof(CS.Core.ILauncher));
             MenuILR.AdapterTypes.Add((typeof(Scene)));
             MenuILR.AdapterTypes.Add(typeof(UIMeta));
             MenuILR.AdapterTypes.Add((typeof(ScriptableObject)));
@@ -261,7 +253,7 @@ namespace EFrame.Editor
                ToLuaSetting.BT(typeof(UIManager)),
                ToLuaSetting.BT(typeof(SceneManager)),
                ToLuaSetting.BT(typeof(EP.U3D.RUNTIME.LUA.SCENE.Scene)),
-               ToLuaSetting.BT(typeof(EFrame.Constants)),
+               ToLuaSetting.BT(typeof(CS.Core.Constants)),
                ToLuaSetting.BT(typeof(EP.U3D.LIBRARY.BASE.Loom)),
                ToLuaSetting.BT(typeof(EP.U3D.RUNTIME.LUA.LuaComponent)),
                ToLuaSetting.BT(typeof(Reporter)),
@@ -275,11 +267,11 @@ namespace EFrame.Editor
 
             ToLuaSetting.DynamicList = new List<Type>() {
                 typeof(MeshRenderer),
-        #if !UNITY_5_4_OR_NEWER
+#if !UNITY_5_4_OR_NEWER
                 typeof(ParticleEmitter),
                 typeof(ParticleRenderer),
                 typeof(ParticleAnimator),
-        #endif
+#endif
 
                 typeof(BoxCollider),
                 typeof(MeshCollider),
@@ -344,13 +336,13 @@ namespace EFrame.Editor
             //不需要导出或者无法导出的类型
             ToLuaSetting.DropType = new List<Type> {
                 typeof(ValueType),                                  //不需要
-        #if UNITY_4_6 || UNITY_4_7
+#if UNITY_4_6 || UNITY_4_7
                 typeof(Motion),                                     //很多平台只是空类
-        #endif
+#endif
 
-        #if UNITY_5_3_OR_NEWER
+#if UNITY_5_3_OR_NEWER
                 typeof(UnityEngine.CustomYieldInstruction),
-        #endif
+#endif
                 typeof(UnityEngine.YieldInstruction),               //无需导出的类      
                 typeof(UnityEngine.WaitForEndOfFrame),              //内部支持
                 typeof(UnityEngine.WaitForFixedUpdate),

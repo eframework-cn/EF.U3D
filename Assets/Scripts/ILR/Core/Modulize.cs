@@ -1,12 +1,4 @@
 #if UNITY_EDITOR || !EFRAME_ILR
-//-----------------------------------------------------------------------//
-//                       EFRAMEWORK LIMITED LICENSE                      //
-//                            Version 2023.10                            //
-//                                                                       //
-// Copyright (C) EFramework, https://eframework.cn, All rights reserved. //
-//   LICENSED-USER is permitted to refer this license document.          //
-//                   SEE LICENSE.md FOR MORE DETAILS.                    //
-//-----------------------------------------------------------------------//
 using System;
 using EP.U3D.LIBRARY.ASSET;
 using EP.U3D.LIBRARY.BASE;
@@ -22,7 +14,7 @@ using NetManager = EP.U3D.RUNTIME.ILR.NET.NetManager;
 using System.Collections.Generic;
 using EP.U3D.LIBRARY.PROTO;
 
-namespace Modulize
+namespace ILR.Core
 {
     /// <summary>
     /// 模块接口

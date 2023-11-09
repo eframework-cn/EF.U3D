@@ -1,14 +1,6 @@
-//-----------------------------------------------------------------------//
-//                       EFRAMEWORK LIMITED LICENSE                      //
-//                            Version 2023.10                            //
-//                                                                       //
-// Copyright (C) EFramework, https://eframework.cn, All rights reserved. //
-//   LICENSED-USER is permitted to refer this license document.          //
-//                   SEE LICENSE.md FOR MORE DETAILS.                    //
-//-----------------------------------------------------------------------//
 using EP.U3D.LIBRARY.BASE;
 
-namespace EFrame
+namespace CS.Core
 {
     /// <summary>
     /// 渠道类型
