@@ -8,40 +8,20 @@ A LITE U3D-BASED FRAMEWORK.
 ### 安装软件
 - Unity Hub(Required): https://unity.com/download
 - Unity 2021.3.30f1(Required): [unityhub://2021.3.30f1/b4360d7cdac4](unityhub://2021.3.30f1/b4360d7cdac4)  
-![avatar](Manual/wiki.u3d.cacheserver.png)
-  - Cache Server Host可向运维人员索取
 - Visual Studio 2022/2019(Required): https://visualstudio.microsoft.com/zh-hansvs
 - Visual Studio Code(Required): https://code.visualstudio.com
 - TexturePacker(Required): https://www.codeandweb.com/texturepacker/download
 - WinRAR(Required): http://www.winrar.com.cn/index.htm
 - Everything(Optional): https://www.voidtools.com/zh-cn
-- Notepad++(Optional): https://u3d.eframework.cn/Manual/npp.8.4.2.Installer.x64.zip
-- BeyondCompare(Optional): https://u3d.eframework.cn/Manual/BeyondCompare_v3.3.12.zip
-- Git(Required): https://git-scm.com/downloads
-  - 简单手册: http://gitref.justjavac.com/
-  - 完整手册: https://git-scm.com/book/zh/v2
-- TortoiseGit(Required): https://tortoisegit.org
-  - 安装时选择OpenSSH验证(Required)
-  - 设置SSH验证(Optional): TortoiseGit > General > Re-run First Start Wizard > Authentication and credential store > OpenSSH
+- Notepad++(Optional): https://soft.eframework.cn/NPP.8.4.2.exe
+- BeyondCompare(Optional): https://soft.eframework.cn/BC.3.3.12.exe
 - UGit(Required): https://ugit.qq.com
-  - 注册工蜂: https://code.tencent.com
+  - 注册工蜂: https://git.code.tencent.com
     - 微信登录/注册
     - 初始化账号: **姓名小写全拼**
-  - 生成密钥: 
-    - 右键Git Bash Here
-    - mkdir ~/.ssh
-    - cd ~/.ssh
-    - ssh-keygen -t rsa -C "邮箱地址"  
-            文件名: **用户名@域名.key**（如：username@git.code.tencent.key）  
-            **生成的key为私钥, key.pub为公钥**
-    - 修改~/.ssh/config文件: https://u3d.eframework.cn/Manual/config（点击下载模板）
-  - 配置公钥: 
-    - 工蜂平台 > 个人设置 > SSH密钥 > 将上述生成的**用户名@域名.key.pub**内容复制保存即可
-    - 验证连接：ssh -T git@git.code.tencent.com（选择yes）
   - 配置软件:
     - UGit软件 > 设置 > 账户 > git.code.tencent.com > 授权登录
-    - UGit软件 > 设置 > SSH密钥 > 启用上述生成的**用户名@域名.key**
-- SetEnv(Required): https://u3d.eframework.cn/Manual/SetEnv.cmd
+- SetEnv(Required): https://soft.eframework.cn/SetEnv.cmd
   - 运行该命令以自动配置系统环境变量（TexturePacker & WinRAR）或手动设置
 
 ## FAQ | 常见问题
@@ -55,6 +35,12 @@ A LITE U3D-BASED FRAMEWORK.
 - **SEE [LICENSE.md](https://u3d.eframework.cn/md_LICENSE.html) FOR MORE DETAILS.**
 
 ## CHANGELOG | 更新日志
+### 2023.9.24 - 
+- 修复Rebuild ILR Component异常（.unity）
+- 优化Excel生成规则（敏感字符转义）
+- 优化Proto生成规则（支持单行注释）
+- 重构Excel和Proto的命名空间
+
 ### 2023.8.8 - 2023.9.23
 - 修复ILR/I18N/OBJREFER等组件序列化问题
 - 修复关闭应用时网络异常（网络输出线程优化）

@@ -6,6 +6,9 @@
 #pragma warning disable CS1591, CS0168, CS0612, CS3021, IDE1006
 namespace ILR.Gen.Proto.MPB
 {
+    /// <summary>
+    /// 请求结果通知
+    /// </summary>
     public partial class GM_Common : EP.U3D.LIBRARY.PROTO.IProto
     {
         private GM_Common()
@@ -13,6 +16,9 @@ namespace ILR.Gen.Proto.MPB
         }
 
         private int mResult;
+        /// <summary>
+        /// 通知类型
+        /// </summary>
         public int Result
         {
             get { if (mDisposed) throw new System.Exception($"{GetType().FullName}.Result({GetHashCode()}) has been disposed, consider using 'Obtain' to keep reference of it."); else return mResult; }
@@ -153,6 +159,9 @@ namespace ILR.Gen.Proto.MPB
         }
     }
 
+    /// <summary>
+    /// 请求登录
+    /// </summary>
     public partial class GM_LoginReq : EP.U3D.LIBRARY.PROTO.IProto
     {
         private GM_LoginReq()
@@ -287,6 +296,9 @@ namespace ILR.Gen.Proto.MPB
         }
     }
 
+    /// <summary>
+    /// 响应登录
+    /// </summary>
     public partial class GM_LoginResp : EP.U3D.LIBRARY.PROTO.IProto
     {
         private GM_LoginResp()
@@ -294,6 +306,9 @@ namespace ILR.Gen.Proto.MPB
         }
 
         private int mID;
+        /// <summary>
+        /// 玩家ID
+        /// </summary>
         public int ID
         {
             get { if (mDisposed) throw new System.Exception($"{GetType().FullName}.ID({GetHashCode()}) has been disposed, consider using 'Obtain' to keep reference of it."); else return mID; }
@@ -301,6 +316,9 @@ namespace ILR.Gen.Proto.MPB
         }
 
         private int mStatus;
+        /// <summary>
+        /// 1-服务暂停
+        /// </summary>
         public int Status
         {
             get { if (mDisposed) throw new System.Exception($"{GetType().FullName}.Status({GetHashCode()}) has been disposed, consider using 'Obtain' to keep reference of it."); else return mStatus; }
