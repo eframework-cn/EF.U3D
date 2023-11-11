@@ -94,3 +94,43 @@
 [submodule "Packages/EP.U3D.RUNTIME.LUA"]
 	path = Packages/EP.U3D.RUNTIME.LUA
 	url = git@github.com:eframework-cn/EP.U3D.RUNTIME.LUA.git
+[submodule "Packages/EP.U3D.LIBRARY.POOL"]
+	path = Packages/EP.U3D.LIBRARY.POOL
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.POOL.git
+	branch = master
+[submodule "Packages/EP.U3D.LIBRARY.PNET"]
+	path = Packages/EP.U3D.LIBRARY.PNET
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.PNET.git
+	branch = master
+[submodule "Packages/EP.U3D.LIBRARY.PPUN"]
+	path = Packages/EP.U3D.LIBRARY.PPUN
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.PPUN.git
+	branch = master
+[submodule "Packages/EP.U3D.LIBRARY.PVOICE"]
+	path = Packages/EP.U3D.LIBRARY.PVOICE
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.PVOICE.git
+	branch = master
+[submodule "Packages/EP.U3D.LIBRARY.PCHAT"]
+	path = Packages/EP.U3D.LIBRARY.PCHAT
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.PCHAT.git
+	branch = master
+[submodule "Packages/EP.U3D.EDITOR.TS"]
+	path = Packages/EP.U3D.EDITOR.TS
+	url = git@github.com:eframework-cn/EP.U3D.EDITOR.TS.git
+	branch = master
+[submodule "Packages/EP.U3D.LIBRARY.TS"]
+	path = Packages/EP.U3D.LIBRARY.TS
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.TS.git
+	branch = master
+[submodule "Packages/EP.U3D.RUNTIME.TS"]
+	path = Packages/EP.U3D.RUNTIME.TS
+	url = git@github.com:eframework-cn/EP.U3D.RUNTIME.TS.git
+	branch = master
+[submodule "Packages/EP.U3D.LIBRARY.NGUI"]
+	path = Packages/EP.U3D.LIBRARY.NGUI
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.NGUI.git
+	branch = master
+[submodule "Packages/EP.U3D.LIBRARY.FGUI"]
+	path = Packages/EP.U3D.LIBRARY.FGUI
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.FGUI.git
+	branch = master
