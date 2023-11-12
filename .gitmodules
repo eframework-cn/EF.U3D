@@ -1,136 +1,168 @@
 [submodule "Packages/EP.U3D.EDITOR.ARCH"]
 	path = Packages/EP.U3D.EDITOR.ARCH
 	url = git@github.com:eframework-cn/EP.U3D.EDITOR.ARCH.git
+	branch = master
 [submodule "Packages/EP.U3D.EDITOR.ASSET"]
 	path = Packages/EP.U3D.EDITOR.ASSET
 	url = git@github.com:eframework-cn/EP.U3D.EDITOR.ASSET.git
+	branch = master
 [submodule "Packages/EP.U3D.EDITOR.ATLAS"]
 	path = Packages/EP.U3D.EDITOR.ATLAS
 	url = git@github.com:eframework-cn/EP.U3D.EDITOR.ATLAS.git
+	branch = master
 [submodule "Packages/EP.U3D.EDITOR.AUDIO"]
 	path = Packages/EP.U3D.EDITOR.AUDIO
 	url = git@github.com:eframework-cn/EP.U3D.EDITOR.AUDIO.git
+	branch = master
 [submodule "Packages/EP.U3D.EDITOR.BASE"]
 	path = Packages/EP.U3D.EDITOR.BASE
 	url = git@github.com:eframework-cn/EP.U3D.EDITOR.BASE.git
+	branch = master
 [submodule "Packages/EP.U3D.EDITOR.EENG"]
 	path = Packages/EP.U3D.EDITOR.EENG
 	url = git@github.com:eframework-cn/EP.U3D.EDITOR.EENG.git
+	branch = master
 [submodule "Packages/EP.U3D.EDITOR.EXCEL"]
 	path = Packages/EP.U3D.EDITOR.EXCEL
 	url = git@github.com:eframework-cn/EP.U3D.EDITOR.EXCEL.git
+	branch = master
 [submodule "Packages/EP.U3D.EDITOR.ILR"]
 	path = Packages/EP.U3D.EDITOR.ILR
 	url = git@github.com:eframework-cn/EP.U3D.EDITOR.ILR.git
+	branch = master
 [submodule "Packages/EP.U3D.EDITOR.LUA"]
 	path = Packages/EP.U3D.EDITOR.LUA
 	url = git@github.com:eframework-cn/EP.U3D.EDITOR.LUA.git
+	branch = master
 [submodule "Packages/EP.U3D.EDITOR.PATCH"]
 	path = Packages/EP.U3D.EDITOR.PATCH
 	url = git@github.com:eframework-cn/EP.U3D.EDITOR.PATCH.git
+	branch = master
 [submodule "Packages/EP.U3D.EDITOR.PLAT"]
 	path = Packages/EP.U3D.EDITOR.PLAT
 	url = git@github.com:eframework-cn/EP.U3D.EDITOR.PLAT.git
+	branch = master
 [submodule "Packages/EP.U3D.EDITOR.PREF"]
 	path = Packages/EP.U3D.EDITOR.PREF
 	url = git@github.com:eframework-cn/EP.U3D.EDITOR.PREF.git
+	branch = master
 [submodule "Packages/EP.U3D.EDITOR.PREFAB"]
 	path = Packages/EP.U3D.EDITOR.PREFAB
 	url = git@github.com:eframework-cn/EP.U3D.EDITOR.PREFAB.git
+	branch = master
 [submodule "Packages/EP.U3D.EDITOR.PROTO"]
 	path = Packages/EP.U3D.EDITOR.PROTO
 	url = git@github.com:eframework-cn/EP.U3D.EDITOR.PROTO.git
+	branch = master
 [submodule "Packages/EP.U3D.EDITOR.SCENE"]
 	path = Packages/EP.U3D.EDITOR.SCENE
 	url = git@github.com:eframework-cn/EP.U3D.EDITOR.SCENE.git
+	branch = master
 [submodule "Packages/EP.U3D.EDITOR.SIM"]
 	path = Packages/EP.U3D.EDITOR.SIM
 	url = git@github.com:eframework-cn/EP.U3D.EDITOR.SIM.git
-[submodule "Packages/EP.U3D.LIBRARY.ASSET"]
-	path = Packages/EP.U3D.LIBRARY.ASSET
-	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.ASSET.git
-[submodule "Packages/EP.U3D.LIBRARY.AUDIO"]
-	path = Packages/EP.U3D.LIBRARY.AUDIO
-	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.AUDIO.git
-[submodule "Packages/EP.U3D.LIBRARY.BASE"]
-	path = Packages/EP.U3D.LIBRARY.BASE
-	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.BASE.git
-[submodule "Packages/EP.U3D.LIBRARY.EVT"]
-	path = Packages/EP.U3D.LIBRARY.EVT
-	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.EVT.git
-[submodule "Packages/EP.U3D.LIBRARY.I18N"]
-	path = Packages/EP.U3D.LIBRARY.I18N
-	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.I18N.git
-[submodule "Packages/EP.U3D.LIBRARY.ILR"]
-	path = Packages/EP.U3D.LIBRARY.ILR
-	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.ILR.git
-[submodule "Packages/EP.U3D.LIBRARY.JSON"]
-	path = Packages/EP.U3D.LIBRARY.JSON
-	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.JSON.git
-[submodule "Packages/EP.U3D.LIBRARY.LUA"]
-	path = Packages/EP.U3D.LIBRARY.LUA
-	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.LUA.git
-[submodule "Packages/EP.U3D.LIBRARY.NET"]
-	path = Packages/EP.U3D.LIBRARY.NET
-	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.NET.git
-[submodule "Packages/EP.U3D.LIBRARY.PATCH"]
-	path = Packages/EP.U3D.LIBRARY.PATCH
-	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.PATCH.git
-[submodule "Packages/EP.U3D.LIBRARY.PROTO"]
-	path = Packages/EP.U3D.LIBRARY.PROTO
-	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.PROTO.git
-[submodule "Packages/EP.U3D.LIBRARY.REPORT"]
-	path = Packages/EP.U3D.LIBRARY.REPORT
-	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.REPORT.git
-[submodule "Packages/EP.U3D.LIBRARY.SCENE"]
-	path = Packages/EP.U3D.LIBRARY.SCENE
-	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.SCENE.git
-[submodule "Packages/EP.U3D.LIBRARY.UI"]
-	path = Packages/EP.U3D.LIBRARY.UI
-	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.UI.git
-[submodule "Packages/EP.U3D.RUNTIME.ILR"]
-	path = Packages/EP.U3D.RUNTIME.ILR
-	url = git@github.com:eframework-cn/EP.U3D.RUNTIME.ILR.git
-[submodule "Packages/EP.U3D.RUNTIME.LUA"]
-	path = Packages/EP.U3D.RUNTIME.LUA
-	url = git@github.com:eframework-cn/EP.U3D.RUNTIME.LUA.git
-[submodule "Packages/EP.U3D.LIBRARY.POOL"]
-	path = Packages/EP.U3D.LIBRARY.POOL
-	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.POOL.git
-	branch = master
-[submodule "Packages/EP.U3D.LIBRARY.PNET"]
-	path = Packages/EP.U3D.LIBRARY.PNET
-	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.PNET.git
-	branch = master
-[submodule "Packages/EP.U3D.LIBRARY.PPUN"]
-	path = Packages/EP.U3D.LIBRARY.PPUN
-	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.PPUN.git
-	branch = master
-[submodule "Packages/EP.U3D.LIBRARY.PVOICE"]
-	path = Packages/EP.U3D.LIBRARY.PVOICE
-	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.PVOICE.git
-	branch = master
-[submodule "Packages/EP.U3D.LIBRARY.PCHAT"]
-	path = Packages/EP.U3D.LIBRARY.PCHAT
-	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.PCHAT.git
 	branch = master
 [submodule "Packages/EP.U3D.EDITOR.TS"]
 	path = Packages/EP.U3D.EDITOR.TS
 	url = git@github.com:eframework-cn/EP.U3D.EDITOR.TS.git
 	branch = master
-[submodule "Packages/EP.U3D.LIBRARY.TS"]
-	path = Packages/EP.U3D.LIBRARY.TS
-	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.TS.git
+[submodule "Packages/EP.U3D.LIBRARY.ASSET"]
+	path = Packages/EP.U3D.LIBRARY.ASSET
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.ASSET.git
 	branch = master
-[submodule "Packages/EP.U3D.RUNTIME.TS"]
-	path = Packages/EP.U3D.RUNTIME.TS
-	url = git@github.com:eframework-cn/EP.U3D.RUNTIME.TS.git
+[submodule "Packages/EP.U3D.LIBRARY.AUDIO"]
+	path = Packages/EP.U3D.LIBRARY.AUDIO
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.AUDIO.git
+	branch = master
+[submodule "Packages/EP.U3D.LIBRARY.BASE"]
+	path = Packages/EP.U3D.LIBRARY.BASE
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.BASE.git
+	branch = master
+[submodule "Packages/EP.U3D.LIBRARY.EVT"]
+	path = Packages/EP.U3D.LIBRARY.EVT
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.EVT.git
+	branch = master
+[submodule "Packages/EP.U3D.LIBRARY.FGUI"]
+	path = Packages/EP.U3D.LIBRARY.FGUI
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.FGUI.git
+	branch = master
+[submodule "Packages/EP.U3D.LIBRARY.I18N"]
+	path = Packages/EP.U3D.LIBRARY.I18N
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.I18N.git
+	branch = master
+[submodule "Packages/EP.U3D.LIBRARY.ILR"]
+	path = Packages/EP.U3D.LIBRARY.ILR
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.ILR.git
+	branch = master
+[submodule "Packages/EP.U3D.LIBRARY.JSON"]
+	path = Packages/EP.U3D.LIBRARY.JSON
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.JSON.git
+	branch = master
+[submodule "Packages/EP.U3D.LIBRARY.LUA"]
+	path = Packages/EP.U3D.LIBRARY.LUA
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.LUA.git
+	branch = master
+[submodule "Packages/EP.U3D.LIBRARY.NET"]
+	path = Packages/EP.U3D.LIBRARY.NET
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.NET.git
 	branch = master
 [submodule "Packages/EP.U3D.LIBRARY.NGUI"]
 	path = Packages/EP.U3D.LIBRARY.NGUI
 	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.NGUI.git
 	branch = master
-[submodule "Packages/EP.U3D.LIBRARY.FGUI"]
-	path = Packages/EP.U3D.LIBRARY.FGUI
-	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.FGUI.git
+[submodule "Packages/EP.U3D.LIBRARY.PATCH"]
+	path = Packages/EP.U3D.LIBRARY.PATCH
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.PATCH.git
+	branch = master
+[submodule "Packages/EP.U3D.LIBRARY.PCHAT"]
+	path = Packages/EP.U3D.LIBRARY.PCHAT
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.PCHAT.git
+	branch = master
+[submodule "Packages/EP.U3D.LIBRARY.PNET"]
+	path = Packages/EP.U3D.LIBRARY.PNET
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.PNET.git
+	branch = master
+[submodule "Packages/EP.U3D.LIBRARY.POOL"]
+	path = Packages/EP.U3D.LIBRARY.POOL
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.POOL.git
+	branch = master
+[submodule "Packages/EP.U3D.LIBRARY.PPUN"]
+	path = Packages/EP.U3D.LIBRARY.PPUN
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.PPUN.git
+	branch = master
+[submodule "Packages/EP.U3D.LIBRARY.PROTO"]
+	path = Packages/EP.U3D.LIBRARY.PROTO
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.PROTO.git
+	branch = master
+[submodule "Packages/EP.U3D.LIBRARY.PVOICE"]
+	path = Packages/EP.U3D.LIBRARY.PVOICE
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.PVOICE.git
+	branch = master
+[submodule "Packages/EP.U3D.LIBRARY.REPORT"]
+	path = Packages/EP.U3D.LIBRARY.REPORT
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.REPORT.git
+	branch = master
+[submodule "Packages/EP.U3D.LIBRARY.SCENE"]
+	path = Packages/EP.U3D.LIBRARY.SCENE
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.SCENE.git
+	branch = master
+[submodule "Packages/EP.U3D.LIBRARY.TS"]
+	path = Packages/EP.U3D.LIBRARY.TS
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.TS.git
+	branch = master
+[submodule "Packages/EP.U3D.LIBRARY.UI"]
+	path = Packages/EP.U3D.LIBRARY.UI
+	url = git@github.com:eframework-cn/EP.U3D.LIBRARY.UI.git
+	branch = master
+[submodule "Packages/EP.U3D.RUNTIME.ILR"]
+	path = Packages/EP.U3D.RUNTIME.ILR
+	url = git@github.com:eframework-cn/EP.U3D.RUNTIME.ILR.git
+	branch = master
+[submodule "Packages/EP.U3D.RUNTIME.LUA"]
+	path = Packages/EP.U3D.RUNTIME.LUA
+	url = git@github.com:eframework-cn/EP.U3D.RUNTIME.LUA.git
+	branch = master
+[submodule "Packages/EP.U3D.RUNTIME.TS"]
+	path = Packages/EP.U3D.RUNTIME.TS
+	url = git@github.com:eframework-cn/EP.U3D.RUNTIME.TS.git
 	branch = master

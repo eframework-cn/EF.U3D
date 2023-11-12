@@ -837,17 +837,17 @@ PlayerSettings:
   webGLDecompressionFallback: 0
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: EFRAME_ILR;EFRAME_LUA;DISABLE_ILRUNTIME_DEBUG;NO_PROFILER
+    Android: EFRAME_ILR;EFRAME_LUA;DISABLE_ILRUNTIME_DEBUG;NO_PROFILER;CROSS_PLATFORM_INPUT;MOBILE_INPUT
     CloudRendering: 
     Lumin: 
     Nintendo Switch: 
     PS4: 
     Stadia: 
-    Standalone: EFRAME_ILR;EFRAME_LUA;DISABLE_ILRUNTIME_DEBUG;NO_PROFILER
+    Standalone: EFRAME_ILR;EFRAME_LUA;DISABLE_ILRUNTIME_DEBUG;NO_PROFILER;CROSS_PLATFORM_INPUT
     WebGL: 
-    Windows Store Apps: 
+    Windows Store Apps: MOBILE_INPUT
     XboxOne: 
-    iPhone: 
+    iPhone: CROSS_PLATFORM_INPUT;MOBILE_INPUT
     tvOS: 
   additionalCompilerArguments: {}
   platformArchitecture:

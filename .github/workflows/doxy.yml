@@ -44,22 +44,32 @@ jobs:
                 EP_U3D_EDITOR_PROTO_GIT: ${{ secrets.EP_U3D_EDITOR_PROTO_GIT }}
                 EP_U3D_EDITOR_SCENE_GIT: ${{ secrets.EP_U3D_EDITOR_SCENE_GIT }}
                 EP_U3D_EDITOR_SIM_GIT: ${{ secrets.EP_U3D_EDITOR_SIM_GIT }}
+                EP_U3D_EDITOR_TS_GIT: ${{ secrets.EP_U3D_EDITOR_TS_GIT }}
                 EP_U3D_LIBRARY_ASSET_GIT: ${{ secrets.EP_U3D_LIBRARY_ASSET_GIT }}
                 EP_U3D_LIBRARY_AUDIO_GIT: ${{ secrets.EP_U3D_LIBRARY_AUDIO_GIT }}
                 EP_U3D_LIBRARY_BASE_GIT: ${{ secrets.EP_U3D_LIBRARY_BASE_GIT }}
                 EP_U3D_LIBRARY_EVT_GIT: ${{ secrets.EP_U3D_LIBRARY_EVT_GIT }}
+                EP_U3D_LIBRARY_FGUI_GIT: ${{ secrets.EP_U3D_LIBRARY_FGUI_GIT }}
                 EP_U3D_LIBRARY_I18N_GIT: ${{ secrets.EP_U3D_LIBRARY_I18N_GIT }}
                 EP_U3D_LIBRARY_ILR_GIT: ${{ secrets.EP_U3D_LIBRARY_ILR_GIT }}
                 EP_U3D_LIBRARY_JSON_GIT: ${{ secrets.EP_U3D_LIBRARY_JSON_GIT }}
                 EP_U3D_LIBRARY_LUA_GIT: ${{ secrets.EP_U3D_LIBRARY_LUA_GIT }}
                 EP_U3D_LIBRARY_NET_GIT: ${{ secrets.EP_U3D_LIBRARY_NET_GIT }}
+                EP_U3D_LIBRARY_NGUI_GIT: ${{ secrets.EP_U3D_LIBRARY_NGUI_GIT }}
                 EP_U3D_LIBRARY_PATCH_GIT: ${{ secrets.EP_U3D_LIBRARY_PATCH_GIT }}
+                EP_U3D_LIBRARY_PCHAT_GIT: ${{ secrets.EP_U3D_LIBRARY_PCHAT_GIT }}
+                EP_U3D_LIBRARY_PNET_GIT: ${{ secrets.EP_U3D_LIBRARY_PNET_GIT }}
+                EP_U3D_LIBRARY_POOL_GIT: ${{ secrets.EP_U3D_LIBRARY_POOL_GIT }}
+                EP_U3D_LIBRARY_PPUN_GIT: ${{ secrets.EP_U3D_LIBRARY_PPUN_GIT }}
                 EP_U3D_LIBRARY_PROTO_GIT: ${{ secrets.EP_U3D_LIBRARY_PROTO_GIT }}
+                EP_U3D_LIBRARY_PVOICE_GIT: ${{ secrets.EP_U3D_LIBRARY_PVOICE_GIT }}
                 EP_U3D_LIBRARY_REPORT_GIT: ${{ secrets.EP_U3D_LIBRARY_REPORT_GIT }}
                 EP_U3D_LIBRARY_SCENE_GIT: ${{ secrets.EP_U3D_LIBRARY_SCENE_GIT }}
+                EP_U3D_LIBRARY_TS_GIT: ${{ secrets.EP_U3D_LIBRARY_TS_GIT }}
                 EP_U3D_LIBRARY_UI_GIT: ${{ secrets.EP_U3D_LIBRARY_UI_GIT }}
                 EP_U3D_RUNTIME_ILR_GIT: ${{ secrets.EP_U3D_RUNTIME_ILR_GIT }}
                 EP_U3D_RUNTIME_LUA_GIT: ${{ secrets.EP_U3D_RUNTIME_LUA_GIT }}
+                EP_U3D_RUNTIME_TS_GIT: ${{ secrets.EP_U3D_RUNTIME_TS_GIT }}
               shell: bash
               run: git submodule foreach -q 'bash ../../git-crypt.action || :'
           
