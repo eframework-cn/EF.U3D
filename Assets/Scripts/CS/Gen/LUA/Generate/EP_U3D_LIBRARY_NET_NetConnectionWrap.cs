@@ -220,7 +220,7 @@ public class EP_U3D_LIBRARY_NET_NetConnectionWrap
 				int arg10 = (int)LuaDLL.luaL_checknumber(L, 11);
 				int arg11 = (int)LuaDLL.luaL_checknumber(L, 12);
 				int arg12 = (int)LuaDLL.luaL_checknumber(L, 13);
-				System.Func<EP.U3D.LIBRARY.PROTO.StreamBuffer> arg13 = (System.Func<EP.U3D.LIBRARY.PROTO.StreamBuffer>)ToLua.CheckDelegate<System.Func<EP.U3D.LIBRARY.PROTO.StreamBuffer>>(L, 14);
+				System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer> arg13 = (System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer>)ToLua.CheckDelegate<System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer>>(L, 14);
 				EP.U3D.LIBRARY.NET.NetConnection obj = new EP.U3D.LIBRARY.NET.NetConnection(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13);
 				ToLua.PushObject(L, obj);
 				return 1;
@@ -307,10 +307,10 @@ public class EP_U3D_LIBRARY_NET_NetConnectionWrap
 		{
 			int count = LuaDLL.lua_gettop(L);
 
-			if (count == 2 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.PROTO.StreamBuffer>(L, 2))
+			if (count == 2 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.POOL.StreamBuffer>(L, 2))
 			{
 				EP.U3D.LIBRARY.NET.NetConnection obj = (EP.U3D.LIBRARY.NET.NetConnection)ToLua.CheckObject<EP.U3D.LIBRARY.NET.NetConnection>(L, 1);
-				EP.U3D.LIBRARY.PROTO.StreamBuffer arg0 = (EP.U3D.LIBRARY.PROTO.StreamBuffer)ToLua.ToObject(L, 2);
+				EP.U3D.LIBRARY.POOL.StreamBuffer arg0 = (EP.U3D.LIBRARY.POOL.StreamBuffer)ToLua.ToObject(L, 2);
 				obj.Send(arg0);
 				return 0;
 			}
@@ -339,10 +339,10 @@ public class EP_U3D_LIBRARY_NET_NetConnectionWrap
 		{
 			int count = LuaDLL.lua_gettop(L);
 
-			if (count == 2 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.PROTO.StreamBuffer>(L, 2))
+			if (count == 2 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.POOL.StreamBuffer>(L, 2))
 			{
 				EP.U3D.LIBRARY.NET.NetConnection obj = (EP.U3D.LIBRARY.NET.NetConnection)ToLua.CheckObject<EP.U3D.LIBRARY.NET.NetConnection>(L, 1);
-				EP.U3D.LIBRARY.PROTO.StreamBuffer arg0 = (EP.U3D.LIBRARY.PROTO.StreamBuffer)ToLua.ToObject(L, 2);
+				EP.U3D.LIBRARY.POOL.StreamBuffer arg0 = (EP.U3D.LIBRARY.POOL.StreamBuffer)ToLua.ToObject(L, 2);
 				obj.SendAsync(arg0);
 				return 0;
 			}
@@ -620,7 +620,7 @@ public class EP_U3D_LIBRARY_NET_NetConnectionWrap
 		{
 			o = ToLua.ToObject(L, 1);
 			EP.U3D.LIBRARY.NET.NetConnection obj = (EP.U3D.LIBRARY.NET.NetConnection)o;
-			System.Func<EP.U3D.LIBRARY.PROTO.StreamBuffer> ret = obj.BeatMsg;
+			System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer> ret = obj.BeatMsg;
 			ToLua.Push(L, ret);
 			return 1;
 		}
@@ -1023,7 +1023,7 @@ public class EP_U3D_LIBRARY_NET_NetConnectionWrap
 		{
 			o = ToLua.ToObject(L, 1);
 			EP.U3D.LIBRARY.NET.NetConnection obj = (EP.U3D.LIBRARY.NET.NetConnection)o;
-			System.Func<EP.U3D.LIBRARY.PROTO.StreamBuffer> arg0 = (System.Func<EP.U3D.LIBRARY.PROTO.StreamBuffer>)ToLua.CheckDelegate<System.Func<EP.U3D.LIBRARY.PROTO.StreamBuffer>>(L, 2);
+			System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer> arg0 = (System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer>)ToLua.CheckDelegate<System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer>>(L, 2);
 			obj.BeatMsg = arg0;
 			return 0;
 		}

@@ -262,7 +262,7 @@ public static class LuaBinder
 		L.RegFunction("Action_UnityEngine_AsyncOperation", System_Action_UnityEngine_AsyncOperation);
 		L.RegFunction("Action_UnityEngine_Playables_PlayableDirector", System_Action_UnityEngine_Playables_PlayableDirector);
 		L.RegFunction("Action_UnityEngine_SceneManagement_Scene", System_Action_UnityEngine_SceneManagement_Scene);
-		L.RegFunction("Func_EP_U3D_LIBRARY_PROTO_StreamBuffer", System_Func_EP_U3D_LIBRARY_PROTO_StreamBuffer);
+		L.RegFunction("Func_EP_U3D_LIBRARY_POOL_StreamBuffer", System_Func_EP_U3D_LIBRARY_POOL_StreamBuffer);
 		L.RegFunction("Action_string_bytes", System_Action_string_bytes);
 		L.RegFunction("Action_string_bool", System_Action_string_bool);
 		L.EndModule();
@@ -1152,7 +1152,7 @@ public static class LuaBinder
 	}
 
 	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
-	static int System_Func_EP_U3D_LIBRARY_PROTO_StreamBuffer(IntPtr L)
+	static int System_Func_EP_U3D_LIBRARY_POOL_StreamBuffer(IntPtr L)
 	{
 		try
 		{
@@ -1161,13 +1161,13 @@ public static class LuaBinder
 
 			if (count == 1)
 			{
-				Delegate arg1 = DelegateTraits<System.Func<EP.U3D.LIBRARY.PROTO.StreamBuffer>>.Create(func);
+				Delegate arg1 = DelegateTraits<System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer>>.Create(func);
 				ToLua.Push(L, arg1);
 			}
 			else
 			{
 				LuaTable self = ToLua.CheckLuaTable(L, 2);
-				Delegate arg1 = DelegateTraits<System.Func<EP.U3D.LIBRARY.PROTO.StreamBuffer>>.Create(func, self);
+				Delegate arg1 = DelegateTraits<System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer>>.Create(func, self);
 				ToLua.Push(L, arg1);
 			}
 			return 1;

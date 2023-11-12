@@ -30,10 +30,10 @@ namespace ILRuntime.Runtime.Generated
         /// Prevent classes to be striped while buiding player.
         /// </summary>
         public static List<Type> PreventToStrip = new List<Type>() { 
-            typeof(UnityEngine.Coroutine),
             typeof(EP.U3D.LIBRARY.UI.UIMeta),
             typeof(UnityEngine.Canvas),
             typeof(System.Delegate),
+            typeof(UnityEngine.Coroutine),
 
         };
         /// <summary>
@@ -42,13 +42,10 @@ namespace ILRuntime.Runtime.Generated
         public static void Initialize(ILRuntime.Runtime.Enviorment.AppDomain app)
         {
             if (PreventToStrip != null) PreventToStrip.Clear();
-            EP_U3D_LIBRARY_BASE_Loom_Binding.Register(app);
-            System_Object_Binding.Register(app);
-            EP_U3D_RUNTIME_ILR_ILRComponent_Binding.Register(app);
-            UnityEngine_WaitForSeconds_Binding.Register(app);
-            System_NotSupportedException_Binding.Register(app);
             System_Array_Binding.Register(app);
             EP_U3D_LIBRARY_SCENE_SceneManager_Binding.Register(app);
+            EP_U3D_LIBRARY_BASE_Constants_Binding.Register(app);
+            System_Object_Binding.Register(app);
             EP_U3D_LIBRARY_BASE_Helper_Binding.Register(app);
             UnityEngine_SceneManagement_Scene_Binding.Register(app);
             EP_U3D_LIBRARY_EVT_EvtManager_Binding.Register(app);
@@ -68,6 +65,7 @@ namespace ILRuntime.Runtime.Generated
             System_Collections_Generic_List_1_ILTypeInstance_Binding.Register(app);
             UnityEngine_Object_Binding.Register(app);
             System_Action_Binding.Register(app);
+            EP_U3D_RUNTIME_ILR_ILRComponent_Binding.Register(app);
             System_Collections_Generic_Dictionary_2_Int32_List_1_ILTypeInstance_Binding_Enumerator_Binding.Register(app);
             System_Collections_Generic_KeyValuePair_2_Int32_List_1_ILTypeInstance_Binding.Register(app);
             System_Int32_Binding.Register(app);
@@ -77,9 +75,11 @@ namespace ILRuntime.Runtime.Generated
             System_Text_Encoding_Binding.Register(app);
             EP_U3D_LIBRARY_PROTO_ProtoEncoder_Binding.Register(app);
             EP_U3D_LIBRARY_PROTO_ProtoDecoder_Binding.Register(app);
-            EP_U3D_LIBRARY_PROTO_ObjectPool_Binding.Register(app);
+            EP_U3D_LIBRARY_POOL_ObjectPool_Binding.Register(app);
+            EP_U3D_LIBRARY_BASE_Loom_Binding.Register(app);
+            UnityEngine_WaitForSeconds_Binding.Register(app);
+            System_NotSupportedException_Binding.Register(app);
             EP_U3D_LIBRARY_NET_NetConnection_Binding.Register(app);
-            EP_U3D_LIBRARY_BASE_Constants_Binding.Register(app);
             EP_U3D_LIBRARY_REPORT_Reporter_Binding.Register(app);
 
             ILRuntime.CLR.TypeSystem.CLRType __clrType = null;

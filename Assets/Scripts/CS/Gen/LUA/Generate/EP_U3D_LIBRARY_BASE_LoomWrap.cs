@@ -13,6 +13,10 @@ public class EP_U3D_LIBRARY_BASE_LoomWrap
 		L.RegFunction("IsInMainThread", IsInMainThread);
 		L.RegFunction("QueueInMainThread", QueueInMainThread);
 		L.RegFunction("RunAsync", RunAsync);
+		L.RegFunction("SetTimeout", SetTimeout);
+		L.RegFunction("ClearTimeout", ClearTimeout);
+		L.RegFunction("SetInterval", SetInterval);
+		L.RegFunction("ClearInterval", ClearInterval);
 		L.RegFunction("__eq", op_Equality);
 		L.RegFunction("__tostring", ToLua.op_ToString);
 		L.RegVar("Instance", get_Instance, set_Instance);
@@ -137,6 +141,74 @@ public class EP_U3D_LIBRARY_BASE_LoomWrap
 			System.Threading.Thread o = EP.U3D.LIBRARY.BASE.Loom.RunAsync(arg0);
 			ToLua.PushSealed(L, o);
 			return 1;
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int SetTimeout(IntPtr L)
+	{
+		try
+		{
+			ToLua.CheckArgsCount(L, 2);
+			System.Action arg0 = (System.Action)ToLua.CheckDelegate<System.Action>(L, 1);
+			float arg1 = (float)LuaDLL.luaL_checknumber(L, 2);
+			EP.U3D.LIBRARY.BASE.Loom.Timer o = EP.U3D.LIBRARY.BASE.Loom.SetTimeout(arg0, arg1);
+			ToLua.PushObject(L, o);
+			return 1;
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int ClearTimeout(IntPtr L)
+	{
+		try
+		{
+			ToLua.CheckArgsCount(L, 1);
+			EP.U3D.LIBRARY.BASE.Loom.Timer arg0 = (EP.U3D.LIBRARY.BASE.Loom.Timer)ToLua.CheckObject<EP.U3D.LIBRARY.BASE.Loom.Timer>(L, 1);
+			EP.U3D.LIBRARY.BASE.Loom.ClearTimeout(arg0);
+			return 0;
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int SetInterval(IntPtr L)
+	{
+		try
+		{
+			ToLua.CheckArgsCount(L, 2);
+			System.Action arg0 = (System.Action)ToLua.CheckDelegate<System.Action>(L, 1);
+			float arg1 = (float)LuaDLL.luaL_checknumber(L, 2);
+			EP.U3D.LIBRARY.BASE.Loom.Timer o = EP.U3D.LIBRARY.BASE.Loom.SetInterval(arg0, arg1);
+			ToLua.PushObject(L, o);
+			return 1;
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int ClearInterval(IntPtr L)
+	{
+		try
+		{
+			ToLua.CheckArgsCount(L, 1);
+			EP.U3D.LIBRARY.BASE.Loom.Timer arg0 = (EP.U3D.LIBRARY.BASE.Loom.Timer)ToLua.CheckObject<EP.U3D.LIBRARY.BASE.Loom.Timer>(L, 1);
+			EP.U3D.LIBRARY.BASE.Loom.ClearInterval(arg0);
+			return 0;
 		}
 		catch (Exception e)
 		{

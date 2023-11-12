@@ -59,25 +59,25 @@ function NetManager.SendMsg(id, body, uid, rid, app) end
 ---@param body EP.U3D.LIBRARY.PROTO.IProto
 ---@param uid int
 ---@param rid int
----@return EP.U3D.LIBRARY.PROTO.StreamBuffer
+---@return EP.U3D.LIBRARY.POOL.StreamBuffer
 function NetManager.EncodeMsg(id, body, uid, rid) end
 
 ---@overload fun(id:int, body:byte[], offset:int):EP.U3D.LIBRARY.PROTO.IProto
 ---@param id int
----@param body EP.U3D.LIBRARY.PROTO.StreamBuffer
+---@param body EP.U3D.LIBRARY.POOL.StreamBuffer
 ---@param offset int
 ---@return EP.U3D.LIBRARY.PROTO.IProto
 function NetManager.DecodeMsg(id, body, offset) end
 
 ---@param type System.Type
----@param buffer EP.U3D.LIBRARY.PROTO.StreamBuffer
+---@param buffer EP.U3D.LIBRARY.POOL.StreamBuffer
 ---@param offset int
 ---@return EP.U3D.LIBRARY.PROTO.IProto
 function NetManager.DecodePB(type, buffer, offset) end
 
 ---@param proto EP.U3D.LIBRARY.PROTO.IProto
 ---@param offset int
----@return EP.U3D.LIBRARY.PROTO.StreamBuffer
+---@return EP.U3D.LIBRARY.POOL.StreamBuffer
 function NetManager.EncodePB(proto, offset) end
 
 ---@param content System.String
@@ -89,7 +89,7 @@ function NetManager.DecodeJson(content, type) end
 ---@return System.String
 function NetManager.EncodeJson(obj) end
 
----@overload fun(id:int, body:EP.U3D.LIBRARY.PROTO.StreamBuffer, func:System.Action, uid:int, rid:int, host:System.String):void
+---@overload fun(id:int, body:EP.U3D.LIBRARY.POOL.StreamBuffer, func:System.Action, uid:int, rid:int, host:System.String):void
 ---@param id int
 ---@param body EP.U3D.LIBRARY.PROTO.IProto
 ---@param func System.Action

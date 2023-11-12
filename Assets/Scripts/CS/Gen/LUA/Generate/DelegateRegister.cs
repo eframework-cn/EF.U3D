@@ -41,7 +41,7 @@ public class DelegateRegister
 		DelegateFactory.Dict.Add(typeof(UnityEngine.Events.UnityAction<string>), register.UnityEngine_Events_UnityAction_string);
 		DelegateFactory.Dict.Add(typeof(System.Action<UnityEngine.SceneManagement.Scene>), register.System_Action_UnityEngine_SceneManagement_Scene);
 		DelegateFactory.Dict.Add(typeof(EP.U3D.LIBRARY.ASSET.AssetManager.Callback), register.EP_U3D_LIBRARY_ASSET_AssetManager_Callback);
-		DelegateFactory.Dict.Add(typeof(System.Func<EP.U3D.LIBRARY.PROTO.StreamBuffer>), register.System_Func_EP_U3D_LIBRARY_PROTO_StreamBuffer);
+		DelegateFactory.Dict.Add(typeof(System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer>), register.System_Func_EP_U3D_LIBRARY_POOL_StreamBuffer);
 		DelegateFactory.Dict.Add(typeof(System.Action<string,byte[]>), register.System_Action_string_bytes);
 		DelegateFactory.Dict.Add(typeof(EP.U3D.LIBRARY.SCENE.SceneManager.SwapDelegate), register.EP_U3D_LIBRARY_SCENE_SceneManager_SwapDelegate);
 		DelegateFactory.Dict.Add(typeof(System.Action<string,bool>), register.System_Action_string_bool);
@@ -77,7 +77,7 @@ public class DelegateRegister
 		DelegateTraits<UnityEngine.Events.UnityAction<string>>.Init(register.UnityEngine_Events_UnityAction_string);
 		DelegateTraits<System.Action<UnityEngine.SceneManagement.Scene>>.Init(register.System_Action_UnityEngine_SceneManagement_Scene);
 		DelegateTraits<EP.U3D.LIBRARY.ASSET.AssetManager.Callback>.Init(register.EP_U3D_LIBRARY_ASSET_AssetManager_Callback);
-		DelegateTraits<System.Func<EP.U3D.LIBRARY.PROTO.StreamBuffer>>.Init(register.System_Func_EP_U3D_LIBRARY_PROTO_StreamBuffer);
+		DelegateTraits<System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer>>.Init(register.System_Func_EP_U3D_LIBRARY_POOL_StreamBuffer);
 		DelegateTraits<System.Action<string,byte[]>>.Init(register.System_Action_string_bytes);
 		DelegateTraits<EP.U3D.LIBRARY.SCENE.SceneManager.SwapDelegate>.Init(register.EP_U3D_LIBRARY_SCENE_SceneManager_SwapDelegate);
 		DelegateTraits<System.Action<string,bool>>.Init(register.System_Action_string_bool);
@@ -113,7 +113,7 @@ public class DelegateRegister
 		TypeTraits<UnityEngine.Events.UnityAction<string>>.Init(register.Check_UnityEngine_Events_UnityAction_string);
 		TypeTraits<System.Action<UnityEngine.SceneManagement.Scene>>.Init(register.Check_System_Action_UnityEngine_SceneManagement_Scene);
 		TypeTraits<EP.U3D.LIBRARY.ASSET.AssetManager.Callback>.Init(register.Check_EP_U3D_LIBRARY_ASSET_AssetManager_Callback);
-		TypeTraits<System.Func<EP.U3D.LIBRARY.PROTO.StreamBuffer>>.Init(register.Check_System_Func_EP_U3D_LIBRARY_PROTO_StreamBuffer);
+		TypeTraits<System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer>>.Init(register.Check_System_Func_EP_U3D_LIBRARY_POOL_StreamBuffer);
 		TypeTraits<System.Action<string,byte[]>>.Init(register.Check_System_Action_string_bytes);
 		TypeTraits<EP.U3D.LIBRARY.SCENE.SceneManager.SwapDelegate>.Init(register.Check_EP_U3D_LIBRARY_SCENE_SceneManager_SwapDelegate);
 		TypeTraits<System.Action<string,bool>>.Init(register.Check_System_Action_string_bool);
@@ -149,7 +149,7 @@ public class DelegateRegister
 		StackTraits<UnityEngine.Events.UnityAction<string>>.Push = register.Push_UnityEngine_Events_UnityAction_string;
 		StackTraits<System.Action<UnityEngine.SceneManagement.Scene>>.Push = register.Push_System_Action_UnityEngine_SceneManagement_Scene;
 		StackTraits<EP.U3D.LIBRARY.ASSET.AssetManager.Callback>.Push = register.Push_EP_U3D_LIBRARY_ASSET_AssetManager_Callback;
-		StackTraits<System.Func<EP.U3D.LIBRARY.PROTO.StreamBuffer>>.Push = register.Push_System_Func_EP_U3D_LIBRARY_PROTO_StreamBuffer;
+		StackTraits<System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer>>.Push = register.Push_System_Func_EP_U3D_LIBRARY_POOL_StreamBuffer;
 		StackTraits<System.Action<string,byte[]>>.Push = register.Push_System_Action_string_bytes;
 		StackTraits<EP.U3D.LIBRARY.SCENE.SceneManager.SwapDelegate>.Push = register.Push_EP_U3D_LIBRARY_SCENE_SceneManager_SwapDelegate;
 		StackTraits<System.Action<string,bool>>.Push = register.Push_System_Action_string_bool;
@@ -1941,61 +1941,61 @@ public class DelegateRegister
 		ToLua.Push(L, o);
 	}
 
-	class System_Func_EP_U3D_LIBRARY_PROTO_StreamBuffer_Event : LuaDelegate
+	class System_Func_EP_U3D_LIBRARY_POOL_StreamBuffer_Event : LuaDelegate
 	{
-		public System_Func_EP_U3D_LIBRARY_PROTO_StreamBuffer_Event(LuaFunction func) : base(func) { }
-		public System_Func_EP_U3D_LIBRARY_PROTO_StreamBuffer_Event(LuaFunction func, LuaTable self) : base(func, self) { }
+		public System_Func_EP_U3D_LIBRARY_POOL_StreamBuffer_Event(LuaFunction func) : base(func) { }
+		public System_Func_EP_U3D_LIBRARY_POOL_StreamBuffer_Event(LuaFunction func, LuaTable self) : base(func, self) { }
 
-		public EP.U3D.LIBRARY.PROTO.StreamBuffer Call()
+		public EP.U3D.LIBRARY.POOL.StreamBuffer Call()
 		{
 			func.BeginPCall();
 			func.PCall();
-			EP.U3D.LIBRARY.PROTO.StreamBuffer ret = (EP.U3D.LIBRARY.PROTO.StreamBuffer)func.CheckObject(typeof(EP.U3D.LIBRARY.PROTO.StreamBuffer));
+			EP.U3D.LIBRARY.POOL.StreamBuffer ret = (EP.U3D.LIBRARY.POOL.StreamBuffer)func.CheckObject(typeof(EP.U3D.LIBRARY.POOL.StreamBuffer));
 			func.EndPCall();
 			return ret;
 		}
 
-		public EP.U3D.LIBRARY.PROTO.StreamBuffer CallWithSelf()
+		public EP.U3D.LIBRARY.POOL.StreamBuffer CallWithSelf()
 		{
 			func.BeginPCall();
 			func.Push(self);
 			func.PCall();
-			EP.U3D.LIBRARY.PROTO.StreamBuffer ret = (EP.U3D.LIBRARY.PROTO.StreamBuffer)func.CheckObject(typeof(EP.U3D.LIBRARY.PROTO.StreamBuffer));
+			EP.U3D.LIBRARY.POOL.StreamBuffer ret = (EP.U3D.LIBRARY.POOL.StreamBuffer)func.CheckObject(typeof(EP.U3D.LIBRARY.POOL.StreamBuffer));
 			func.EndPCall();
 			return ret;
 		}
 	}
 
-	public System.Func<EP.U3D.LIBRARY.PROTO.StreamBuffer> System_Func_EP_U3D_LIBRARY_PROTO_StreamBuffer(LuaFunction func, LuaTable self, bool flag)
+	public System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer> System_Func_EP_U3D_LIBRARY_POOL_StreamBuffer(LuaFunction func, LuaTable self, bool flag)
 	{
 		if (func == null)
 		{
-			System.Func<EP.U3D.LIBRARY.PROTO.StreamBuffer> fn = delegate() { return null; };
+			System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer> fn = delegate() { return null; };
 			return fn;
 		}
 
 		if(!flag)
 		{
-			System_Func_EP_U3D_LIBRARY_PROTO_StreamBuffer_Event target = new System_Func_EP_U3D_LIBRARY_PROTO_StreamBuffer_Event(func);
-			System.Func<EP.U3D.LIBRARY.PROTO.StreamBuffer> d = target.Call;
+			System_Func_EP_U3D_LIBRARY_POOL_StreamBuffer_Event target = new System_Func_EP_U3D_LIBRARY_POOL_StreamBuffer_Event(func);
+			System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer> d = target.Call;
 			target.method = d.Method;
 			return d;
 		}
 		else
 		{
-			System_Func_EP_U3D_LIBRARY_PROTO_StreamBuffer_Event target = new System_Func_EP_U3D_LIBRARY_PROTO_StreamBuffer_Event(func, self);
-			System.Func<EP.U3D.LIBRARY.PROTO.StreamBuffer> d = target.CallWithSelf;
+			System_Func_EP_U3D_LIBRARY_POOL_StreamBuffer_Event target = new System_Func_EP_U3D_LIBRARY_POOL_StreamBuffer_Event(func, self);
+			System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer> d = target.CallWithSelf;
 			target.method = d.Method;
 			return d;
 		}
 	}
 
-	bool Check_System_Func_EP_U3D_LIBRARY_PROTO_StreamBuffer(IntPtr L, int pos)
+	bool Check_System_Func_EP_U3D_LIBRARY_POOL_StreamBuffer(IntPtr L, int pos)
 	{
-		return TypeChecker.CheckDelegateType(typeof(System.Func<EP.U3D.LIBRARY.PROTO.StreamBuffer>), L, pos);
+		return TypeChecker.CheckDelegateType(typeof(System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer>), L, pos);
 	}
 
-	void Push_System_Func_EP_U3D_LIBRARY_PROTO_StreamBuffer(IntPtr L, System.Func<EP.U3D.LIBRARY.PROTO.StreamBuffer> o)
+	void Push_System_Func_EP_U3D_LIBRARY_POOL_StreamBuffer(IntPtr L, System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer> o)
 	{
 		ToLua.Push(L, o);
 	}

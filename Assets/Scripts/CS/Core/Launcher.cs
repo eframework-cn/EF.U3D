@@ -11,6 +11,7 @@ using EP.U3D.LIBRARY.PATCH;
 using EP.U3D.LIBRARY.UI;
 using EP.U3D.LIBRARY.I18N;
 using EP.U3D.LIBRARY.ASSET;
+using EP.U3D.LIBRARY.POOL;
 
 #if EFRAME_ILR
 using EP.U3D.RUNTIME.ILR;
@@ -79,6 +80,7 @@ namespace CS.Core
             Constants.RELEASE_MODE = Preferences.Instance.ReleaseMode;
             Constants.REPORT_URL = Preferences.Instance.LogServer;
             Loom.Initialize(transform);
+            GameObjectPool.Initialize(transform);
 
             #region compare uuid and cleanup
             var uuid = Helper.StringFormat("{0}{1}", Constants.CONFIG_PATH, Preferences.Instance.UUID);

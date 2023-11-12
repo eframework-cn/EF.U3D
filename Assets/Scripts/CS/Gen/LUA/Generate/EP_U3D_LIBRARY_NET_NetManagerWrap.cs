@@ -271,7 +271,7 @@ public class EP_U3D_LIBRARY_NET_NetManagerWrap
 				int arg9 = (int)LuaDLL.luaL_checknumber(L, 10);
 				int arg10 = (int)LuaDLL.luaL_checknumber(L, 11);
 				int arg11 = (int)LuaDLL.luaL_checknumber(L, 12);
-				System.Func<EP.U3D.LIBRARY.PROTO.StreamBuffer> arg12 = (System.Func<EP.U3D.LIBRARY.PROTO.StreamBuffer>)ToLua.CheckDelegate<System.Func<EP.U3D.LIBRARY.PROTO.StreamBuffer>>(L, 13);
+				System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer> arg12 = (System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer>)ToLua.CheckDelegate<System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer>>(L, 13);
 				EP.U3D.LIBRARY.NET.NetConnection o = EP.U3D.LIBRARY.NET.NetManager.ConnectTo(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12);
 				ToLua.PushObject(L, o);
 				return 1;
@@ -512,7 +512,7 @@ public class EP_U3D_LIBRARY_NET_NetManagerWrap
 			if (count == 1)
 			{
 				int arg0 = (int)LuaDLL.luaL_checknumber(L, 1);
-				EP.U3D.LIBRARY.PROTO.StreamBuffer o = EP.U3D.LIBRARY.NET.NetManager.EncodeMsg(arg0);
+				EP.U3D.LIBRARY.POOL.StreamBuffer o = EP.U3D.LIBRARY.NET.NetManager.EncodeMsg(arg0);
 				ToLua.PushSealed(L, o);
 				return 1;
 			}
@@ -520,7 +520,7 @@ public class EP_U3D_LIBRARY_NET_NetManagerWrap
 			{
 				int arg0 = (int)LuaDLL.luaL_checknumber(L, 1);
 				EP.U3D.LIBRARY.PROTO.IProto arg1 = (EP.U3D.LIBRARY.PROTO.IProto)ToLua.CheckObject<EP.U3D.LIBRARY.PROTO.IProto>(L, 2);
-				EP.U3D.LIBRARY.PROTO.StreamBuffer o = EP.U3D.LIBRARY.NET.NetManager.EncodeMsg(arg0, arg1);
+				EP.U3D.LIBRARY.POOL.StreamBuffer o = EP.U3D.LIBRARY.NET.NetManager.EncodeMsg(arg0, arg1);
 				ToLua.PushSealed(L, o);
 				return 1;
 			}
@@ -529,7 +529,7 @@ public class EP_U3D_LIBRARY_NET_NetManagerWrap
 				int arg0 = (int)LuaDLL.luaL_checknumber(L, 1);
 				EP.U3D.LIBRARY.PROTO.IProto arg1 = (EP.U3D.LIBRARY.PROTO.IProto)ToLua.CheckObject<EP.U3D.LIBRARY.PROTO.IProto>(L, 2);
 				int arg2 = (int)LuaDLL.luaL_checknumber(L, 3);
-				EP.U3D.LIBRARY.PROTO.StreamBuffer o = EP.U3D.LIBRARY.NET.NetManager.EncodeMsg(arg0, arg1, arg2);
+				EP.U3D.LIBRARY.POOL.StreamBuffer o = EP.U3D.LIBRARY.NET.NetManager.EncodeMsg(arg0, arg1, arg2);
 				ToLua.PushSealed(L, o);
 				return 1;
 			}
@@ -539,7 +539,7 @@ public class EP_U3D_LIBRARY_NET_NetManagerWrap
 				EP.U3D.LIBRARY.PROTO.IProto arg1 = (EP.U3D.LIBRARY.PROTO.IProto)ToLua.CheckObject<EP.U3D.LIBRARY.PROTO.IProto>(L, 2);
 				int arg2 = (int)LuaDLL.luaL_checknumber(L, 3);
 				int arg3 = (int)LuaDLL.luaL_checknumber(L, 4);
-				EP.U3D.LIBRARY.PROTO.StreamBuffer o = EP.U3D.LIBRARY.NET.NetManager.EncodeMsg(arg0, arg1, arg2, arg3);
+				EP.U3D.LIBRARY.POOL.StreamBuffer o = EP.U3D.LIBRARY.NET.NetManager.EncodeMsg(arg0, arg1, arg2, arg3);
 				ToLua.PushSealed(L, o);
 				return 1;
 			}
@@ -561,10 +561,10 @@ public class EP_U3D_LIBRARY_NET_NetManagerWrap
 		{
 			int count = LuaDLL.lua_gettop(L);
 
-			if (count == 2 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.PROTO.StreamBuffer>(L, 2))
+			if (count == 2 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.POOL.StreamBuffer>(L, 2))
 			{
 				int arg0 = (int)LuaDLL.luaL_checknumber(L, 1);
-				EP.U3D.LIBRARY.PROTO.StreamBuffer arg1 = (EP.U3D.LIBRARY.PROTO.StreamBuffer)ToLua.ToObject(L, 2);
+				EP.U3D.LIBRARY.POOL.StreamBuffer arg1 = (EP.U3D.LIBRARY.POOL.StreamBuffer)ToLua.ToObject(L, 2);
 				EP.U3D.LIBRARY.PROTO.IProto o = EP.U3D.LIBRARY.NET.NetManager.DecodeMsg(arg0, arg1);
 				ToLua.PushObject(L, o);
 				return 1;
@@ -577,10 +577,10 @@ public class EP_U3D_LIBRARY_NET_NetManagerWrap
 				ToLua.PushObject(L, o);
 				return 1;
 			}
-			else if (count == 3 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.PROTO.StreamBuffer, int>(L, 2))
+			else if (count == 3 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.POOL.StreamBuffer, int>(L, 2))
 			{
 				int arg0 = (int)LuaDLL.luaL_checknumber(L, 1);
-				EP.U3D.LIBRARY.PROTO.StreamBuffer arg1 = (EP.U3D.LIBRARY.PROTO.StreamBuffer)ToLua.ToObject(L, 2);
+				EP.U3D.LIBRARY.POOL.StreamBuffer arg1 = (EP.U3D.LIBRARY.POOL.StreamBuffer)ToLua.ToObject(L, 2);
 				int arg2 = (int)LuaDLL.lua_tonumber(L, 3);
 				EP.U3D.LIBRARY.PROTO.IProto o = EP.U3D.LIBRARY.NET.NetManager.DecodeMsg(arg0, arg1, arg2);
 				ToLua.PushObject(L, o);
@@ -616,7 +616,7 @@ public class EP_U3D_LIBRARY_NET_NetManagerWrap
 			if (count == 2)
 			{
 				System.Type arg0 = ToLua.CheckMonoType(L, 1);
-				EP.U3D.LIBRARY.PROTO.StreamBuffer arg1 = (EP.U3D.LIBRARY.PROTO.StreamBuffer)ToLua.CheckObject(L, 2, typeof(EP.U3D.LIBRARY.PROTO.StreamBuffer));
+				EP.U3D.LIBRARY.POOL.StreamBuffer arg1 = (EP.U3D.LIBRARY.POOL.StreamBuffer)ToLua.CheckObject(L, 2, typeof(EP.U3D.LIBRARY.POOL.StreamBuffer));
 				EP.U3D.LIBRARY.PROTO.IProto o = EP.U3D.LIBRARY.NET.NetManager.DecodePB(arg0, arg1);
 				ToLua.PushObject(L, o);
 				return 1;
@@ -624,7 +624,7 @@ public class EP_U3D_LIBRARY_NET_NetManagerWrap
 			else if (count == 3)
 			{
 				System.Type arg0 = ToLua.CheckMonoType(L, 1);
-				EP.U3D.LIBRARY.PROTO.StreamBuffer arg1 = (EP.U3D.LIBRARY.PROTO.StreamBuffer)ToLua.CheckObject(L, 2, typeof(EP.U3D.LIBRARY.PROTO.StreamBuffer));
+				EP.U3D.LIBRARY.POOL.StreamBuffer arg1 = (EP.U3D.LIBRARY.POOL.StreamBuffer)ToLua.CheckObject(L, 2, typeof(EP.U3D.LIBRARY.POOL.StreamBuffer));
 				int arg2 = (int)LuaDLL.luaL_checknumber(L, 3);
 				EP.U3D.LIBRARY.PROTO.IProto o = EP.U3D.LIBRARY.NET.NetManager.DecodePB(arg0, arg1, arg2);
 				ToLua.PushObject(L, o);
@@ -651,7 +651,7 @@ public class EP_U3D_LIBRARY_NET_NetManagerWrap
 			if (count == 1)
 			{
 				EP.U3D.LIBRARY.PROTO.IProto arg0 = (EP.U3D.LIBRARY.PROTO.IProto)ToLua.CheckObject<EP.U3D.LIBRARY.PROTO.IProto>(L, 1);
-				EP.U3D.LIBRARY.PROTO.StreamBuffer o = EP.U3D.LIBRARY.NET.NetManager.EncodePB(arg0);
+				EP.U3D.LIBRARY.POOL.StreamBuffer o = EP.U3D.LIBRARY.NET.NetManager.EncodePB(arg0);
 				ToLua.PushSealed(L, o);
 				return 1;
 			}
@@ -659,7 +659,7 @@ public class EP_U3D_LIBRARY_NET_NetManagerWrap
 			{
 				EP.U3D.LIBRARY.PROTO.IProto arg0 = (EP.U3D.LIBRARY.PROTO.IProto)ToLua.CheckObject<EP.U3D.LIBRARY.PROTO.IProto>(L, 1);
 				int arg1 = (int)LuaDLL.luaL_checknumber(L, 2);
-				EP.U3D.LIBRARY.PROTO.StreamBuffer o = EP.U3D.LIBRARY.NET.NetManager.EncodePB(arg0, arg1);
+				EP.U3D.LIBRARY.POOL.StreamBuffer o = EP.U3D.LIBRARY.NET.NetManager.EncodePB(arg0, arg1);
 				ToLua.PushSealed(L, o);
 				return 1;
 			}
@@ -729,10 +729,10 @@ public class EP_U3D_LIBRARY_NET_NetManagerWrap
 				EP.U3D.LIBRARY.NET.NetManager.SendCgi(arg0, arg1);
 				return 0;
 			}
-			else if (count == 2 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.PROTO.StreamBuffer>(L, 2))
+			else if (count == 2 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.POOL.StreamBuffer>(L, 2))
 			{
 				int arg0 = (int)LuaDLL.luaL_checknumber(L, 1);
-				EP.U3D.LIBRARY.PROTO.StreamBuffer arg1 = (EP.U3D.LIBRARY.PROTO.StreamBuffer)ToLua.ToObject(L, 2);
+				EP.U3D.LIBRARY.POOL.StreamBuffer arg1 = (EP.U3D.LIBRARY.POOL.StreamBuffer)ToLua.ToObject(L, 2);
 				EP.U3D.LIBRARY.NET.NetManager.SendCgi(arg0, arg1);
 				return 0;
 			}
@@ -744,10 +744,10 @@ public class EP_U3D_LIBRARY_NET_NetManagerWrap
 				EP.U3D.LIBRARY.NET.NetManager.SendCgi(arg0, arg1, arg2);
 				return 0;
 			}
-			else if (count == 3 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.PROTO.StreamBuffer, System.Action<string,byte[]>>(L, 2))
+			else if (count == 3 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.POOL.StreamBuffer, System.Action<string,byte[]>>(L, 2))
 			{
 				int arg0 = (int)LuaDLL.luaL_checknumber(L, 1);
-				EP.U3D.LIBRARY.PROTO.StreamBuffer arg1 = (EP.U3D.LIBRARY.PROTO.StreamBuffer)ToLua.ToObject(L, 2);
+				EP.U3D.LIBRARY.POOL.StreamBuffer arg1 = (EP.U3D.LIBRARY.POOL.StreamBuffer)ToLua.ToObject(L, 2);
 				System.Action<string,byte[]> arg2 = (System.Action<string,byte[]>)ToLua.ToObject(L, 3);
 				EP.U3D.LIBRARY.NET.NetManager.SendCgi(arg0, arg1, arg2);
 				return 0;
@@ -761,10 +761,10 @@ public class EP_U3D_LIBRARY_NET_NetManagerWrap
 				EP.U3D.LIBRARY.NET.NetManager.SendCgi(arg0, arg1, arg2, arg3);
 				return 0;
 			}
-			else if (count == 4 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.PROTO.StreamBuffer, System.Action<string,byte[]>, int>(L, 2))
+			else if (count == 4 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.POOL.StreamBuffer, System.Action<string,byte[]>, int>(L, 2))
 			{
 				int arg0 = (int)LuaDLL.luaL_checknumber(L, 1);
-				EP.U3D.LIBRARY.PROTO.StreamBuffer arg1 = (EP.U3D.LIBRARY.PROTO.StreamBuffer)ToLua.ToObject(L, 2);
+				EP.U3D.LIBRARY.POOL.StreamBuffer arg1 = (EP.U3D.LIBRARY.POOL.StreamBuffer)ToLua.ToObject(L, 2);
 				System.Action<string,byte[]> arg2 = (System.Action<string,byte[]>)ToLua.ToObject(L, 3);
 				int arg3 = (int)LuaDLL.lua_tonumber(L, 4);
 				EP.U3D.LIBRARY.NET.NetManager.SendCgi(arg0, arg1, arg2, arg3);
@@ -780,10 +780,10 @@ public class EP_U3D_LIBRARY_NET_NetManagerWrap
 				EP.U3D.LIBRARY.NET.NetManager.SendCgi(arg0, arg1, arg2, arg3, arg4);
 				return 0;
 			}
-			else if (count == 5 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.PROTO.StreamBuffer, System.Action<string,byte[]>, int, int>(L, 2))
+			else if (count == 5 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.POOL.StreamBuffer, System.Action<string,byte[]>, int, int>(L, 2))
 			{
 				int arg0 = (int)LuaDLL.luaL_checknumber(L, 1);
-				EP.U3D.LIBRARY.PROTO.StreamBuffer arg1 = (EP.U3D.LIBRARY.PROTO.StreamBuffer)ToLua.ToObject(L, 2);
+				EP.U3D.LIBRARY.POOL.StreamBuffer arg1 = (EP.U3D.LIBRARY.POOL.StreamBuffer)ToLua.ToObject(L, 2);
 				System.Action<string,byte[]> arg2 = (System.Action<string,byte[]>)ToLua.ToObject(L, 3);
 				int arg3 = (int)LuaDLL.lua_tonumber(L, 4);
 				int arg4 = (int)LuaDLL.lua_tonumber(L, 5);
@@ -801,10 +801,10 @@ public class EP_U3D_LIBRARY_NET_NetManagerWrap
 				EP.U3D.LIBRARY.NET.NetManager.SendCgi(arg0, arg1, arg2, arg3, arg4, arg5);
 				return 0;
 			}
-			else if (count == 6 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.PROTO.StreamBuffer, System.Action<string,byte[]>, int, int, string>(L, 2))
+			else if (count == 6 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.POOL.StreamBuffer, System.Action<string,byte[]>, int, int, string>(L, 2))
 			{
 				int arg0 = (int)LuaDLL.luaL_checknumber(L, 1);
-				EP.U3D.LIBRARY.PROTO.StreamBuffer arg1 = (EP.U3D.LIBRARY.PROTO.StreamBuffer)ToLua.ToObject(L, 2);
+				EP.U3D.LIBRARY.POOL.StreamBuffer arg1 = (EP.U3D.LIBRARY.POOL.StreamBuffer)ToLua.ToObject(L, 2);
 				System.Action<string,byte[]> arg2 = (System.Action<string,byte[]>)ToLua.ToObject(L, 3);
 				int arg3 = (int)LuaDLL.lua_tonumber(L, 4);
 				int arg4 = (int)LuaDLL.lua_tonumber(L, 5);

@@ -23,4 +23,20 @@ function Loom.QueueInMainThread(action) end
 ---@return System.Threading.Thread
 function Loom.RunAsync(action) end
 
+---@param fun System.Action
+---@param timeout float
+---@return EP.U3D.LIBRARY.BASE.Loom.Timer
+function Loom.SetTimeout(fun, timeout) end
+
+---@param timer EP.U3D.LIBRARY.BASE.Loom.Timer
+function Loom.ClearTimeout(timer) end
+
+---@param fun System.Action
+---@param interval float
+---@return EP.U3D.LIBRARY.BASE.Loom.Timer
+function Loom.SetInterval(fun, interval) end
+
+---@param timer EP.U3D.LIBRARY.BASE.Loom.Timer
+function Loom.ClearInterval(timer) end
+
 EP.U3D.LIBRARY.BASE.Loom = Loom

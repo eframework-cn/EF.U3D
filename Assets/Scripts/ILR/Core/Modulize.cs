@@ -12,6 +12,7 @@ using UIHelper = EP.U3D.RUNTIME.ILR.UI.UIHelper;
 using UIManager = EP.U3D.RUNTIME.ILR.UI.UIManager;
 using NetManager = EP.U3D.RUNTIME.ILR.NET.NetManager;
 using System.Collections.Generic;
+using EP.U3D.LIBRARY.POOL;
 using EP.U3D.LIBRARY.PROTO;
 
 namespace ILR.Core

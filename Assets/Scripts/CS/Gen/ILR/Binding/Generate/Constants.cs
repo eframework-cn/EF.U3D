@@ -27,41 +27,71 @@ namespace ILRuntime.Runtime.Generated
             Type[] args;
             Type type = typeof(EP.U3D.LIBRARY.BASE.Constants);
 
+            field = type.GetField("RELEASE_MODE", flag);
+            app.RegisterCLRFieldGetter(field, get_RELEASE_MODE_0);
+            app.RegisterCLRFieldSetter(field, set_RELEASE_MODE_0);
+            app.RegisterCLRFieldBinding(field, CopyToStack_RELEASE_MODE_0, AssignFromStack_RELEASE_MODE_0);
             field = type.GetField("CONN_SERVER_IP", flag);
-            app.RegisterCLRFieldGetter(field, get_CONN_SERVER_IP_0);
-            app.RegisterCLRFieldSetter(field, set_CONN_SERVER_IP_0);
-            app.RegisterCLRFieldBinding(field, CopyToStack_CONN_SERVER_IP_0, AssignFromStack_CONN_SERVER_IP_0);
+            app.RegisterCLRFieldGetter(field, get_CONN_SERVER_IP_1);
+            app.RegisterCLRFieldSetter(field, set_CONN_SERVER_IP_1);
+            app.RegisterCLRFieldBinding(field, CopyToStack_CONN_SERVER_IP_1, AssignFromStack_CONN_SERVER_IP_1);
             field = type.GetField("CONN_SERVER_PORT", flag);
-            app.RegisterCLRFieldGetter(field, get_CONN_SERVER_PORT_1);
-            app.RegisterCLRFieldSetter(field, set_CONN_SERVER_PORT_1);
-            app.RegisterCLRFieldBinding(field, CopyToStack_CONN_SERVER_PORT_1, AssignFromStack_CONN_SERVER_PORT_1);
+            app.RegisterCLRFieldGetter(field, get_CONN_SERVER_PORT_2);
+            app.RegisterCLRFieldSetter(field, set_CONN_SERVER_PORT_2);
+            app.RegisterCLRFieldBinding(field, CopyToStack_CONN_SERVER_PORT_2, AssignFromStack_CONN_SERVER_PORT_2);
             field = type.GetField("CONN_SERVER_UID", flag);
-            app.RegisterCLRFieldGetter(field, get_CONN_SERVER_UID_2);
-            app.RegisterCLRFieldSetter(field, set_CONN_SERVER_UID_2);
-            app.RegisterCLRFieldBinding(field, CopyToStack_CONN_SERVER_UID_2, AssignFromStack_CONN_SERVER_UID_2);
+            app.RegisterCLRFieldGetter(field, get_CONN_SERVER_UID_3);
+            app.RegisterCLRFieldSetter(field, set_CONN_SERVER_UID_3);
+            app.RegisterCLRFieldBinding(field, CopyToStack_CONN_SERVER_UID_3, AssignFromStack_CONN_SERVER_UID_3);
 
 
         }
 
 
 
-        static object get_CONN_SERVER_IP_0(ref object o)
+        static object get_RELEASE_MODE_0(ref object o)
+        {
+            return EP.U3D.LIBRARY.BASE.Constants.RELEASE_MODE;
+        }
+
+        static StackObject* CopyToStack_RELEASE_MODE_0(ref object o, ILIntepreter __intp, StackObject* __ret, AutoList __mStack)
+        {
+            var result_of_this_method = EP.U3D.LIBRARY.BASE.Constants.RELEASE_MODE;
+            __ret->ObjectType = ObjectTypes.Integer;
+            __ret->Value = result_of_this_method ? 1 : 0;
+            return __ret + 1;
+        }
+
+        static void set_RELEASE_MODE_0(ref object o, object v)
+        {
+            EP.U3D.LIBRARY.BASE.Constants.RELEASE_MODE = (System.Boolean)v;
+        }
+
+        static StackObject* AssignFromStack_RELEASE_MODE_0(ref object o, ILIntepreter __intp, StackObject* ptr_of_this_method, AutoList __mStack)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            System.Boolean @RELEASE_MODE = ptr_of_this_method->Value == 1;
+            EP.U3D.LIBRARY.BASE.Constants.RELEASE_MODE = @RELEASE_MODE;
+            return ptr_of_this_method;
+        }
+
+        static object get_CONN_SERVER_IP_1(ref object o)
         {
             return EP.U3D.LIBRARY.BASE.Constants.CONN_SERVER_IP;
         }
 
-        static StackObject* CopyToStack_CONN_SERVER_IP_0(ref object o, ILIntepreter __intp, StackObject* __ret, AutoList __mStack)
+        static StackObject* CopyToStack_CONN_SERVER_IP_1(ref object o, ILIntepreter __intp, StackObject* __ret, AutoList __mStack)
         {
             var result_of_this_method = EP.U3D.LIBRARY.BASE.Constants.CONN_SERVER_IP;
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }
 
-        static void set_CONN_SERVER_IP_0(ref object o, object v)
+        static void set_CONN_SERVER_IP_1(ref object o, object v)
         {
             EP.U3D.LIBRARY.BASE.Constants.CONN_SERVER_IP = (System.String)v;
         }
 
-        static StackObject* AssignFromStack_CONN_SERVER_IP_0(ref object o, ILIntepreter __intp, StackObject* ptr_of_this_method, AutoList __mStack)
+        static StackObject* AssignFromStack_CONN_SERVER_IP_1(ref object o, ILIntepreter __intp, StackObject* ptr_of_this_method, AutoList __mStack)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             System.String @CONN_SERVER_IP = (System.String)typeof(System.String).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack), (CLR.Utils.Extensions.TypeFlags)0);
@@ -69,12 +99,12 @@ namespace ILRuntime.Runtime.Generated
             return ptr_of_this_method;
         }
 
-        static object get_CONN_SERVER_PORT_1(ref object o)
+        static object get_CONN_SERVER_PORT_2(ref object o)
         {
             return EP.U3D.LIBRARY.BASE.Constants.CONN_SERVER_PORT;
         }
 
-        static StackObject* CopyToStack_CONN_SERVER_PORT_1(ref object o, ILIntepreter __intp, StackObject* __ret, AutoList __mStack)
+        static StackObject* CopyToStack_CONN_SERVER_PORT_2(ref object o, ILIntepreter __intp, StackObject* __ret, AutoList __mStack)
         {
             var result_of_this_method = EP.U3D.LIBRARY.BASE.Constants.CONN_SERVER_PORT;
             __ret->ObjectType = ObjectTypes.Integer;
@@ -82,12 +112,12 @@ namespace ILRuntime.Runtime.Generated
             return __ret + 1;
         }
 
-        static void set_CONN_SERVER_PORT_1(ref object o, object v)
+        static void set_CONN_SERVER_PORT_2(ref object o, object v)
         {
             EP.U3D.LIBRARY.BASE.Constants.CONN_SERVER_PORT = (System.Int32)v;
         }
 
-        static StackObject* AssignFromStack_CONN_SERVER_PORT_1(ref object o, ILIntepreter __intp, StackObject* ptr_of_this_method, AutoList __mStack)
+        static StackObject* AssignFromStack_CONN_SERVER_PORT_2(ref object o, ILIntepreter __intp, StackObject* ptr_of_this_method, AutoList __mStack)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             System.Int32 @CONN_SERVER_PORT = ptr_of_this_method->Value;
@@ -95,12 +125,12 @@ namespace ILRuntime.Runtime.Generated
             return ptr_of_this_method;
         }
 
-        static object get_CONN_SERVER_UID_2(ref object o)
+        static object get_CONN_SERVER_UID_3(ref object o)
         {
             return EP.U3D.LIBRARY.BASE.Constants.CONN_SERVER_UID;
         }
 
-        static StackObject* CopyToStack_CONN_SERVER_UID_2(ref object o, ILIntepreter __intp, StackObject* __ret, AutoList __mStack)
+        static StackObject* CopyToStack_CONN_SERVER_UID_3(ref object o, ILIntepreter __intp, StackObject* __ret, AutoList __mStack)
         {
             var result_of_this_method = EP.U3D.LIBRARY.BASE.Constants.CONN_SERVER_UID;
             __ret->ObjectType = ObjectTypes.Integer;
@@ -108,12 +138,12 @@ namespace ILRuntime.Runtime.Generated
             return __ret + 1;
         }
 
-        static void set_CONN_SERVER_UID_2(ref object o, object v)
+        static void set_CONN_SERVER_UID_3(ref object o, object v)
         {
             EP.U3D.LIBRARY.BASE.Constants.CONN_SERVER_UID = (System.Int32)v;
         }
 
-        static StackObject* AssignFromStack_CONN_SERVER_UID_2(ref object o, ILIntepreter __intp, StackObject* ptr_of_this_method, AutoList __mStack)
+        static StackObject* AssignFromStack_CONN_SERVER_UID_3(ref object o, ILIntepreter __intp, StackObject* ptr_of_this_method, AutoList __mStack)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             System.Int32 @CONN_SERVER_UID = ptr_of_this_method->Value;

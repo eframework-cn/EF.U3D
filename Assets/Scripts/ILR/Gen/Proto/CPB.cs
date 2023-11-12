@@ -119,16 +119,16 @@ namespace ILR.Gen.Proto.CPB
             return mObtained;
         }
 
-        private static EP.U3D.LIBRARY.PROTO.ObjectPool mPool;
-        public EP.U3D.LIBRARY.PROTO.ObjectPool Pool()
+        private static EP.U3D.LIBRARY.POOL.ObjectPool mPool;
+        public EP.U3D.LIBRARY.POOL.ObjectPool Pool()
         {
-            if (mPool == null) mPool = new EP.U3D.LIBRARY.PROTO.ObjectPool(() => new CGI_Hello());
+            if (mPool == null) mPool = new EP.U3D.LIBRARY.POOL.ObjectPool(() => new CGI_Hello());
             return mPool;
         }
 
         public static CGI_Hello Get()
         {
-            if (mPool == null) mPool = new EP.U3D.LIBRARY.PROTO.ObjectPool(() => new CGI_Hello());
+            if (mPool == null) mPool = new EP.U3D.LIBRARY.POOL.ObjectPool(() => new CGI_Hello());
             var obj = (CGI_Hello)mPool.Get();
             obj.Reset();
             return obj;
@@ -138,7 +138,7 @@ namespace ILR.Gen.Proto.CPB
         public void Put()
         {
             if (mDisposed) return;
-            if (mPool == null) mPool = new EP.U3D.LIBRARY.PROTO.ObjectPool(() => new CGI_Hello());
+            if (mPool == null) mPool = new EP.U3D.LIBRARY.POOL.ObjectPool(() => new CGI_Hello());
             mDisposed = true;
             mPool.Put(this);
         }

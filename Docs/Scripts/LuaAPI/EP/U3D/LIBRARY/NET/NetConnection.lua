@@ -35,11 +35,11 @@ function NetConnection:Reconnect() end
 function NetConnection:Disconnect() end
 
 ---@overload fun(buffer:byte[]):void
----@param buffer EP.U3D.LIBRARY.PROTO.StreamBuffer
+---@param buffer EP.U3D.LIBRARY.POOL.StreamBuffer
 function NetConnection:Send(buffer) end
 
 ---@overload fun(buffer:byte[]):void
----@param buffer EP.U3D.LIBRARY.PROTO.StreamBuffer
+---@param buffer EP.U3D.LIBRARY.POOL.StreamBuffer
 function NetConnection:SendAsync(buffer) end
 
 EP.U3D.LIBRARY.NET.NetConnection = NetConnection

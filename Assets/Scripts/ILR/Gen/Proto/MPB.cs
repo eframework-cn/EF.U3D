@@ -134,16 +134,16 @@ namespace ILR.Gen.Proto.MPB
             return mObtained;
         }
 
-        private static EP.U3D.LIBRARY.PROTO.ObjectPool mPool;
-        public EP.U3D.LIBRARY.PROTO.ObjectPool Pool()
+        private static EP.U3D.LIBRARY.POOL.ObjectPool mPool;
+        public EP.U3D.LIBRARY.POOL.ObjectPool Pool()
         {
-            if (mPool == null) mPool = new EP.U3D.LIBRARY.PROTO.ObjectPool(() => new GM_Common());
+            if (mPool == null) mPool = new EP.U3D.LIBRARY.POOL.ObjectPool(() => new GM_Common());
             return mPool;
         }
 
         public static GM_Common Get()
         {
-            if (mPool == null) mPool = new EP.U3D.LIBRARY.PROTO.ObjectPool(() => new GM_Common());
+            if (mPool == null) mPool = new EP.U3D.LIBRARY.POOL.ObjectPool(() => new GM_Common());
             var obj = (GM_Common)mPool.Get();
             obj.Reset();
             return obj;
@@ -153,7 +153,7 @@ namespace ILR.Gen.Proto.MPB
         public void Put()
         {
             if (mDisposed) return;
-            if (mPool == null) mPool = new EP.U3D.LIBRARY.PROTO.ObjectPool(() => new GM_Common());
+            if (mPool == null) mPool = new EP.U3D.LIBRARY.POOL.ObjectPool(() => new GM_Common());
             mDisposed = true;
             mPool.Put(this);
         }
@@ -271,16 +271,16 @@ namespace ILR.Gen.Proto.MPB
             return mObtained;
         }
 
-        private static EP.U3D.LIBRARY.PROTO.ObjectPool mPool;
-        public EP.U3D.LIBRARY.PROTO.ObjectPool Pool()
+        private static EP.U3D.LIBRARY.POOL.ObjectPool mPool;
+        public EP.U3D.LIBRARY.POOL.ObjectPool Pool()
         {
-            if (mPool == null) mPool = new EP.U3D.LIBRARY.PROTO.ObjectPool(() => new GM_LoginReq());
+            if (mPool == null) mPool = new EP.U3D.LIBRARY.POOL.ObjectPool(() => new GM_LoginReq());
             return mPool;
         }
 
         public static GM_LoginReq Get()
         {
-            if (mPool == null) mPool = new EP.U3D.LIBRARY.PROTO.ObjectPool(() => new GM_LoginReq());
+            if (mPool == null) mPool = new EP.U3D.LIBRARY.POOL.ObjectPool(() => new GM_LoginReq());
             var obj = (GM_LoginReq)mPool.Get();
             obj.Reset();
             return obj;
@@ -290,7 +290,7 @@ namespace ILR.Gen.Proto.MPB
         public void Put()
         {
             if (mDisposed) return;
-            if (mPool == null) mPool = new EP.U3D.LIBRARY.PROTO.ObjectPool(() => new GM_LoginReq());
+            if (mPool == null) mPool = new EP.U3D.LIBRARY.POOL.ObjectPool(() => new GM_LoginReq());
             mDisposed = true;
             mPool.Put(this);
         }
@@ -428,16 +428,16 @@ namespace ILR.Gen.Proto.MPB
             return mObtained;
         }
 
-        private static EP.U3D.LIBRARY.PROTO.ObjectPool mPool;
-        public EP.U3D.LIBRARY.PROTO.ObjectPool Pool()
+        private static EP.U3D.LIBRARY.POOL.ObjectPool mPool;
+        public EP.U3D.LIBRARY.POOL.ObjectPool Pool()
         {
-            if (mPool == null) mPool = new EP.U3D.LIBRARY.PROTO.ObjectPool(() => new GM_LoginResp());
+            if (mPool == null) mPool = new EP.U3D.LIBRARY.POOL.ObjectPool(() => new GM_LoginResp());
             return mPool;
         }
 
         public static GM_LoginResp Get()
         {
-            if (mPool == null) mPool = new EP.U3D.LIBRARY.PROTO.ObjectPool(() => new GM_LoginResp());
+            if (mPool == null) mPool = new EP.U3D.LIBRARY.POOL.ObjectPool(() => new GM_LoginResp());
             var obj = (GM_LoginResp)mPool.Get();
             obj.Reset();
             return obj;
@@ -447,7 +447,7 @@ namespace ILR.Gen.Proto.MPB
         public void Put()
         {
             if (mDisposed) return;
-            if (mPool == null) mPool = new EP.U3D.LIBRARY.PROTO.ObjectPool(() => new GM_LoginResp());
+            if (mPool == null) mPool = new EP.U3D.LIBRARY.POOL.ObjectPool(() => new GM_LoginResp());
             mDisposed = true;
             mPool.Put(this);
         }

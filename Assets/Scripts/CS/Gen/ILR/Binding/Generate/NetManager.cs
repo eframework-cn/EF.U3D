@@ -38,7 +38,7 @@ namespace ILRuntime.Runtime.Generated
             args = new Type[]{typeof(System.Int32), typeof(EP.U3D.LIBRARY.PROTO.IProto), typeof(System.Action<System.String, System.Byte[]>), typeof(System.Int32), typeof(System.Int32), typeof(System.String)};
             method = type.GetMethod("SendCgi", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, SendCgi_3);
-            args = new Type[]{typeof(System.Int32), typeof(System.String), typeof(System.Int32), typeof(System.Net.Sockets.ProtocolType), typeof(EP.U3D.LIBRARY.NET.NetConnection.StatusDelegate), typeof(EP.U3D.LIBRARY.NET.NetConnection.StatusDelegate), typeof(EP.U3D.LIBRARY.NET.NetConnection.StatusDelegate), typeof(EP.U3D.LIBRARY.NET.NetConnection.StatusDelegate), typeof(EP.U3D.LIBRARY.NET.NetConnection.StatusDelegate), typeof(System.Int32), typeof(System.Int32), typeof(System.Int32), typeof(System.Func<EP.U3D.LIBRARY.PROTO.StreamBuffer>)};
+            args = new Type[]{typeof(System.Int32), typeof(System.String), typeof(System.Int32), typeof(System.Net.Sockets.ProtocolType), typeof(EP.U3D.LIBRARY.NET.NetConnection.StatusDelegate), typeof(EP.U3D.LIBRARY.NET.NetConnection.StatusDelegate), typeof(EP.U3D.LIBRARY.NET.NetConnection.StatusDelegate), typeof(EP.U3D.LIBRARY.NET.NetConnection.StatusDelegate), typeof(EP.U3D.LIBRARY.NET.NetConnection.StatusDelegate), typeof(System.Int32), typeof(System.Int32), typeof(System.Int32), typeof(System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer>)};
             method = type.GetMethod("ConnectTo", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, ConnectTo_4);
             args = new Type[]{typeof(System.Int32)};
@@ -162,7 +162,7 @@ namespace ILRuntime.Runtime.Generated
             StackObject* __ret = ILIntepreter.Minus(__esp, 13);
 
             ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
-            System.Func<EP.U3D.LIBRARY.PROTO.StreamBuffer> @beatMsg = (System.Func<EP.U3D.LIBRARY.PROTO.StreamBuffer>)typeof(System.Func<EP.U3D.LIBRARY.PROTO.StreamBuffer>).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack), (CLR.Utils.Extensions.TypeFlags)8);
+            System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer> @beatMsg = (System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer>)typeof(System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer>).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack), (CLR.Utils.Extensions.TypeFlags)8);
             __intp.Free(ptr_of_this_method);
 
             ptr_of_this_method = ILIntepreter.Minus(__esp, 2);

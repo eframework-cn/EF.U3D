@@ -18,14 +18,14 @@ using AutoList = ILRuntime.Other.UncheckedList<object>;
 #endif
 namespace ILRuntime.Runtime.Generated
 {
-    unsafe class EP_U3D_LIBRARY_PROTO_ObjectPool_Binding
+    unsafe class EP_U3D_LIBRARY_POOL_ObjectPool_Binding
     {
         public static void Register(ILRuntime.Runtime.Enviorment.AppDomain app)
         {
             BindingFlags flag = BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly;
             MethodBase method;
             Type[] args;
-            Type type = typeof(EP.U3D.LIBRARY.PROTO.ObjectPool);
+            Type type = typeof(EP.U3D.LIBRARY.POOL.ObjectPool);
             args = new Type[]{};
             method = type.GetMethod("Get", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, Get_0);
@@ -47,7 +47,7 @@ namespace ILRuntime.Runtime.Generated
             StackObject* __ret = ILIntepreter.Minus(__esp, 1);
 
             ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
-            EP.U3D.LIBRARY.PROTO.ObjectPool instance_of_this_method = (EP.U3D.LIBRARY.PROTO.ObjectPool)typeof(EP.U3D.LIBRARY.PROTO.ObjectPool).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack), (CLR.Utils.Extensions.TypeFlags)0);
+            EP.U3D.LIBRARY.POOL.ObjectPool instance_of_this_method = (EP.U3D.LIBRARY.POOL.ObjectPool)typeof(EP.U3D.LIBRARY.POOL.ObjectPool).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack), (CLR.Utils.Extensions.TypeFlags)0);
             __intp.Free(ptr_of_this_method);
 
             var result_of_this_method = instance_of_this_method.Get();
@@ -71,7 +71,7 @@ namespace ILRuntime.Runtime.Generated
             __intp.Free(ptr_of_this_method);
 
             ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
-            EP.U3D.LIBRARY.PROTO.ObjectPool instance_of_this_method = (EP.U3D.LIBRARY.PROTO.ObjectPool)typeof(EP.U3D.LIBRARY.PROTO.ObjectPool).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack), (CLR.Utils.Extensions.TypeFlags)0);
+            EP.U3D.LIBRARY.POOL.ObjectPool instance_of_this_method = (EP.U3D.LIBRARY.POOL.ObjectPool)typeof(EP.U3D.LIBRARY.POOL.ObjectPool).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack), (CLR.Utils.Extensions.TypeFlags)0);
             __intp.Free(ptr_of_this_method);
 
             instance_of_this_method.Put(@obj);
@@ -90,7 +90,7 @@ namespace ILRuntime.Runtime.Generated
             __intp.Free(ptr_of_this_method);
 
 
-            var result_of_this_method = new EP.U3D.LIBRARY.PROTO.ObjectPool(@activator);
+            var result_of_this_method = new EP.U3D.LIBRARY.POOL.ObjectPool(@activator);
 
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }

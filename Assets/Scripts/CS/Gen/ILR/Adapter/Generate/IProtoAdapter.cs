@@ -35,7 +35,7 @@ namespace EP.U3D.LIBRARY.PROTO
 
         public class Adapter : EP.U3D.LIBRARY.PROTO.IProto, CrossBindingAdaptorType
         {
-            CrossBindingFunctionInfo<EP.U3D.LIBRARY.PROTO.ObjectPool> mPool_0 = new CrossBindingFunctionInfo<EP.U3D.LIBRARY.PROTO.ObjectPool>("Pool");
+            CrossBindingFunctionInfo<EP.U3D.LIBRARY.POOL.ObjectPool> mPool_0 = new CrossBindingFunctionInfo<EP.U3D.LIBRARY.POOL.ObjectPool>("Pool");
             CrossBindingFunctionInfo<System.Int32> mSize_1 = new CrossBindingFunctionInfo<System.Int32>("Size");
             CrossBindingMethodInfo<EP.U3D.LIBRARY.PROTO.ProtoEncoder> mEncode_2 = new CrossBindingMethodInfo<EP.U3D.LIBRARY.PROTO.ProtoEncoder>("Encode");
             CrossBindingMethodInfo<EP.U3D.LIBRARY.PROTO.ProtoDecoder, System.Int32> mDecode_3 = new CrossBindingMethodInfo<EP.U3D.LIBRARY.PROTO.ProtoDecoder, System.Int32>("Decode");
@@ -61,7 +61,7 @@ namespace EP.U3D.LIBRARY.PROTO
 
             public ILTypeInstance ILInstance { get { return instance; } }
 
-            public EP.U3D.LIBRARY.PROTO.ObjectPool Pool()
+            public EP.U3D.LIBRARY.POOL.ObjectPool Pool()
             {
                 return mPool_0.Invoke(this.instance);
             }

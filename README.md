@@ -40,6 +40,8 @@ A LITE U3D-BASED FRAMEWORK.
 - 优化Excel生成规则（敏感字符转义）
 - 优化Proto生成规则（支持单行注释）
 - 重构Excel和Proto的命名空间
+- 新增GameObjectPool（Unity对象缓存）
+- 新增Loom.SetTimeout/SetInterval等定时器相关接口
 
 ### 2023.8.8 - 2023.9.23
 - 修复ILR/I18N/OBJREFER等组件序列化问题
