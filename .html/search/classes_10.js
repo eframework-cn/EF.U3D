@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['raiseeventoptions_0',['RaiseEventOptions',['../classEP_1_1U3D_1_1LIBRARY_1_1PNET_1_1RaiseEventOptions.html',1,'EP::U3D::LIBRARY::PNET']]],
+  ['rawcodec_1',['RawCodec',['../classEP_1_1U3D_1_1LIBRARY_1_1PVOICE_1_1RawCodec.html',1,'EP::U3D::LIBRARY::PVOICE']]],
+  ['realtime_2',['RealTime',['../classRealTime.html',1,'']]],
+  ['recorder_3',['Recorder',['../classEP_1_1U3D_1_1LIBRARY_1_1PVOICE_1_1Recorder.html',1,'EP::U3D::LIBRARY::PVOICE']]],
+  ['recorderpreset_4',['RecorderPreset',['../classEP_1_1U3D_1_1LIBRARY_1_1PVOICE_1_1RecorderPreset.html',1,'EP::U3D::LIBRARY::PVOICE']]],
+  ['recylemodule_5',['RecyleModule',['../classEP_1_1U3D_1_1LIBRARY_1_1UI_1_1UIWrapContent_1_1RecyleModule.html',1,'EP::U3D::LIBRARY::UI::UIWrapContent']]],
+  ['region_6',['Region',['../classEP_1_1U3D_1_1LIBRARY_1_1PNET_1_1Region.html',1,'EP::U3D::LIBRARY::PNET']]],
+  ['regionhandler_7',['RegionHandler',['../classEP_1_1U3D_1_1LIBRARY_1_1PNET_1_1RegionHandler.html',1,'EP::U3D::LIBRARY::PNET']]],
+  ['regionpinger_8',['RegionPinger',['../classEP_1_1U3D_1_1LIBRARY_1_1PNET_1_1RegionPinger.html',1,'EP::U3D::LIBRARY::PNET']]],
+  ['remotespeakerui_9',['RemoteSpeakerUI',['../classPhoton_1_1Voice_1_1Unity_1_1Demos_1_1DemoVoiceUI_1_1RemoteSpeakerUI.html',1,'Photon::Voice::Unity::Demos::DemoVoiceUI']]],
+  ['remotevoiceinfo_10',['RemoteVoiceInfo',['../classEP_1_1U3D_1_1LIBRARY_1_1PVOICE_1_1RemoteVoiceInfo.html',1,'EP::U3D::LIBRARY::PVOICE']]],
+  ['remotevoicelink_11',['RemoteVoiceLink',['../classEP_1_1U3D_1_1LIBRARY_1_1PVOICE_1_1RemoteVoiceLink.html',1,'EP::U3D::LIBRARY::PVOICE']]],
+  ['remotevoiceoptions_12',['RemoteVoiceOptions',['../structEP_1_1U3D_1_1LIBRARY_1_1PVOICE_1_1RemoteVoiceOptions.html',1,'EP::U3D::LIBRARY::PVOICE']]],
+  ['reporter_13',['Reporter',['../classEP_1_1U3D_1_1LIBRARY_1_1REPORT_1_1Reporter.html',1,'EP::U3D::LIBRARY::REPORT']]],
+  ['resampler_14',['Resampler',['../classEP_1_1U3D_1_1LIBRARY_1_1PVOICE_1_1AudioUtil_1_1Resampler.html',1,'EP::U3D::LIBRARY::PVOICE::AudioUtil']]],
+  ['room_15',['Room',['../classEP_1_1U3D_1_1LIBRARY_1_1PNET_1_1Room.html',1,'EP::U3D::LIBRARY::PNET']]],
+  ['roominfo_16',['RoomInfo',['../classEP_1_1U3D_1_1LIBRARY_1_1PNET_1_1RoomInfo.html',1,'EP::U3D::LIBRARY::PNET']]],
+  ['roomoptions_17',['RoomOptions',['../classEP_1_1U3D_1_1LIBRARY_1_1PNET_1_1RoomOptions.html',1,'EP::U3D::LIBRARY::PNET']]]
+];

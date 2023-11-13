@@ -1,0 +1,27 @@
+var classUIBasicSprite =
+[
+    [ "AdvancedFill", "classUIBasicSprite.html#a97a32263e3aac9817738c780b68a82de", null ],
+    [ "Fill", "classUIBasicSprite.html#adbb6a60c3691391f60a5e0112a108bf2", null ],
+    [ "FilledFill", "classUIBasicSprite.html#ac5da06fc3ae12c2472422f8eb2c16483", null ],
+    [ "SimpleFill", "classUIBasicSprite.html#a6122518fdf8ebc192221ea06d87bc40a", null ],
+    [ "SlicedFill", "classUIBasicSprite.html#a4783d431f3e1a8fb3c4e1b4f4ffb2846", null ],
+    [ "TiledFill", "classUIBasicSprite.html#a7bd12760cb4651be9986c05fa428c68d", null ],
+    [ "bottomType", "classUIBasicSprite.html#a820dccfb648f0b5cd1d027b04d1da0aa", null ],
+    [ "centerType", "classUIBasicSprite.html#a747543348ed265a86728b74adaa5c82d", null ],
+    [ "leftType", "classUIBasicSprite.html#a01cf223f9682efa97c94b46aee970bef", null ],
+    [ "rightType", "classUIBasicSprite.html#a82f4189c47a87d3839c49edd3ecd2af9", null ],
+    [ "topType", "classUIBasicSprite.html#ab462465cbe33a7f11a5e5afdb9a0d9e5", null ],
+    [ "drawingColor", "classUIBasicSprite.html#a6e926c5fdd3e46f593be5fd6cc366b01", null ],
+    [ "drawingUVs", "classUIBasicSprite.html#a69a610a776d1cd1a9acd3413fd51d452", null ],
+    [ "fillAmount", "classUIBasicSprite.html#a8a0ff98073554ef7156f01f8fb10098f", null ],
+    [ "fillDirection", "classUIBasicSprite.html#ac244e03791eac62358a85f35b2526928", null ],
+    [ "flip", "classUIBasicSprite.html#a0d558228186d84bde78c03df9f5c82d1", null ],
+    [ "hasBorder", "classUIBasicSprite.html#ac24267701129476007cde98d55c5d6e2", null ],
+    [ "invert", "classUIBasicSprite.html#a47427582412398d8dc3571698d2aca69", null ],
+    [ "minHeight", "classUIBasicSprite.html#ae89e454a8e2deb6a3bead21c17b52cf2", null ],
+    [ "minWidth", "classUIBasicSprite.html#ab63134b4ce97c32bb2292aa519741338", null ],
+    [ "padding", "classUIBasicSprite.html#a12ccf6f2af5f389bd5512a21f2098dcc", null ],
+    [ "pixelSize", "classUIBasicSprite.html#aadfedfa0a269587a25a5a799b86fd36e", null ],
+    [ "premultipliedAlpha", "classUIBasicSprite.html#a3768230a99453169639c70c840a1f721", null ],
+    [ "type", "classUIBasicSprite.html#a45cf2fcf37e4d504b439df7c49231c6c", null ]
+];
