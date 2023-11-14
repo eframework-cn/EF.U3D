@@ -17,7 +17,9 @@ public class EP_U3D_LIBRARY_ASSET_AssetManager_HandlerWrap
 		L.RegVar("TotalCount", get_TotalCount, set_TotalCount);
 		L.RegVar("Operation", get_Operation, set_Operation);
 		L.RegVar("Progress", get_Progress, null);
+		L.RegVar("Asset", get_Asset, null);
 		L.RegVar("Current", get_Current, null);
+		L.RegVar("IsDone", get_IsDone, null);
 		L.RegVar("WillLoad", get_WillLoad, set_WillLoad);
 		L.RegVar("AfterLoad", get_AfterLoad, set_AfterLoad);
 		L.EndClass();
@@ -189,6 +191,25 @@ public class EP_U3D_LIBRARY_ASSET_AssetManager_HandlerWrap
 	}
 
 	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int get_Asset(IntPtr L)
+	{
+		object o = null;
+
+		try
+		{
+			o = ToLua.ToObject(L, 1);
+			EP.U3D.LIBRARY.ASSET.AssetManager.Handler obj = (EP.U3D.LIBRARY.ASSET.AssetManager.Handler)o;
+			UnityEngine.Object ret = obj.Asset;
+			ToLua.Push(L, ret);
+			return 1;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e, o, "attempt to index Asset on a nil value");
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
 	static int get_Current(IntPtr L)
 	{
 		object o = null;
@@ -204,6 +225,25 @@ public class EP_U3D_LIBRARY_ASSET_AssetManager_HandlerWrap
 		catch(Exception e)
 		{
 			return LuaDLL.toluaL_exception(L, e, o, "attempt to index Current on a nil value");
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int get_IsDone(IntPtr L)
+	{
+		object o = null;
+
+		try
+		{
+			o = ToLua.ToObject(L, 1);
+			EP.U3D.LIBRARY.ASSET.AssetManager.Handler obj = (EP.U3D.LIBRARY.ASSET.AssetManager.Handler)o;
+			bool ret = obj.IsDone;
+			LuaDLL.lua_pushboolean(L, ret);
+			return 1;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e, o, "attempt to index IsDone on a nil value");
 		}
 	}
 

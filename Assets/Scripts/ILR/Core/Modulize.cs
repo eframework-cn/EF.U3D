@@ -658,7 +658,7 @@ namespace ILR.Core
         /// <param name="cb">回调函数</param>
         /// <param name="internal">resources内部资源</param>
         /// <returns></returns>
-        public virtual AssetManager.Handler LoadAssetAsync<T>(string assetPath, Action<T> cb, bool @internal = false) where T : UnityEngine.Object { return AssetManager.LoadAssetAsync(assetPath, typeof(T), (asset) => cb?.Invoke(asset as T), @internal); }
+        public virtual AssetManager.Handler LoadAssetAsync<T>(string assetPath, Action<T> cb = null, bool @internal = false) where T : UnityEngine.Object { return AssetManager.LoadAssetAsync(assetPath, typeof(T), (asset) => cb?.Invoke(asset as T), @internal); }
 
         /// <summary>
         /// 加载资源（异步）
@@ -668,7 +668,7 @@ namespace ILR.Core
         /// <param name="cb">回调函数</param>
         /// <param name="internal">resources内部资源</param>
         /// <returns></returns>
-        public virtual AssetManager.Handler LoadAssetAsync(string assetPath, Type type, AssetManager.Callback cb, bool @internal = false) { return AssetManager.LoadAssetAsync(assetPath, type, cb, @internal); }
+        public virtual AssetManager.Handler LoadAssetAsync(string assetPath, Type type, AssetManager.Callback cb = null, bool @internal = false) { return AssetManager.LoadAssetAsync(assetPath, type, cb, @internal); }
 
         /// <summary>
         /// 加载场景
@@ -1805,7 +1805,7 @@ namespace ILR.Core
         /// <param name="cb">回调函数</param>
         /// <param name="internal">resources内部资源</param>
         /// <returns></returns>
-        public virtual AssetManager.Handler LoadAssetAsync<T>(string assetPath, Action<T> cb, bool @internal = false) where T : UnityEngine.Object { return AssetManager.LoadAssetAsync(assetPath, typeof(T), (asset) => cb?.Invoke(asset as T), @internal); }
+        public virtual AssetManager.Handler LoadAssetAsync<T>(string assetPath, Action<T> cb = null, bool @internal = false) where T : UnityEngine.Object { return AssetManager.LoadAssetAsync(assetPath, typeof(T), (asset) => cb?.Invoke(asset as T), @internal); }
 
         /// <summary>
         /// 加载资源（异步）
@@ -1815,7 +1815,7 @@ namespace ILR.Core
         /// <param name="cb">回调函数</param>
         /// <param name="internal">resources内部资源</param>
         /// <returns></returns>
-        public virtual AssetManager.Handler LoadAssetAsync(string assetPath, Type type, AssetManager.Callback cb, bool @internal = false) { return AssetManager.LoadAssetAsync(assetPath, type, cb, @internal); }
+        public virtual AssetManager.Handler LoadAssetAsync(string assetPath, Type type, AssetManager.Callback cb = null, bool @internal = false) { return AssetManager.LoadAssetAsync(assetPath, type, cb, @internal); }
 
         /// <summary>
         /// 加载场景

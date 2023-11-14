@@ -84,7 +84,9 @@ EP.U3D.LIBRARY.ASSET.AssetManager = AssetManager
 
 ---@class EP.U3D.LIBRARY.ASSET.AssetManager.Handler : System.Object
 ---@field Progress float
+---@field Asset UnityEngine.Object
 ---@field Current System.Object
+---@field IsDone bool
 ---@field DoneCount int
 ---@field TotalCount int
 ---@field Operation UnityEngine.AsyncOperation

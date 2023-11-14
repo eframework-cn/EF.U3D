@@ -34,6 +34,7 @@ namespace ILRuntime.Runtime.Generated
             typeof(UnityEngine.Canvas),
             typeof(System.Delegate),
             typeof(UnityEngine.Coroutine),
+            typeof(EP.U3D.LIBRARY.SCENE.ISceneAdapter.Adapter),
 
         };
         /// <summary>
@@ -81,6 +82,7 @@ namespace ILRuntime.Runtime.Generated
             System_NotSupportedException_Binding.Register(app);
             EP_U3D_LIBRARY_NET_NetConnection_Binding.Register(app);
             EP_U3D_LIBRARY_REPORT_Reporter_Binding.Register(app);
+            EP_U3D_LIBRARY_ASSET_AssetManager_Binding_Handler_Binding.Register(app);
 
             ILRuntime.CLR.TypeSystem.CLRType __clrType = null;
             __clrType = (ILRuntime.CLR.TypeSystem.CLRType)app.GetType (typeof(UnityEngine.Vector2));

@@ -193,7 +193,15 @@ public class EP_U3D_LIBRARY_ASSET_AssetManagerWrap
 		{
 			int count = LuaDLL.lua_gettop(L);
 
-			if (count == 3)
+			if (count == 2)
+			{
+				string arg0 = ToLua.CheckString(L, 1);
+				System.Type arg1 = ToLua.CheckMonoType(L, 2);
+				EP.U3D.LIBRARY.ASSET.AssetManager.Handler o = EP.U3D.LIBRARY.ASSET.AssetManager.LoadAssetAsync(arg0, arg1);
+				ToLua.PushObject(L, o);
+				return 1;
+			}
+			else if (count == 3)
 			{
 				string arg0 = ToLua.CheckString(L, 1);
 				System.Type arg1 = ToLua.CheckMonoType(L, 2);
