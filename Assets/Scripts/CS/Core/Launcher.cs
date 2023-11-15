@@ -197,7 +197,7 @@ namespace CS.Core
 
 #if !EFRAME_ILR && !EFRAME_LUA
                 var assembly = Assembly.GetExecutingAssembly();
-                var type = assembly.GetType("Launcher");
+                var type = assembly.GetType("ILR.Core.Launcher");
                 var o = System.Activator.CreateInstance(type);
                 ILauncher = o as ILauncher;
                 patchOK = ILauncher != null;
