@@ -1,0 +1,47 @@
+var classUICamera =
+[
+    [ "MouseOrTouch", "classUICamera_1_1MouseOrTouch.html", "classUICamera_1_1MouseOrTouch" ],
+    [ "Touch", "classUICamera_1_1Touch.html", null ],
+    [ "ClickNotification", "classUICamera.html#ae74dc1c2fd6fdad27cf84c9896b1c3de", [
+      [ "None", "classUICamera.html#ae74dc1c2fd6fdad27cf84c9896b1c3dea6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "Always", "classUICamera.html#ae74dc1c2fd6fdad27cf84c9896b1c3dea68eec46437c384d8dad18d5464ebc35c", null ],
+      [ "BasedOnDelta", "classUICamera.html#ae74dc1c2fd6fdad27cf84c9896b1c3deab5b93717ec5256500560acc81bd504e9", null ]
+    ] ],
+    [ "EventType", "classUICamera.html#a5886f96759a1295d8d0bd72c816358ae", [
+      [ "World_3D", "classUICamera.html#a5886f96759a1295d8d0bd72c816358aea71fac4b3d65e0a59d39b140035cbb1a0", null ],
+      [ "UI_3D", "classUICamera.html#a5886f96759a1295d8d0bd72c816358aeafdd63e055646ed281f26e29649a92653", null ],
+      [ "World_2D", "classUICamera.html#a5886f96759a1295d8d0bd72c816358aea405082415f35e8ef988651c0308b38e3", null ],
+      [ "UI_2D", "classUICamera.html#a5886f96759a1295d8d0bd72c816358aea8b95f4e79f5784cc6017a4cf29dfee0f", null ]
+    ] ],
+    [ "ProcessMouse", "classUICamera.html#a085f7380f1924c99495eb1845fef0e75", null ],
+    [ "ProcessOthers", "classUICamera.html#a74853f777eef1db069cc948997a0e3cc", null ],
+    [ "ProcessTouch", "classUICamera.html#a11499096073f2dcbc35ae2326419b4d0", null ],
+    [ "ProcessTouches", "classUICamera.html#ac3b5cffe0af522586260efcc3ce83102", null ],
+    [ "allowMultiTouch", "classUICamera.html#adfd2182e51c8c84a5da6ede1b6b16041", null ],
+    [ "autoHideCursor", "classUICamera.html#abb9fa1444edb12038ec7c9a6605c6783", null ],
+    [ "commandClick", "classUICamera.html#ad963a6c877a8b5e13741a6a14efca246", null ],
+    [ "debug", "classUICamera.html#a830430c892ea9c7b5e09a9b2a0fe1b74", null ],
+    [ "eventReceiverMask", "classUICamera.html#ad10a4cbcbd70f2520871cef9abc44a4a", null ],
+    [ "eventsGoToColliders", "classUICamera.html#a4d1357306f4e82a4a045ebc94987f438", null ],
+    [ "eventType", "classUICamera.html#a8c6f5a2ea1255c74ba8201663305a2b9", null ],
+    [ "horizontalAxisName", "classUICamera.html#ac18ef6e9e6834d224cd2c5bdddb368fe", null ],
+    [ "horizontalPanAxisName", "classUICamera.html#aa4b8a4c715d1e46f0bafd76fb98311b4", null ],
+    [ "longPressTooltip", "classUICamera.html#a52cf475c6fc0893fb910c8651338da08", null ],
+    [ "mouseClickThreshold", "classUICamera.html#a8d7c3571887325dcdd873513610e3f6f", null ],
+    [ "mouseDragThreshold", "classUICamera.html#a8c952caf66216e4a2fb3895c760246b4", null ],
+    [ "processEventsIn", "classUICamera.html#a07c77731e51d17576e36e94e7179e0f4", null ],
+    [ "rangeDistance", "classUICamera.html#a43b61d474b7bf64397a0dde3b48bf538", null ],
+    [ "scrollAxisName", "classUICamera.html#a9a67421efe632a5dc14804c517579a7a", null ],
+    [ "stickyTooltip", "classUICamera.html#a13cfe9415bf213b671e741bcfcf30012", null ],
+    [ "submitKey0", "classUICamera.html#aab722097b3ec17dbf119a171bf4ade8e", null ],
+    [ "tooltipDelay", "classUICamera.html#a8cc400fbb26bce6eba53689eb2b0c692", null ],
+    [ "touchClickThreshold", "classUICamera.html#a582dfe30c14651db20c5c60ab2328ae5", null ],
+    [ "touchDragThreshold", "classUICamera.html#a93f77cb96bbef2be2eadc774db18d12e", null ],
+    [ "useController", "classUICamera.html#a6204d6bd57dd719964b8360f5dde3ae4", null ],
+    [ "useKeyboard", "classUICamera.html#a1f0456e5ef29c997ea8df5e03546a2f6", null ],
+    [ "useMouse", "classUICamera.html#adf6b7fac9b260a5fbd6896399032de5b", null ],
+    [ "useTouch", "classUICamera.html#a6a069dcb93f4d85385598bab969e669a", null ],
+    [ "verticalAxisName", "classUICamera.html#a5ecf6a4c0948777bda562d9c8629b052", null ],
+    [ "verticalPanAxisName", "classUICamera.html#ab377389e073ce08bb11bd934c1a821c8", null ],
+    [ "cachedCamera", "classUICamera.html#a26ed6d2c8ff236c0280058ad253fa66b", null ]
+];
