@@ -249,14 +249,51 @@ namespace ILR.Core
         /// </summary>
         /// <param name="id">消息ID</param>
         /// <param name="body">消息包</param>
-        /// <param name="handler">消息回调</param>
-        /// <param name="uid">用户ID</param>
-        /// <param name="rid">路由ID</param>
-        /// <param name="host">主机地址</param>
-        public virtual void SendCgi(Gen.Proto.CID id, IProto body = null, Action<string, byte[]> handler = null, int uid = 0, int rid = 0, string host = null)
+        /// <param name="func">消息回调</param>
+        public virtual NetManager.CgiHandler SendCgi(Gen.Proto.CID id, IProto body = null, Action<byte[], long, string> func = null) { return NetManager.SendCgi((int)id, body, func); }
+
+        /// <summary>
+        /// 发送Cgi消息
+        /// </summary>
+        /// <param name="id">消息ID</param>
+        /// <param name="body">消息包</param>
+        /// <param name="func">消息回调</param>
+        public virtual NetManager.CgiHandler SendCgi<T>(Gen.Proto.CID id, IProto body = null, Action<T, long, string> func = null) where T : class, IProto
         {
-            NetManager.SendCgi((int)id, body, handler, uid, rid, host);
+            return NetManager.SendCgi((int)id, body, (data, code, error) =>
+            {
+                if (func != null)
+                {
+                    T ret = default;
+                    if (data != null) ret = NetManager.DecodePB(typeof(T), data) as T;
+                    func?.Invoke(ret, code, error);
+                }
+            });
         }
+
+        /// <summary>
+        /// 反序列化IProto对象
+        /// </summary>
+        /// <param name="buffer">字节流</param>
+        /// <param name="offset">字节偏移</param>
+        /// <returns>IProto对象</returns>
+        public T DecodePB<T>(StreamBuffer buffer, int offset = 0) where T : class, IProto { return NetManager.DecodePB(typeof(T), buffer, offset) as T; }
+
+        /// <summary>
+        /// 反序列化IProto对象
+        /// </summary>
+        /// <param name="buffer">字节流</param>
+        /// <param name="offset">字节偏移</param>
+        /// <returns>IProto对象</returns>
+        public T DecodePB<T>(byte[] buffer, int offset = 0) where T : class, IProto { return NetManager.DecodePB(typeof(T), buffer, offset) as T; }
+
+        /// <summary>
+        /// 序列化IProto对象
+        /// </summary>
+        /// <param name="proto">IProto对象</param>
+        /// <param name="offset">字节偏移</param>
+        /// <returns>字节流</returns>
+        public StreamBuffer EncodePB(IProto proto, int offset = 0) { return NetManager.EncodePB(proto, offset); }
 
         /// <summary>
         /// 解析Msg消息
@@ -270,7 +307,7 @@ namespace ILR.Core
             {
                 return (T)NetManager.DecodePB(typeof(T), evt.Param as StreamBuffer, NetPacket.MESSAGE_OFFSET);
             }
-            return default(T);
+            return default;
         }
 
         /// <summary>
@@ -1070,14 +1107,51 @@ namespace ILR.Core
         /// </summary>
         /// <param name="id">消息ID</param>
         /// <param name="body">消息包</param>
-        /// <param name="handler">消息回调</param>
-        /// <param name="uid">用户ID</param>
-        /// <param name="rid">路由ID</param>
-        /// <param name="host">主机地址</param>
-        public virtual void SendCgi(Gen.Proto.CID id, IProto body = null, Action<string, byte[]> handler = null, int uid = 0, int rid = 0, string host = null)
+        /// <param name="func">消息回调</param>
+        public virtual NetManager.CgiHandler SendCgi(Gen.Proto.CID id, IProto body = null, Action<byte[], long, string> func = null) { return NetManager.SendCgi((int)id, body, func); }
+
+        /// <summary>
+        /// 发送Cgi消息
+        /// </summary>
+        /// <param name="id">消息ID</param>
+        /// <param name="body">消息包</param>
+        /// <param name="func">消息回调</param>
+        public virtual NetManager.CgiHandler SendCgi<T>(Gen.Proto.CID id, IProto body = null, Action<T, long, string> func = null) where T : class, IProto
         {
-            NetManager.SendCgi((int)id, body, handler, uid, rid, host);
+            return NetManager.SendCgi((int)id, body, (data, code, error) =>
+            {
+                if (func != null)
+                {
+                    T ret = default;
+                    if (data != null) ret = NetManager.DecodePB(typeof(T), data) as T;
+                    func?.Invoke(ret, code, error);
+                }
+            });
         }
+
+        /// <summary>
+        /// 反序列化IProto对象
+        /// </summary>
+        /// <param name="buffer">字节流</param>
+        /// <param name="offset">字节偏移</param>
+        /// <returns>IProto对象</returns>
+        public T DecodePB<T>(StreamBuffer buffer, int offset = 0) where T : class, IProto { return NetManager.DecodePB(typeof(T), buffer, offset) as T; }
+
+        /// <summary>
+        /// 反序列化IProto对象
+        /// </summary>
+        /// <param name="buffer">字节流</param>
+        /// <param name="offset">字节偏移</param>
+        /// <returns>IProto对象</returns>
+        public T DecodePB<T>(byte[] buffer, int offset = 0) where T : class, IProto { return NetManager.DecodePB(typeof(T), buffer, offset) as T; }
+
+        /// <summary>
+        /// 序列化IProto对象
+        /// </summary>
+        /// <param name="proto">IProto对象</param>
+        /// <param name="offset">字节偏移</param>
+        /// <returns>字节流</returns>
+        public StreamBuffer EncodePB(IProto proto, int offset = 0) { return NetManager.EncodePB(proto, offset); }
 
         /// <summary>
         /// 解析Msg消息
@@ -1091,7 +1165,7 @@ namespace ILR.Core
             {
                 return (T)NetManager.DecodePB(typeof(T), evt.Param as StreamBuffer, NetPacket.MESSAGE_OFFSET);
             }
-            return default(T);
+            return default;
         }
 
         /// <summary>
