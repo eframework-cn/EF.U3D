@@ -7,6 +7,7 @@
 ---@field JSON_DOMAIN System.String
 ---@field JSON_URL System.String
 ---@field JSON_DATA System.String
+---@field CGI_REFRESH_TOKEN System.String
 ---@field FORCE_UPDATE bool
 ---@field CHECK_UPDATE bool
 ---@field UPDATE_WHITELIST table
@@ -32,8 +33,6 @@
 ---@field CONN_SERVER_UID int
 ---@field CGI_SERVER_URL System.String
 ---@field CGI_ACCESS_TOKEN System.String
----@field CGI_REFRESH_TOKEN System.String
----@field CGI_SERVER_UID int
 ---@field BINARY_FILE_URL System.String
 ---@field BINARY_FILE_SIZE int
 ---@field REPORT_URL System.String

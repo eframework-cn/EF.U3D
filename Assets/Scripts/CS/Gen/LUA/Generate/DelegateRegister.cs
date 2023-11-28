@@ -41,8 +41,10 @@ public class DelegateRegister
 		DelegateFactory.Dict.Add(typeof(UnityEngine.Events.UnityAction<string>), register.UnityEngine_Events_UnityAction_string);
 		DelegateFactory.Dict.Add(typeof(System.Action<UnityEngine.SceneManagement.Scene>), register.System_Action_UnityEngine_SceneManagement_Scene);
 		DelegateFactory.Dict.Add(typeof(EP.U3D.LIBRARY.ASSET.AssetManager.Callback), register.EP_U3D_LIBRARY_ASSET_AssetManager_Callback);
+		DelegateFactory.Dict.Add(typeof(System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler,int>), register.System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler_int);
+		DelegateFactory.Dict.Add(typeof(System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler>), register.System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler);
 		DelegateFactory.Dict.Add(typeof(System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer>), register.System_Func_EP_U3D_LIBRARY_POOL_StreamBuffer);
-		DelegateFactory.Dict.Add(typeof(System.Action<string,byte[]>), register.System_Action_string_bytes);
+		DelegateFactory.Dict.Add(typeof(System.Action<byte[],long,string>), register.System_Action_bytes_long_string);
 		DelegateFactory.Dict.Add(typeof(EP.U3D.LIBRARY.SCENE.SceneManager.SwapDelegate), register.EP_U3D_LIBRARY_SCENE_SceneManager_SwapDelegate);
 		DelegateFactory.Dict.Add(typeof(System.Action<string,bool>), register.System_Action_string_bool);
 
@@ -77,8 +79,10 @@ public class DelegateRegister
 		DelegateTraits<UnityEngine.Events.UnityAction<string>>.Init(register.UnityEngine_Events_UnityAction_string);
 		DelegateTraits<System.Action<UnityEngine.SceneManagement.Scene>>.Init(register.System_Action_UnityEngine_SceneManagement_Scene);
 		DelegateTraits<EP.U3D.LIBRARY.ASSET.AssetManager.Callback>.Init(register.EP_U3D_LIBRARY_ASSET_AssetManager_Callback);
+		DelegateTraits<System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler,int>>.Init(register.System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler_int);
+		DelegateTraits<System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler>>.Init(register.System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler);
 		DelegateTraits<System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer>>.Init(register.System_Func_EP_U3D_LIBRARY_POOL_StreamBuffer);
-		DelegateTraits<System.Action<string,byte[]>>.Init(register.System_Action_string_bytes);
+		DelegateTraits<System.Action<byte[],long,string>>.Init(register.System_Action_bytes_long_string);
 		DelegateTraits<EP.U3D.LIBRARY.SCENE.SceneManager.SwapDelegate>.Init(register.EP_U3D_LIBRARY_SCENE_SceneManager_SwapDelegate);
 		DelegateTraits<System.Action<string,bool>>.Init(register.System_Action_string_bool);
 
@@ -113,8 +117,10 @@ public class DelegateRegister
 		TypeTraits<UnityEngine.Events.UnityAction<string>>.Init(register.Check_UnityEngine_Events_UnityAction_string);
 		TypeTraits<System.Action<UnityEngine.SceneManagement.Scene>>.Init(register.Check_System_Action_UnityEngine_SceneManagement_Scene);
 		TypeTraits<EP.U3D.LIBRARY.ASSET.AssetManager.Callback>.Init(register.Check_EP_U3D_LIBRARY_ASSET_AssetManager_Callback);
+		TypeTraits<System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler,int>>.Init(register.Check_System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler_int);
+		TypeTraits<System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler>>.Init(register.Check_System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler);
 		TypeTraits<System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer>>.Init(register.Check_System_Func_EP_U3D_LIBRARY_POOL_StreamBuffer);
-		TypeTraits<System.Action<string,byte[]>>.Init(register.Check_System_Action_string_bytes);
+		TypeTraits<System.Action<byte[],long,string>>.Init(register.Check_System_Action_bytes_long_string);
 		TypeTraits<EP.U3D.LIBRARY.SCENE.SceneManager.SwapDelegate>.Init(register.Check_EP_U3D_LIBRARY_SCENE_SceneManager_SwapDelegate);
 		TypeTraits<System.Action<string,bool>>.Init(register.Check_System_Action_string_bool);
 
@@ -149,8 +155,10 @@ public class DelegateRegister
 		StackTraits<UnityEngine.Events.UnityAction<string>>.Push = register.Push_UnityEngine_Events_UnityAction_string;
 		StackTraits<System.Action<UnityEngine.SceneManagement.Scene>>.Push = register.Push_System_Action_UnityEngine_SceneManagement_Scene;
 		StackTraits<EP.U3D.LIBRARY.ASSET.AssetManager.Callback>.Push = register.Push_EP_U3D_LIBRARY_ASSET_AssetManager_Callback;
+		StackTraits<System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler,int>>.Push = register.Push_System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler_int;
+		StackTraits<System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler>>.Push = register.Push_System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler;
 		StackTraits<System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer>>.Push = register.Push_System_Func_EP_U3D_LIBRARY_POOL_StreamBuffer;
-		StackTraits<System.Action<string,byte[]>>.Push = register.Push_System_Action_string_bytes;
+		StackTraits<System.Action<byte[],long,string>>.Push = register.Push_System_Action_bytes_long_string;
 		StackTraits<EP.U3D.LIBRARY.SCENE.SceneManager.SwapDelegate>.Push = register.Push_EP_U3D_LIBRARY_SCENE_SceneManager_SwapDelegate;
 		StackTraits<System.Action<string,bool>>.Push = register.Push_System_Action_string_bool;
 	}
@@ -1941,6 +1949,126 @@ public class DelegateRegister
 		ToLua.Push(L, o);
 	}
 
+	class System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler_int_Event : LuaDelegate
+	{
+		public System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler_int_Event(LuaFunction func) : base(func) { }
+		public System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler_int_Event(LuaFunction func, LuaTable self) : base(func, self) { }
+
+		public int Call(EP.U3D.LIBRARY.NET.NetManager.CgiHandler param0)
+		{
+			func.BeginPCall();
+			func.PushObject(param0);
+			func.PCall();
+			int ret = (int)func.CheckNumber();
+			func.EndPCall();
+			return ret;
+		}
+
+		public int CallWithSelf(EP.U3D.LIBRARY.NET.NetManager.CgiHandler param0)
+		{
+			func.BeginPCall();
+			func.Push(self);
+			func.PushObject(param0);
+			func.PCall();
+			int ret = (int)func.CheckNumber();
+			func.EndPCall();
+			return ret;
+		}
+	}
+
+	public System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler,int> System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler_int(LuaFunction func, LuaTable self, bool flag)
+	{
+		if (func == null)
+		{
+			System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler,int> fn = delegate(EP.U3D.LIBRARY.NET.NetManager.CgiHandler param0) { return 0; };
+			return fn;
+		}
+
+		if(!flag)
+		{
+			System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler_int_Event target = new System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler_int_Event(func);
+			System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler,int> d = target.Call;
+			target.method = d.Method;
+			return d;
+		}
+		else
+		{
+			System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler_int_Event target = new System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler_int_Event(func, self);
+			System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler,int> d = target.CallWithSelf;
+			target.method = d.Method;
+			return d;
+		}
+	}
+
+	bool Check_System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler_int(IntPtr L, int pos)
+	{
+		return TypeChecker.CheckDelegateType(typeof(System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler,int>), L, pos);
+	}
+
+	void Push_System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler_int(IntPtr L, System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler,int> o)
+	{
+		ToLua.Push(L, o);
+	}
+
+	class System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler_Event : LuaDelegate
+	{
+		public System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler_Event(LuaFunction func) : base(func) { }
+		public System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler_Event(LuaFunction func, LuaTable self) : base(func, self) { }
+
+		public EP.U3D.LIBRARY.NET.NetManager.CgiHandler Call()
+		{
+			func.BeginPCall();
+			func.PCall();
+			EP.U3D.LIBRARY.NET.NetManager.CgiHandler ret = (EP.U3D.LIBRARY.NET.NetManager.CgiHandler)func.CheckObject(typeof(EP.U3D.LIBRARY.NET.NetManager.CgiHandler));
+			func.EndPCall();
+			return ret;
+		}
+
+		public EP.U3D.LIBRARY.NET.NetManager.CgiHandler CallWithSelf()
+		{
+			func.BeginPCall();
+			func.Push(self);
+			func.PCall();
+			EP.U3D.LIBRARY.NET.NetManager.CgiHandler ret = (EP.U3D.LIBRARY.NET.NetManager.CgiHandler)func.CheckObject(typeof(EP.U3D.LIBRARY.NET.NetManager.CgiHandler));
+			func.EndPCall();
+			return ret;
+		}
+	}
+
+	public System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler> System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler(LuaFunction func, LuaTable self, bool flag)
+	{
+		if (func == null)
+		{
+			System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler> fn = delegate() { return null; };
+			return fn;
+		}
+
+		if(!flag)
+		{
+			System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler_Event target = new System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler_Event(func);
+			System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler> d = target.Call;
+			target.method = d.Method;
+			return d;
+		}
+		else
+		{
+			System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler_Event target = new System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler_Event(func, self);
+			System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler> d = target.CallWithSelf;
+			target.method = d.Method;
+			return d;
+		}
+	}
+
+	bool Check_System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler(IntPtr L, int pos)
+	{
+		return TypeChecker.CheckDelegateType(typeof(System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler>), L, pos);
+	}
+
+	void Push_System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler(IntPtr L, System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler> o)
+	{
+		ToLua.Push(L, o);
+	}
+
 	class System_Func_EP_U3D_LIBRARY_POOL_StreamBuffer_Event : LuaDelegate
 	{
 		public System_Func_EP_U3D_LIBRARY_POOL_StreamBuffer_Event(LuaFunction func) : base(func) { }
@@ -2000,61 +2128,63 @@ public class DelegateRegister
 		ToLua.Push(L, o);
 	}
 
-	class System_Action_string_bytes_Event : LuaDelegate
+	class System_Action_bytes_long_string_Event : LuaDelegate
 	{
-		public System_Action_string_bytes_Event(LuaFunction func) : base(func) { }
-		public System_Action_string_bytes_Event(LuaFunction func, LuaTable self) : base(func, self) { }
+		public System_Action_bytes_long_string_Event(LuaFunction func) : base(func) { }
+		public System_Action_bytes_long_string_Event(LuaFunction func, LuaTable self) : base(func, self) { }
 
-		public void Call(string param0, byte[] param1)
+		public void Call(byte[] param0, long param1, string param2)
 		{
 			func.BeginPCall();
 			func.Push(param0);
 			func.Push(param1);
+			func.Push(param2);
 			func.PCall();
 			func.EndPCall();
 		}
 
-		public void CallWithSelf(string param0, byte[] param1)
+		public void CallWithSelf(byte[] param0, long param1, string param2)
 		{
 			func.BeginPCall();
 			func.Push(self);
 			func.Push(param0);
 			func.Push(param1);
+			func.Push(param2);
 			func.PCall();
 			func.EndPCall();
 		}
 	}
 
-	public System.Action<string,byte[]> System_Action_string_bytes(LuaFunction func, LuaTable self, bool flag)
+	public System.Action<byte[],long,string> System_Action_bytes_long_string(LuaFunction func, LuaTable self, bool flag)
 	{
 		if (func == null)
 		{
-			System.Action<string,byte[]> fn = delegate(string param0, byte[] param1) { };
+			System.Action<byte[],long,string> fn = delegate(byte[] param0, long param1, string param2) { };
 			return fn;
 		}
 
 		if(!flag)
 		{
-			System_Action_string_bytes_Event target = new System_Action_string_bytes_Event(func);
-			System.Action<string,byte[]> d = target.Call;
+			System_Action_bytes_long_string_Event target = new System_Action_bytes_long_string_Event(func);
+			System.Action<byte[],long,string> d = target.Call;
 			target.method = d.Method;
 			return d;
 		}
 		else
 		{
-			System_Action_string_bytes_Event target = new System_Action_string_bytes_Event(func, self);
-			System.Action<string,byte[]> d = target.CallWithSelf;
+			System_Action_bytes_long_string_Event target = new System_Action_bytes_long_string_Event(func, self);
+			System.Action<byte[],long,string> d = target.CallWithSelf;
 			target.method = d.Method;
 			return d;
 		}
 	}
 
-	bool Check_System_Action_string_bytes(IntPtr L, int pos)
+	bool Check_System_Action_bytes_long_string(IntPtr L, int pos)
 	{
-		return TypeChecker.CheckDelegateType(typeof(System.Action<string,byte[]>), L, pos);
+		return TypeChecker.CheckDelegateType(typeof(System.Action<byte[],long,string>), L, pos);
 	}
 
-	void Push_System_Action_string_bytes(IntPtr L, System.Action<string,byte[]> o)
+	void Push_System_Action_bytes_long_string(IntPtr L, System.Action<byte[],long,string> o)
 	{
 		ToLua.Push(L, o);
 	}

@@ -18,8 +18,6 @@ public class EP_U3D_LIBRARY_BASE_ConstantsWrap
 		L.RegVar("CONN_SERVER_UID", get_CONN_SERVER_UID, set_CONN_SERVER_UID);
 		L.RegVar("CGI_SERVER_URL", get_CGI_SERVER_URL, set_CGI_SERVER_URL);
 		L.RegVar("CGI_ACCESS_TOKEN", get_CGI_ACCESS_TOKEN, set_CGI_ACCESS_TOKEN);
-		L.RegVar("CGI_REFRESH_TOKEN", get_CGI_REFRESH_TOKEN, set_CGI_REFRESH_TOKEN);
-		L.RegVar("CGI_SERVER_UID", get_CGI_SERVER_UID, set_CGI_SERVER_UID);
 		L.RegVar("BINARY_FILE_URL", get_BINARY_FILE_URL, set_BINARY_FILE_URL);
 		L.RegVar("BINARY_FILE_SIZE", get_BINARY_FILE_SIZE, set_BINARY_FILE_SIZE);
 		L.RegVar("REPORT_URL", get_REPORT_URL, set_REPORT_URL);
@@ -53,6 +51,7 @@ public class EP_U3D_LIBRARY_BASE_ConstantsWrap
 		L.RegVar("JSON_DOMAIN", get_JSON_DOMAIN, null);
 		L.RegVar("JSON_URL", get_JSON_URL, null);
 		L.RegVar("JSON_DATA", get_JSON_DATA, set_JSON_DATA);
+		L.RegVar("CGI_REFRESH_TOKEN", get_CGI_REFRESH_TOKEN, set_CGI_REFRESH_TOKEN);
 		L.RegVar("FORCE_UPDATE", get_FORCE_UPDATE, set_FORCE_UPDATE);
 		L.RegVar("CHECK_UPDATE", get_CHECK_UPDATE, set_CHECK_UPDATE);
 		L.RegVar("UPDATE_WHITELIST", get_UPDATE_WHITELIST, set_UPDATE_WHITELIST);
@@ -214,34 +213,6 @@ public class EP_U3D_LIBRARY_BASE_ConstantsWrap
 		try
 		{
 			LuaDLL.lua_pushstring(L, EP.U3D.LIBRARY.BASE.Constants.CGI_ACCESS_TOKEN);
-			return 1;
-		}
-		catch (Exception e)
-		{
-			return LuaDLL.toluaL_exception(L, e);
-		}
-	}
-
-	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
-	static int get_CGI_REFRESH_TOKEN(IntPtr L)
-	{
-		try
-		{
-			LuaDLL.lua_pushstring(L, EP.U3D.LIBRARY.BASE.Constants.CGI_REFRESH_TOKEN);
-			return 1;
-		}
-		catch (Exception e)
-		{
-			return LuaDLL.toluaL_exception(L, e);
-		}
-	}
-
-	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
-	static int get_CGI_SERVER_UID(IntPtr L)
-	{
-		try
-		{
-			LuaDLL.lua_pushinteger(L, EP.U3D.LIBRARY.BASE.Constants.CGI_SERVER_UID);
 			return 1;
 		}
 		catch (Exception e)
@@ -713,6 +684,20 @@ public class EP_U3D_LIBRARY_BASE_ConstantsWrap
 	}
 
 	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int get_CGI_REFRESH_TOKEN(IntPtr L)
+	{
+		try
+		{
+			LuaDLL.lua_pushstring(L, EP.U3D.LIBRARY.BASE.Constants.CGI_REFRESH_TOKEN);
+			return 1;
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
 	static int get_FORCE_UPDATE(IntPtr L)
 	{
 		try
@@ -1072,36 +1057,6 @@ public class EP_U3D_LIBRARY_BASE_ConstantsWrap
 	}
 
 	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
-	static int set_CGI_REFRESH_TOKEN(IntPtr L)
-	{
-		try
-		{
-			string arg0 = ToLua.CheckString(L, 2);
-			EP.U3D.LIBRARY.BASE.Constants.CGI_REFRESH_TOKEN = arg0;
-			return 0;
-		}
-		catch (Exception e)
-		{
-			return LuaDLL.toluaL_exception(L, e);
-		}
-	}
-
-	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
-	static int set_CGI_SERVER_UID(IntPtr L)
-	{
-		try
-		{
-			int arg0 = (int)LuaDLL.luaL_checknumber(L, 2);
-			EP.U3D.LIBRARY.BASE.Constants.CGI_SERVER_UID = arg0;
-			return 0;
-		}
-		catch (Exception e)
-		{
-			return LuaDLL.toluaL_exception(L, e);
-		}
-	}
-
-	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
 	static int set_BINARY_FILE_URL(IntPtr L)
 	{
 		try
@@ -1438,6 +1393,21 @@ public class EP_U3D_LIBRARY_BASE_ConstantsWrap
 		{
 			string arg0 = ToLua.CheckString(L, 2);
 			EP.U3D.LIBRARY.BASE.Constants.JSON_DATA = arg0;
+			return 0;
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int set_CGI_REFRESH_TOKEN(IntPtr L)
+	{
+		try
+		{
+			string arg0 = ToLua.CheckString(L, 2);
+			EP.U3D.LIBRARY.BASE.Constants.CGI_REFRESH_TOKEN = arg0;
 			return 0;
 		}
 		catch (Exception e)

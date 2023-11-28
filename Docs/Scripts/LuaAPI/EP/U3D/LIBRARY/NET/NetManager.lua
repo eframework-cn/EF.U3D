@@ -1,4 +1,7 @@
 ---@class EP.U3D.LIBRARY.NET.NetManager : System.Object
+---@field OnCgiResp System.Func
+---@field OnCgiExpire System.Func
+---@field OnCgiLogout System.Action
 local NetManager = {}
 
 function NetManager.Initialize() end
@@ -69,6 +72,14 @@ function NetManager.EncodeMsg(id, body, uid, rid) end
 ---@return EP.U3D.LIBRARY.PROTO.IProto
 function NetManager.DecodeMsg(id, body, offset) end
 
+---@overload fun(id:int, body:EP.U3D.LIBRARY.POOL.StreamBuffer, func:System.Action):EP.U3D.LIBRARY.NET.NetManager.CgiHandler
+---@param id int
+---@param body EP.U3D.LIBRARY.PROTO.IProto
+---@param func System.Action
+---@return EP.U3D.LIBRARY.NET.NetManager.CgiHandler
+function NetManager.SendCgi(id, body, func) end
+
+---@overload fun(type:System.Type, buffer:byte[], offset:int):EP.U3D.LIBRARY.PROTO.IProto
 ---@param type System.Type
 ---@param buffer EP.U3D.LIBRARY.POOL.StreamBuffer
 ---@param offset int
@@ -88,14 +99,5 @@ function NetManager.DecodeJson(content, type) end
 ---@param obj System.Object
 ---@return System.String
 function NetManager.EncodeJson(obj) end
-
----@overload fun(id:int, body:EP.U3D.LIBRARY.POOL.StreamBuffer, func:System.Action, uid:int, rid:int, host:System.String):void
----@param id int
----@param body EP.U3D.LIBRARY.PROTO.IProto
----@param func System.Action
----@param uid int
----@param rid int
----@param host System.String
-function NetManager.SendCgi(id, body, func, uid, rid, host) end
 
 EP.U3D.LIBRARY.NET.NetManager = NetManager

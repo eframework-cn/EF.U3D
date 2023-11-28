@@ -21,13 +21,16 @@ public class EP_U3D_LIBRARY_NET_NetManagerWrap
 		L.RegFunction("SendMsg", SendMsg);
 		L.RegFunction("EncodeMsg", EncodeMsg);
 		L.RegFunction("DecodeMsg", DecodeMsg);
+		L.RegFunction("SendCgi", SendCgi);
 		L.RegFunction("DecodePB", DecodePB);
 		L.RegFunction("EncodePB", EncodePB);
 		L.RegFunction("DecodeJson", DecodeJson);
 		L.RegFunction("EncodeJson", EncodeJson);
-		L.RegFunction("SendCgi", SendCgi);
 		L.RegFunction("New", _CreateEP_U3D_LIBRARY_NET_NetManager);
 		L.RegFunction("__tostring", ToLua.op_ToString);
+		L.RegVar("OnCgiResp", get_OnCgiResp, set_OnCgiResp);
+		L.RegVar("OnCgiExpire", get_OnCgiExpire, set_OnCgiExpire);
+		L.RegVar("OnCgiLogout", get_OnCgiLogout, set_OnCgiLogout);
 		L.EndClass();
 	}
 
@@ -607,25 +610,101 @@ public class EP_U3D_LIBRARY_NET_NetManagerWrap
 	}
 
 	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int SendCgi(IntPtr L)
+	{
+		try
+		{
+			int count = LuaDLL.lua_gettop(L);
+
+			if (count == 1)
+			{
+				int arg0 = (int)LuaDLL.luaL_checknumber(L, 1);
+				EP.U3D.LIBRARY.NET.NetManager.CgiHandler o = EP.U3D.LIBRARY.NET.NetManager.SendCgi(arg0);
+				ToLua.PushObject(L, o);
+				return 1;
+			}
+			else if (count == 2 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.PROTO.IProto>(L, 2))
+			{
+				int arg0 = (int)LuaDLL.luaL_checknumber(L, 1);
+				EP.U3D.LIBRARY.PROTO.IProto arg1 = (EP.U3D.LIBRARY.PROTO.IProto)ToLua.ToObject(L, 2);
+				EP.U3D.LIBRARY.NET.NetManager.CgiHandler o = EP.U3D.LIBRARY.NET.NetManager.SendCgi(arg0, arg1);
+				ToLua.PushObject(L, o);
+				return 1;
+			}
+			else if (count == 2 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.POOL.StreamBuffer>(L, 2))
+			{
+				int arg0 = (int)LuaDLL.luaL_checknumber(L, 1);
+				EP.U3D.LIBRARY.POOL.StreamBuffer arg1 = (EP.U3D.LIBRARY.POOL.StreamBuffer)ToLua.ToObject(L, 2);
+				EP.U3D.LIBRARY.NET.NetManager.CgiHandler o = EP.U3D.LIBRARY.NET.NetManager.SendCgi(arg0, arg1);
+				ToLua.PushObject(L, o);
+				return 1;
+			}
+			else if (count == 3 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.PROTO.IProto, System.Action<byte[],long,string>>(L, 2))
+			{
+				int arg0 = (int)LuaDLL.luaL_checknumber(L, 1);
+				EP.U3D.LIBRARY.PROTO.IProto arg1 = (EP.U3D.LIBRARY.PROTO.IProto)ToLua.ToObject(L, 2);
+				System.Action<byte[],long,string> arg2 = (System.Action<byte[],long,string>)ToLua.ToObject(L, 3);
+				EP.U3D.LIBRARY.NET.NetManager.CgiHandler o = EP.U3D.LIBRARY.NET.NetManager.SendCgi(arg0, arg1, arg2);
+				ToLua.PushObject(L, o);
+				return 1;
+			}
+			else if (count == 3 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.POOL.StreamBuffer, System.Action<byte[],long,string>>(L, 2))
+			{
+				int arg0 = (int)LuaDLL.luaL_checknumber(L, 1);
+				EP.U3D.LIBRARY.POOL.StreamBuffer arg1 = (EP.U3D.LIBRARY.POOL.StreamBuffer)ToLua.ToObject(L, 2);
+				System.Action<byte[],long,string> arg2 = (System.Action<byte[],long,string>)ToLua.ToObject(L, 3);
+				EP.U3D.LIBRARY.NET.NetManager.CgiHandler o = EP.U3D.LIBRARY.NET.NetManager.SendCgi(arg0, arg1, arg2);
+				ToLua.PushObject(L, o);
+				return 1;
+			}
+			else
+			{
+				return LuaDLL.luaL_throw(L, "invalid arguments to method: EP.U3D.LIBRARY.NET.NetManager.SendCgi");
+			}
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
 	static int DecodePB(IntPtr L)
 	{
 		try
 		{
 			int count = LuaDLL.lua_gettop(L);
 
-			if (count == 2)
+			if (count == 2 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.POOL.StreamBuffer>(L, 2))
 			{
 				System.Type arg0 = ToLua.CheckMonoType(L, 1);
-				EP.U3D.LIBRARY.POOL.StreamBuffer arg1 = (EP.U3D.LIBRARY.POOL.StreamBuffer)ToLua.CheckObject(L, 2, typeof(EP.U3D.LIBRARY.POOL.StreamBuffer));
+				EP.U3D.LIBRARY.POOL.StreamBuffer arg1 = (EP.U3D.LIBRARY.POOL.StreamBuffer)ToLua.ToObject(L, 2);
 				EP.U3D.LIBRARY.PROTO.IProto o = EP.U3D.LIBRARY.NET.NetManager.DecodePB(arg0, arg1);
 				ToLua.PushObject(L, o);
 				return 1;
 			}
-			else if (count == 3)
+			else if (count == 2 && TypeChecker.CheckTypes<byte[]>(L, 2))
 			{
 				System.Type arg0 = ToLua.CheckMonoType(L, 1);
-				EP.U3D.LIBRARY.POOL.StreamBuffer arg1 = (EP.U3D.LIBRARY.POOL.StreamBuffer)ToLua.CheckObject(L, 2, typeof(EP.U3D.LIBRARY.POOL.StreamBuffer));
-				int arg2 = (int)LuaDLL.luaL_checknumber(L, 3);
+				byte[] arg1 = ToLua.CheckByteBuffer(L, 2);
+				EP.U3D.LIBRARY.PROTO.IProto o = EP.U3D.LIBRARY.NET.NetManager.DecodePB(arg0, arg1);
+				ToLua.PushObject(L, o);
+				return 1;
+			}
+			else if (count == 3 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.POOL.StreamBuffer, int>(L, 2))
+			{
+				System.Type arg0 = ToLua.CheckMonoType(L, 1);
+				EP.U3D.LIBRARY.POOL.StreamBuffer arg1 = (EP.U3D.LIBRARY.POOL.StreamBuffer)ToLua.ToObject(L, 2);
+				int arg2 = (int)LuaDLL.lua_tonumber(L, 3);
+				EP.U3D.LIBRARY.PROTO.IProto o = EP.U3D.LIBRARY.NET.NetManager.DecodePB(arg0, arg1, arg2);
+				ToLua.PushObject(L, o);
+				return 1;
+			}
+			else if (count == 3 && TypeChecker.CheckTypes<byte[], int>(L, 2))
+			{
+				System.Type arg0 = ToLua.CheckMonoType(L, 1);
+				byte[] arg1 = ToLua.CheckByteBuffer(L, 2);
+				int arg2 = (int)LuaDLL.lua_tonumber(L, 3);
 				EP.U3D.LIBRARY.PROTO.IProto o = EP.U3D.LIBRARY.NET.NetManager.DecodePB(arg0, arg1, arg2);
 				ToLua.PushObject(L, o);
 				return 1;
@@ -710,112 +789,85 @@ public class EP_U3D_LIBRARY_NET_NetManagerWrap
 	}
 
 	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
-	static int SendCgi(IntPtr L)
+	static int get_OnCgiResp(IntPtr L)
 	{
 		try
 		{
-			int count = LuaDLL.lua_gettop(L);
+			ToLua.Push(L, EP.U3D.LIBRARY.NET.NetManager.OnCgiResp);
+			return 1;
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
 
-			if (count == 1)
-			{
-				int arg0 = (int)LuaDLL.luaL_checknumber(L, 1);
-				EP.U3D.LIBRARY.NET.NetManager.SendCgi(arg0);
-				return 0;
-			}
-			else if (count == 2 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.PROTO.IProto>(L, 2))
-			{
-				int arg0 = (int)LuaDLL.luaL_checknumber(L, 1);
-				EP.U3D.LIBRARY.PROTO.IProto arg1 = (EP.U3D.LIBRARY.PROTO.IProto)ToLua.ToObject(L, 2);
-				EP.U3D.LIBRARY.NET.NetManager.SendCgi(arg0, arg1);
-				return 0;
-			}
-			else if (count == 2 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.POOL.StreamBuffer>(L, 2))
-			{
-				int arg0 = (int)LuaDLL.luaL_checknumber(L, 1);
-				EP.U3D.LIBRARY.POOL.StreamBuffer arg1 = (EP.U3D.LIBRARY.POOL.StreamBuffer)ToLua.ToObject(L, 2);
-				EP.U3D.LIBRARY.NET.NetManager.SendCgi(arg0, arg1);
-				return 0;
-			}
-			else if (count == 3 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.PROTO.IProto, System.Action<string,byte[]>>(L, 2))
-			{
-				int arg0 = (int)LuaDLL.luaL_checknumber(L, 1);
-				EP.U3D.LIBRARY.PROTO.IProto arg1 = (EP.U3D.LIBRARY.PROTO.IProto)ToLua.ToObject(L, 2);
-				System.Action<string,byte[]> arg2 = (System.Action<string,byte[]>)ToLua.ToObject(L, 3);
-				EP.U3D.LIBRARY.NET.NetManager.SendCgi(arg0, arg1, arg2);
-				return 0;
-			}
-			else if (count == 3 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.POOL.StreamBuffer, System.Action<string,byte[]>>(L, 2))
-			{
-				int arg0 = (int)LuaDLL.luaL_checknumber(L, 1);
-				EP.U3D.LIBRARY.POOL.StreamBuffer arg1 = (EP.U3D.LIBRARY.POOL.StreamBuffer)ToLua.ToObject(L, 2);
-				System.Action<string,byte[]> arg2 = (System.Action<string,byte[]>)ToLua.ToObject(L, 3);
-				EP.U3D.LIBRARY.NET.NetManager.SendCgi(arg0, arg1, arg2);
-				return 0;
-			}
-			else if (count == 4 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.PROTO.IProto, System.Action<string,byte[]>, int>(L, 2))
-			{
-				int arg0 = (int)LuaDLL.luaL_checknumber(L, 1);
-				EP.U3D.LIBRARY.PROTO.IProto arg1 = (EP.U3D.LIBRARY.PROTO.IProto)ToLua.ToObject(L, 2);
-				System.Action<string,byte[]> arg2 = (System.Action<string,byte[]>)ToLua.ToObject(L, 3);
-				int arg3 = (int)LuaDLL.lua_tonumber(L, 4);
-				EP.U3D.LIBRARY.NET.NetManager.SendCgi(arg0, arg1, arg2, arg3);
-				return 0;
-			}
-			else if (count == 4 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.POOL.StreamBuffer, System.Action<string,byte[]>, int>(L, 2))
-			{
-				int arg0 = (int)LuaDLL.luaL_checknumber(L, 1);
-				EP.U3D.LIBRARY.POOL.StreamBuffer arg1 = (EP.U3D.LIBRARY.POOL.StreamBuffer)ToLua.ToObject(L, 2);
-				System.Action<string,byte[]> arg2 = (System.Action<string,byte[]>)ToLua.ToObject(L, 3);
-				int arg3 = (int)LuaDLL.lua_tonumber(L, 4);
-				EP.U3D.LIBRARY.NET.NetManager.SendCgi(arg0, arg1, arg2, arg3);
-				return 0;
-			}
-			else if (count == 5 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.PROTO.IProto, System.Action<string,byte[]>, int, int>(L, 2))
-			{
-				int arg0 = (int)LuaDLL.luaL_checknumber(L, 1);
-				EP.U3D.LIBRARY.PROTO.IProto arg1 = (EP.U3D.LIBRARY.PROTO.IProto)ToLua.ToObject(L, 2);
-				System.Action<string,byte[]> arg2 = (System.Action<string,byte[]>)ToLua.ToObject(L, 3);
-				int arg3 = (int)LuaDLL.lua_tonumber(L, 4);
-				int arg4 = (int)LuaDLL.lua_tonumber(L, 5);
-				EP.U3D.LIBRARY.NET.NetManager.SendCgi(arg0, arg1, arg2, arg3, arg4);
-				return 0;
-			}
-			else if (count == 5 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.POOL.StreamBuffer, System.Action<string,byte[]>, int, int>(L, 2))
-			{
-				int arg0 = (int)LuaDLL.luaL_checknumber(L, 1);
-				EP.U3D.LIBRARY.POOL.StreamBuffer arg1 = (EP.U3D.LIBRARY.POOL.StreamBuffer)ToLua.ToObject(L, 2);
-				System.Action<string,byte[]> arg2 = (System.Action<string,byte[]>)ToLua.ToObject(L, 3);
-				int arg3 = (int)LuaDLL.lua_tonumber(L, 4);
-				int arg4 = (int)LuaDLL.lua_tonumber(L, 5);
-				EP.U3D.LIBRARY.NET.NetManager.SendCgi(arg0, arg1, arg2, arg3, arg4);
-				return 0;
-			}
-			else if (count == 6 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.PROTO.IProto, System.Action<string,byte[]>, int, int, string>(L, 2))
-			{
-				int arg0 = (int)LuaDLL.luaL_checknumber(L, 1);
-				EP.U3D.LIBRARY.PROTO.IProto arg1 = (EP.U3D.LIBRARY.PROTO.IProto)ToLua.ToObject(L, 2);
-				System.Action<string,byte[]> arg2 = (System.Action<string,byte[]>)ToLua.ToObject(L, 3);
-				int arg3 = (int)LuaDLL.lua_tonumber(L, 4);
-				int arg4 = (int)LuaDLL.lua_tonumber(L, 5);
-				string arg5 = ToLua.ToString(L, 6);
-				EP.U3D.LIBRARY.NET.NetManager.SendCgi(arg0, arg1, arg2, arg3, arg4, arg5);
-				return 0;
-			}
-			else if (count == 6 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.POOL.StreamBuffer, System.Action<string,byte[]>, int, int, string>(L, 2))
-			{
-				int arg0 = (int)LuaDLL.luaL_checknumber(L, 1);
-				EP.U3D.LIBRARY.POOL.StreamBuffer arg1 = (EP.U3D.LIBRARY.POOL.StreamBuffer)ToLua.ToObject(L, 2);
-				System.Action<string,byte[]> arg2 = (System.Action<string,byte[]>)ToLua.ToObject(L, 3);
-				int arg3 = (int)LuaDLL.lua_tonumber(L, 4);
-				int arg4 = (int)LuaDLL.lua_tonumber(L, 5);
-				string arg5 = ToLua.ToString(L, 6);
-				EP.U3D.LIBRARY.NET.NetManager.SendCgi(arg0, arg1, arg2, arg3, arg4, arg5);
-				return 0;
-			}
-			else
-			{
-				return LuaDLL.luaL_throw(L, "invalid arguments to method: EP.U3D.LIBRARY.NET.NetManager.SendCgi");
-			}
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int get_OnCgiExpire(IntPtr L)
+	{
+		try
+		{
+			ToLua.Push(L, EP.U3D.LIBRARY.NET.NetManager.OnCgiExpire);
+			return 1;
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int get_OnCgiLogout(IntPtr L)
+	{
+		try
+		{
+			ToLua.Push(L, EP.U3D.LIBRARY.NET.NetManager.OnCgiLogout);
+			return 1;
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int set_OnCgiResp(IntPtr L)
+	{
+		try
+		{
+			System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler,int> arg0 = (System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler,int>)ToLua.CheckDelegate<System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler,int>>(L, 2);
+			EP.U3D.LIBRARY.NET.NetManager.OnCgiResp = arg0;
+			return 0;
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int set_OnCgiExpire(IntPtr L)
+	{
+		try
+		{
+			System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler> arg0 = (System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler>)ToLua.CheckDelegate<System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler>>(L, 2);
+			EP.U3D.LIBRARY.NET.NetManager.OnCgiExpire = arg0;
+			return 0;
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int set_OnCgiLogout(IntPtr L)
+	{
+		try
+		{
+			System.Action arg0 = (System.Action)ToLua.CheckDelegate<System.Action>(L, 2);
+			EP.U3D.LIBRARY.NET.NetManager.OnCgiLogout = arg0;
+			return 0;
 		}
 		catch (Exception e)
 		{

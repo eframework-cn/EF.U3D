@@ -262,8 +262,10 @@ public static class LuaBinder
 		L.RegFunction("Action_UnityEngine_AsyncOperation", System_Action_UnityEngine_AsyncOperation);
 		L.RegFunction("Action_UnityEngine_Playables_PlayableDirector", System_Action_UnityEngine_Playables_PlayableDirector);
 		L.RegFunction("Action_UnityEngine_SceneManagement_Scene", System_Action_UnityEngine_SceneManagement_Scene);
+		L.RegFunction("Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler_int", System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler_int);
+		L.RegFunction("Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler", System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler);
 		L.RegFunction("Func_EP_U3D_LIBRARY_POOL_StreamBuffer", System_Func_EP_U3D_LIBRARY_POOL_StreamBuffer);
-		L.RegFunction("Action_string_bytes", System_Action_string_bytes);
+		L.RegFunction("Action_bytes_long_string", System_Action_bytes_long_string);
 		L.RegFunction("Action_string_bool", System_Action_string_bool);
 		L.EndModule();
 		L.BeginModule("LuaInterface");
@@ -1152,6 +1154,60 @@ public static class LuaBinder
 	}
 
 	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler_int(IntPtr L)
+	{
+		try
+		{
+			int count = LuaDLL.lua_gettop(L);
+			LuaFunction func = ToLua.CheckLuaFunction(L, 1);
+
+			if (count == 1)
+			{
+				Delegate arg1 = DelegateTraits<System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler,int>>.Create(func);
+				ToLua.Push(L, arg1);
+			}
+			else
+			{
+				LuaTable self = ToLua.CheckLuaTable(L, 2);
+				Delegate arg1 = DelegateTraits<System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler,int>>.Create(func, self);
+				ToLua.Push(L, arg1);
+			}
+			return 1;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int System_Func_EP_U3D_LIBRARY_NET_NetManager_CgiHandler(IntPtr L)
+	{
+		try
+		{
+			int count = LuaDLL.lua_gettop(L);
+			LuaFunction func = ToLua.CheckLuaFunction(L, 1);
+
+			if (count == 1)
+			{
+				Delegate arg1 = DelegateTraits<System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler>>.Create(func);
+				ToLua.Push(L, arg1);
+			}
+			else
+			{
+				LuaTable self = ToLua.CheckLuaTable(L, 2);
+				Delegate arg1 = DelegateTraits<System.Func<EP.U3D.LIBRARY.NET.NetManager.CgiHandler>>.Create(func, self);
+				ToLua.Push(L, arg1);
+			}
+			return 1;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
 	static int System_Func_EP_U3D_LIBRARY_POOL_StreamBuffer(IntPtr L)
 	{
 		try
@@ -1179,7 +1235,7 @@ public static class LuaBinder
 	}
 
 	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
-	static int System_Action_string_bytes(IntPtr L)
+	static int System_Action_bytes_long_string(IntPtr L)
 	{
 		try
 		{
@@ -1188,13 +1244,13 @@ public static class LuaBinder
 
 			if (count == 1)
 			{
-				Delegate arg1 = DelegateTraits<System.Action<string,byte[]>>.Create(func);
+				Delegate arg1 = DelegateTraits<System.Action<byte[],long,string>>.Create(func);
 				ToLua.Push(L, arg1);
 			}
 			else
 			{
 				LuaTable self = ToLua.CheckLuaTable(L, 2);
-				Delegate arg1 = DelegateTraits<System.Action<string,byte[]>>.Create(func, self);
+				Delegate arg1 = DelegateTraits<System.Action<byte[],long,string>>.Create(func, self);
 				ToLua.Push(L, arg1);
 			}
 			return 1;

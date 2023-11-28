@@ -35,15 +35,18 @@ namespace ILRuntime.Runtime.Generated
             args = new Type[]{typeof(System.Int32), typeof(EP.U3D.LIBRARY.PROTO.IProto), typeof(System.Int32), typeof(System.Int32), typeof(System.Int32)};
             method = type.GetMethod("SendMsg", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, SendMsg_2);
-            args = new Type[]{typeof(System.Int32), typeof(EP.U3D.LIBRARY.PROTO.IProto), typeof(System.Action<System.String, System.Byte[]>), typeof(System.Int32), typeof(System.Int32), typeof(System.String)};
+            args = new Type[]{typeof(System.Int32), typeof(EP.U3D.LIBRARY.PROTO.IProto), typeof(System.Action<System.Byte[], System.Int64, System.String>)};
             method = type.GetMethod("SendCgi", flag, null, args, null);
             app.RegisterCLRMethodRedirection(method, SendCgi_3);
+            args = new Type[]{typeof(EP.U3D.LIBRARY.PROTO.IProto), typeof(System.Int32)};
+            method = type.GetMethod("EncodePB", flag, null, args, null);
+            app.RegisterCLRMethodRedirection(method, EncodePB_4);
             args = new Type[]{typeof(System.Int32), typeof(System.String), typeof(System.Int32), typeof(System.Net.Sockets.ProtocolType), typeof(EP.U3D.LIBRARY.NET.NetConnection.StatusDelegate), typeof(EP.U3D.LIBRARY.NET.NetConnection.StatusDelegate), typeof(EP.U3D.LIBRARY.NET.NetConnection.StatusDelegate), typeof(EP.U3D.LIBRARY.NET.NetConnection.StatusDelegate), typeof(EP.U3D.LIBRARY.NET.NetConnection.StatusDelegate), typeof(System.Int32), typeof(System.Int32), typeof(System.Int32), typeof(System.Func<EP.U3D.LIBRARY.POOL.StreamBuffer>)};
             method = type.GetMethod("ConnectTo", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, ConnectTo_4);
+            app.RegisterCLRMethodRedirection(method, ConnectTo_5);
             args = new Type[]{typeof(System.Int32)};
             method = type.GetMethod("DisconnectFrom", flag, null, args, null);
-            app.RegisterCLRMethodRedirection(method, DisconnectFrom_5);
+            app.RegisterCLRMethodRedirection(method, DisconnectFrom_6);
 
 
         }
@@ -126,36 +129,50 @@ namespace ILRuntime.Runtime.Generated
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
-            StackObject* __ret = ILIntepreter.Minus(__esp, 6);
+            StackObject* __ret = ILIntepreter.Minus(__esp, 3);
 
             ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
-            System.String @host = (System.String)typeof(System.String).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack), (CLR.Utils.Extensions.TypeFlags)0);
+            System.Action<System.Byte[], System.Int64, System.String> @func = (System.Action<System.Byte[], System.Int64, System.String>)typeof(System.Action<System.Byte[], System.Int64, System.String>).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack), (CLR.Utils.Extensions.TypeFlags)8);
             __intp.Free(ptr_of_this_method);
 
             ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
-            System.Int32 @rid = ptr_of_this_method->Value;
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 3);
-            System.Int32 @uid = ptr_of_this_method->Value;
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 4);
-            System.Action<System.String, System.Byte[]> @func = (System.Action<System.String, System.Byte[]>)typeof(System.Action<System.String, System.Byte[]>).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack), (CLR.Utils.Extensions.TypeFlags)8);
-            __intp.Free(ptr_of_this_method);
-
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 5);
             EP.U3D.LIBRARY.PROTO.IProto @body = (EP.U3D.LIBRARY.PROTO.IProto)typeof(EP.U3D.LIBRARY.PROTO.IProto).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack), (CLR.Utils.Extensions.TypeFlags)0);
             __intp.Free(ptr_of_this_method);
 
-            ptr_of_this_method = ILIntepreter.Minus(__esp, 6);
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 3);
             System.Int32 @id = ptr_of_this_method->Value;
 
 
-            EP.U3D.LIBRARY.NET.NetManager.SendCgi(@id, @body, @func, @uid, @rid, @host);
+            var result_of_this_method = EP.U3D.LIBRARY.NET.NetManager.SendCgi(@id, @body, @func);
 
-            return __ret;
+            object obj_result_of_this_method = result_of_this_method;
+            if(obj_result_of_this_method is CrossBindingAdaptorType)
+            {    
+                return ILIntepreter.PushObject(__ret, __mStack, ((CrossBindingAdaptorType)obj_result_of_this_method).ILInstance);
+            }
+            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }
 
-        static StackObject* ConnectTo_4(ILIntepreter __intp, StackObject* __esp, AutoList __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* EncodePB_4(ILIntepreter __intp, StackObject* __esp, AutoList __mStack, CLRMethod __method, bool isNewObj)
+        {
+            ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
+            StackObject* ptr_of_this_method;
+            StackObject* __ret = ILIntepreter.Minus(__esp, 2);
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 1);
+            System.Int32 @offset = ptr_of_this_method->Value;
+
+            ptr_of_this_method = ILIntepreter.Minus(__esp, 2);
+            EP.U3D.LIBRARY.PROTO.IProto @proto = (EP.U3D.LIBRARY.PROTO.IProto)typeof(EP.U3D.LIBRARY.PROTO.IProto).CheckCLRTypes(StackObject.ToObject(ptr_of_this_method, __domain, __mStack), (CLR.Utils.Extensions.TypeFlags)0);
+            __intp.Free(ptr_of_this_method);
+
+
+            var result_of_this_method = EP.U3D.LIBRARY.NET.NetManager.EncodePB(@proto, @offset);
+
+            return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
+        }
+
+        static StackObject* ConnectTo_5(ILIntepreter __intp, StackObject* __esp, AutoList __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
@@ -214,7 +231,7 @@ namespace ILRuntime.Runtime.Generated
             return ILIntepreter.PushObject(__ret, __mStack, result_of_this_method);
         }
 
-        static StackObject* DisconnectFrom_5(ILIntepreter __intp, StackObject* __esp, AutoList __mStack, CLRMethod __method, bool isNewObj)
+        static StackObject* DisconnectFrom_6(ILIntepreter __intp, StackObject* __esp, AutoList __mStack, CLRMethod __method, bool isNewObj)
         {
             ILRuntime.Runtime.Enviorment.AppDomain __domain = __intp.AppDomain;
             StackObject* ptr_of_this_method;
