@@ -178,7 +178,7 @@ namespace ILR.Core
         /// <param name="id">消息ID</param>
         /// <param name="handler">消息回调</param>
         /// <param name="once">调用一次</param>
-        public virtual void RegMsg(Gen.Proto.MID id, EventHandlerDelegate handler, bool once = false)
+        public virtual void RegMsg(Gen.Proto.MPB.MID id, EventHandlerDelegate handler, bool once = false)
         {
             NetManager.RegMsg((int)id, handler, null, once);
         }
@@ -189,7 +189,7 @@ namespace ILR.Core
         /// <param name="id">消息ID</param>
         /// <param name="handler">消息回调</param>
         /// <param name="once">调用一次</param>
-        public virtual void RegMsg<T>(Gen.Proto.MID id, Action<T> handler, bool once = false) where T : class, IProto
+        public virtual void RegMsg<T>(Gen.Proto.MPB.MID id, Action<T> handler, bool once = false) where T : class, IProto
         {
             var _id = id.GetHashCode();
             if (!mMsgMap.ContainsKey(_id)) mMsgMap.Add(_id, new List<MsgHandler>());
@@ -206,14 +206,14 @@ namespace ILR.Core
         /// </summary>
         /// <param name="id">消息ID</param>
         /// <param name="handler">消息回调</param>
-        public virtual void UnregMsg(Gen.Proto.MID id, EventHandlerDelegate handler) { NetManager.UnregMsg((int)id, handler); }
+        public virtual void UnregMsg(Gen.Proto.MPB.MID id, EventHandlerDelegate handler) { NetManager.UnregMsg((int)id, handler); }
 
         /// <summary>
         /// 注销Msg消息（全局）
         /// </summary>
         /// <param name="id">消息ID</param>
         /// <param name="handler">消息回调</param>
-        public virtual void UnregMsg<T>(Gen.Proto.MID id, Action<T> handler) where T : class, IProto
+        public virtual void UnregMsg<T>(Gen.Proto.MPB.MID id, Action<T> handler) where T : class, IProto
         {
             var _id = id.GetHashCode();
             if (mMsgMap.TryGetValue(_id, out var rets))
@@ -242,7 +242,7 @@ namespace ILR.Core
         /// <param name="uid">用户ID</param>
         /// <param name="rid">路由ID</param>
         /// <param name="type">服务类型</param>
-        public virtual void SendMsg(Gen.Proto.MID id, IProto body = null, int uid = 0, int rid = 0, int server = 0) { NetManager.SendMsg((int)id, body, uid, rid, server); }
+        public virtual void SendMsg(Gen.Proto.MPB.MID id, IProto body = null, int uid = 0, int rid = 0, int server = 0) { NetManager.SendMsg((int)id, body, uid, rid, server); }
 
         /// <summary>
         /// 发送Cgi消息
@@ -250,7 +250,7 @@ namespace ILR.Core
         /// <param name="id">消息ID</param>
         /// <param name="body">消息包</param>
         /// <param name="func">消息回调</param>
-        public virtual NetManager.CgiHandler SendCgi(Gen.Proto.CID id, IProto body = null, Action<byte[], long, string> func = null) { return NetManager.SendCgi((int)id, body, func); }
+        public virtual NetManager.CgiHandler SendCgi(Gen.Proto.CPB.CID id, IProto body = null, Action<byte[], long, string> func = null) { return NetManager.SendCgi((int)id, body, func); }
 
         /// <summary>
         /// 发送Cgi消息
@@ -258,7 +258,7 @@ namespace ILR.Core
         /// <param name="id">消息ID</param>
         /// <param name="body">消息包</param>
         /// <param name="func">消息回调</param>
-        public virtual NetManager.CgiHandler SendCgi<T>(Gen.Proto.CID id, IProto body = null, Action<T, long, string> func = null) where T : class, IProto
+        public virtual NetManager.CgiHandler SendCgi<T>(Gen.Proto.CPB.CID id, IProto body = null, Action<T, long, string> func = null) where T : class, IProto
         {
             return NetManager.SendCgi((int)id, body, (data, code, error) =>
             {
@@ -1011,7 +1011,7 @@ namespace ILR.Core
         /// <param name="id">消息ID</param>
         /// <param name="handler">消息回调</param>
         /// <param name="once">调用一次</param>
-        public virtual void RegMsg(Gen.Proto.MID id, EventHandlerDelegate handler, bool once = false)
+        public virtual void RegMsg(Gen.Proto.MPB.MID id, EventHandlerDelegate handler, bool once = false)
         {
             var _id = id.GetHashCode();
             if (!mMsgMap.ContainsKey(_id)) mMsgMap.Add(_id, new List<MsgHandler>());
@@ -1028,7 +1028,7 @@ namespace ILR.Core
         /// <param name="id">消息ID</param>
         /// <param name="handler">消息回调</param>
         /// <param name="once">调用一次</param>
-        public virtual void RegMsg<T>(Gen.Proto.MID id, Action<T> handler, bool once = false) where T : class, IProto
+        public virtual void RegMsg<T>(Gen.Proto.MPB.MID id, Action<T> handler, bool once = false) where T : class, IProto
         {
             var _id = id.GetHashCode();
             if (!mMsgMap.ContainsKey(_id)) mMsgMap.Add(_id, new List<MsgHandler>());
@@ -1045,7 +1045,7 @@ namespace ILR.Core
         /// </summary>
         /// <param name="id">消息ID</param>
         /// <param name="handler">消息回调</param>
-        public virtual void UnregMsg(Gen.Proto.MID id, EventHandlerDelegate handler)
+        public virtual void UnregMsg(Gen.Proto.MPB.MID id, EventHandlerDelegate handler)
         {
             var _id = id.GetHashCode();
             if (mMsgMap.TryGetValue(_id, out var rets))
@@ -1071,7 +1071,7 @@ namespace ILR.Core
         /// </summary>
         /// <param name="id">消息ID</param>
         /// <param name="handler">消息回调</param>
-        public virtual void UnregMsg<T>(Gen.Proto.MID id, Action<T> handler) where T : class, IProto
+        public virtual void UnregMsg<T>(Gen.Proto.MPB.MID id, Action<T> handler) where T : class, IProto
         {
             var _id = id.GetHashCode();
             if (mMsgMap.TryGetValue(_id, out var rets))
@@ -1100,7 +1100,7 @@ namespace ILR.Core
         /// <param name="uid">用户ID</param>
         /// <param name="rid">路由ID</param>
         /// <param name="type">服务类型</param>
-        public virtual void SendMsg(Gen.Proto.MID id, IProto body = null, int uid = 0, int rid = 0, int server = 0) { NetManager.SendMsg((int)id, body, uid, rid, server); }
+        public virtual void SendMsg(Gen.Proto.MPB.MID id, IProto body = null, int uid = 0, int rid = 0, int server = 0) { NetManager.SendMsg((int)id, body, uid, rid, server); }
 
         /// <summary>
         /// 发送Cgi消息
@@ -1108,7 +1108,7 @@ namespace ILR.Core
         /// <param name="id">消息ID</param>
         /// <param name="body">消息包</param>
         /// <param name="func">消息回调</param>
-        public virtual NetManager.CgiHandler SendCgi(Gen.Proto.CID id, IProto body = null, Action<byte[], long, string> func = null) { return NetManager.SendCgi((int)id, body, func); }
+        public virtual NetManager.CgiHandler SendCgi(Gen.Proto.CPB.CID id, IProto body = null, Action<byte[], long, string> func = null) { return NetManager.SendCgi((int)id, body, func); }
 
         /// <summary>
         /// 发送Cgi消息
@@ -1116,7 +1116,7 @@ namespace ILR.Core
         /// <param name="id">消息ID</param>
         /// <param name="body">消息包</param>
         /// <param name="func">消息回调</param>
-        public virtual NetManager.CgiHandler SendCgi<T>(Gen.Proto.CID id, IProto body = null, Action<T, long, string> func = null) where T : class, IProto
+        public virtual NetManager.CgiHandler SendCgi<T>(Gen.Proto.CPB.CID id, IProto body = null, Action<T, long, string> func = null) where T : class, IProto
         {
             return NetManager.SendCgi((int)id, body, (data, code, error) =>
             {

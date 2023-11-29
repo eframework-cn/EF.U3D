@@ -5,7 +5,7 @@ using EP.U3D.LIBRARY.NET;
 using EP.U3D.LIBRARY.REPORT;
 using EP.U3D.LIBRARY.SCENE;
 using ILR.Core;
-using ILR.Gen.Proto;
+using ILR.Gen.Proto.MPB;
 
 namespace ILR.Scene.LOGIN
 {
