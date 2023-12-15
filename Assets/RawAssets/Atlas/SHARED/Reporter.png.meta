@@ -69,7 +69,7 @@ TextureImporter:
       213: -5207245761708568628
     second: warning_icon
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
@@ -129,6 +129,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -144,7 +145,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 512
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: 48
     textureCompression: 1
@@ -156,7 +157,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 512
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: 12
     textureCompression: 1
@@ -168,7 +169,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: iPhone
-    maxTextureSize: 512
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: 48
     textureCompression: 1
@@ -176,6 +177,18 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -654,28 +667,28 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      scroller_vertical_thumb: -1663026714724029171
-      log_icon: -1334344822842325516
+      Commit: 9143707324168310798
+      ComputerIcon: 4673508398083883884
+      bar: -8568005151626139212
+      button_active: 8061145838948107114
       clear: 4210946996480701498
+      close: 4671213621800289002
+      delete: 3517879452892153186
       error_icon: 2800136515747636146
-      scroller_up_arraw: -7527070253010534521
+      even_log: -317118142007333933
       fps: -2489677446991864059
+      info: 3164007730830291572
+      log_icon: -1334344822842325516
       odd_log: 4543241178822422002
       red: 2643910077437806402
-      close: 4671213621800289002
+      scroller_down_arraw: -97232461234349446
+      scroller_up_arraw: -7527070253010534521
+      scroller_vertical_back: 4610899949694548976
+      scroller_vertical_thumb: -1663026714724029171
       search: 3012001409656551221
       selected: -4775819929773596427
       time: -6950778193427997146
       warning_icon: -5207245761708568628
-      ComputerIcon: 4673508398083883884
-      even_log: -317118142007333933
-      bar: -8568005151626139212
-      info: 3164007730830291572
-      delete: 3517879452892153186
-      button_active: 8061145838948107114
-      scroller_down_arraw: -97232461234349446
-      Commit: 9143707324168310798
-      scroller_vertical_back: 4610899949694548976
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
