@@ -1022,6 +1022,13 @@ EXCLUDE                = ./Packages/EP.U3D.EDITOR.ATLAS \
                          ./Packages/EP.U3D.LIBRARY.UI/Runtime/Utils/iTween.cs \
                          ./Packages/EP.U3D.LIBRARY.JSON \
                          ./Packages/EP.U3D.LIBRARY.I18N \
+                         ./Packages/EP.U3D.LIBRARY.PNET \
+                         ./Packages/EP.U3D.LIBRARY.PPUN \
+                         ./Packages/EP.U3D.LIBRARY.PVOICE \
+                         ./Packages/EP.U3D.LIBRARY.PCHAT \
+                         ./Packages/EP.U3D.LIBRARY.TS \
+                         ./Packages/EP.U3D.LIBRARY.FGUI \
+                         ./Packages/EP.U3D.LIBRARY.NGUI \
                          ./Packages/EP.U3D.EDITOR.BASE/Editor/Libs
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or
