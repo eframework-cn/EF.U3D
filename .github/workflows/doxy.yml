@@ -14,6 +14,11 @@ jobs:
         runs-on: ubuntu-latest
         
         steps:
+            ## 设置时区
+            - uses: szenius/set-timezone@v1.2
+              with:
+                timezoneLinux: "Asia/Shanghai"
+
             ## 检出工程
             - uses: actions/checkout@v3
               with: 
