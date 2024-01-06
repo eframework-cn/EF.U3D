@@ -35,8 +35,13 @@ A LITE U3D-BASED FRAMEWORK.
 - **SEE [LICENSE.md](https://u3d.eframework.cn/md_LICENSE.html) FOR MORE DETAILS.**
 
 ## CHANGELOG | 更新日志
-### 2023.9.24 - 
+### 2024.1.6 - 
+- 修复若干I18N接口问题
+- 新增AssetBundle混淆功能
+
+### 2023.9.24 - 2024.1.5
 - 修复Rebuild ILR Component异常（.unity）
+- 优化CGI协议鉴权流程
 - 优化Excel生成规则（敏感字符转义）
 - 优化Proto生成规则（支持单行注释）
 - 重构Excel和Proto的命名空间

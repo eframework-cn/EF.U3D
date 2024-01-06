@@ -211,7 +211,7 @@ public class EP_U3D_LIBRARY_AUDIO_AudioManagerWrap
 			if (count == 1)
 			{
 				string arg0 = ToLua.CheckString(L, 1);
-				AudioObject o = EP.U3D.LIBRARY.AUDIO.AudioManager.PlaySound(arg0);
+				EP.U3D.LIBRARY.AUDIO.AudioObject o = EP.U3D.LIBRARY.AUDIO.AudioManager.PlaySound(arg0);
 				ToLua.Push(L, o);
 				return 1;
 			}
@@ -219,7 +219,7 @@ public class EP_U3D_LIBRARY_AUDIO_AudioManagerWrap
 			{
 				string arg0 = ToLua.CheckString(L, 1);
 				float arg1 = (float)LuaDLL.lua_tonumber(L, 2);
-				AudioObject o = EP.U3D.LIBRARY.AUDIO.AudioManager.PlaySound(arg0, arg1);
+				EP.U3D.LIBRARY.AUDIO.AudioObject o = EP.U3D.LIBRARY.AUDIO.AudioManager.PlaySound(arg0, arg1);
 				ToLua.Push(L, o);
 				return 1;
 			}
@@ -227,7 +227,7 @@ public class EP_U3D_LIBRARY_AUDIO_AudioManagerWrap
 			{
 				string arg0 = ToLua.CheckString(L, 1);
 				UnityEngine.Vector3 arg1 = ToLua.ToVector3(L, 2);
-				AudioObject o = EP.U3D.LIBRARY.AUDIO.AudioManager.PlaySound(arg0, arg1);
+				EP.U3D.LIBRARY.AUDIO.AudioObject o = EP.U3D.LIBRARY.AUDIO.AudioManager.PlaySound(arg0, arg1);
 				ToLua.Push(L, o);
 				return 1;
 			}
@@ -236,7 +236,7 @@ public class EP_U3D_LIBRARY_AUDIO_AudioManagerWrap
 				string arg0 = ToLua.CheckString(L, 1);
 				UnityEngine.Vector3 arg1 = ToLua.ToVector3(L, 2);
 				UnityEngine.Transform arg2 = (UnityEngine.Transform)ToLua.CheckObject<UnityEngine.Transform>(L, 3);
-				AudioObject o = EP.U3D.LIBRARY.AUDIO.AudioManager.PlaySound(arg0, arg1, arg2);
+				EP.U3D.LIBRARY.AUDIO.AudioObject o = EP.U3D.LIBRARY.AUDIO.AudioManager.PlaySound(arg0, arg1, arg2);
 				ToLua.Push(L, o);
 				return 1;
 			}
@@ -246,7 +246,7 @@ public class EP_U3D_LIBRARY_AUDIO_AudioManagerWrap
 				UnityEngine.Vector3 arg1 = ToLua.ToVector3(L, 2);
 				UnityEngine.Transform arg2 = (UnityEngine.Transform)ToLua.CheckObject<UnityEngine.Transform>(L, 3);
 				float arg3 = (float)LuaDLL.luaL_checknumber(L, 4);
-				AudioObject o = EP.U3D.LIBRARY.AUDIO.AudioManager.PlaySound(arg0, arg1, arg2, arg3);
+				EP.U3D.LIBRARY.AUDIO.AudioObject o = EP.U3D.LIBRARY.AUDIO.AudioManager.PlaySound(arg0, arg1, arg2, arg3);
 				ToLua.Push(L, o);
 				return 1;
 			}
@@ -274,9 +274,9 @@ public class EP_U3D_LIBRARY_AUDIO_AudioManagerWrap
 				EP.U3D.LIBRARY.AUDIO.AudioManager.StopSound(arg0);
 				return 0;
 			}
-			else if (count == 1 && TypeChecker.CheckTypes<AudioObject>(L, 1))
+			else if (count == 1 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.AUDIO.AudioObject>(L, 1))
 			{
-				AudioObject arg0 = (AudioObject)ToLua.ToObject(L, 1);
+				EP.U3D.LIBRARY.AUDIO.AudioObject arg0 = (EP.U3D.LIBRARY.AUDIO.AudioObject)ToLua.ToObject(L, 1);
 				EP.U3D.LIBRARY.AUDIO.AudioManager.StopSound(arg0);
 				return 0;
 			}
@@ -287,9 +287,9 @@ public class EP_U3D_LIBRARY_AUDIO_AudioManagerWrap
 				EP.U3D.LIBRARY.AUDIO.AudioManager.StopSound(arg0, arg1);
 				return 0;
 			}
-			else if (count == 2 && TypeChecker.CheckTypes<AudioObject, float>(L, 1))
+			else if (count == 2 && TypeChecker.CheckTypes<EP.U3D.LIBRARY.AUDIO.AudioObject, float>(L, 1))
 			{
-				AudioObject arg0 = (AudioObject)ToLua.ToObject(L, 1);
+				EP.U3D.LIBRARY.AUDIO.AudioObject arg0 = (EP.U3D.LIBRARY.AUDIO.AudioObject)ToLua.ToObject(L, 1);
 				float arg1 = (float)LuaDLL.lua_tonumber(L, 2);
 				EP.U3D.LIBRARY.AUDIO.AudioManager.StopSound(arg0, arg1);
 				return 0;

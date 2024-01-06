@@ -22,15 +22,15 @@ function AudioManager.PauseMusic(fadeOut) end
 ---@param fadeOut float
 function AudioManager.UnpauseMusic(fadeOut) end
 
----@overload fun(sound:System.String, pos:UnityEngine.Vector3):AudioObject
----@overload fun(sound:System.String, pos:UnityEngine.Vector3, parent:UnityEngine.Transform):AudioObject
----@overload fun(sound:System.String, pos:UnityEngine.Vector3, parent:UnityEngine.Transform, pitch:float):AudioObject
+---@overload fun(sound:System.String, pos:UnityEngine.Vector3):EP.U3D.LIBRARY.AUDIO.AudioObject
+---@overload fun(sound:System.String, pos:UnityEngine.Vector3, parent:UnityEngine.Transform):EP.U3D.LIBRARY.AUDIO.AudioObject
+---@overload fun(sound:System.String, pos:UnityEngine.Vector3, parent:UnityEngine.Transform, pitch:float):EP.U3D.LIBRARY.AUDIO.AudioObject
 ---@param sound System.String
 ---@param pitch float
----@return AudioObject
+---@return EP.U3D.LIBRARY.AUDIO.AudioObject
 function AudioManager.PlaySound(sound, pitch) end
 
----@overload fun(sound:AudioObject, fadeOut:float):void
+---@overload fun(sound:EP.U3D.LIBRARY.AUDIO.AudioObject, fadeOut:float):void
 ---@param sound System.String
 ---@param fadeOut float
 function AudioManager.StopSound(sound, fadeOut) end

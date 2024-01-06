@@ -70,12 +70,12 @@ namespace ILRuntime.Runtime.Generated
             System_Collections_Generic_KeyValuePair_2_Int32_List_1_ILTypeInstance_Binding.Register(app);
             System_Int32_Binding.Register(app);
             System_IDisposable_Binding.Register(app);
-            System_Collections_Generic_List_1_String_Binding.Register(app);
             System_Exception_Binding.Register(app);
             System_Text_Encoding_Binding.Register(app);
             EP_U3D_LIBRARY_PROTO_ProtoEncoder_Binding.Register(app);
             EP_U3D_LIBRARY_PROTO_ProtoDecoder_Binding.Register(app);
             EP_U3D_LIBRARY_POOL_ObjectPool_Binding.Register(app);
+            System_Collections_Generic_List_1_String_Binding.Register(app);
             EP_U3D_LIBRARY_BASE_Loom_Binding.Register(app);
             UnityEngine_WaitForSeconds_Binding.Register(app);
             System_NotSupportedException_Binding.Register(app);
