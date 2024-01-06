@@ -38,6 +38,7 @@ A LITE U3D-BASED FRAMEWORK.
 ### 2024.1.6 - 
 - 修复若干I18N接口问题
 - 新增AssetBundle混淆功能
+- 新增Platform.Exclude设置以排除资源
 
 ### 2023.9.24 - 2024.1.5
 - 修复Rebuild ILR Component异常（.unity）
